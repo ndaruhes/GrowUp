@@ -1,0 +1,91 @@
+@import 'variables.scss';
+
+// HEADER DESKTOP
+.header {
+    padding: 30px 0;
+
+    .image-left {
+        display: none;
+    }
+
+    .text {
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: 25px;
+            color: $red;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 23px;
+            margin-bottom: 30px;
+        }
+
+        .btn-started {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+}
+
+// PARTNERS DESKTOP
+.partners {
+    .container {
+        background: #fcfcfc;
+        position: relative;
+        padding: 20px 50px;
+        border-radius: 20px;
+        border: 3px solid $green;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        h2 {
+            color: $grey;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .item {
+            position: relative;
+
+            img {}
+        }
+    }
+}
+
+// ABOUT DESKTOP
+.about {
+    margin-top: -100px;
+    padding: 120px 0 50px 0;
+    background: rgb(73, 217, 131);
+    background: linear-gradient(221deg, rgba(73, 217, 131, 1) 0%, rgba(198, 226, 209, 1) 89%);
+
+    .text {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0;
+            color: $white;
+        }
+
+        span {
+            font-size: 25px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+}

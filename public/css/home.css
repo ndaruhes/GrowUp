@@ -1,0 +1,74 @@
+.bg-green {
+  background: #49D983;
+  color: white !important;
+}
+
+.header {
+  padding: 30px 0;
+}
+.header .image-left {
+  display: none;
+}
+.header .text {
+  display: flex;
+  align-items: center;
+}
+.header .text span {
+  font-size: 25px;
+  color: #E31A56;
+  font-weight: bold;
+}
+.header .text h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+.header .text p {
+  font-size: 23px;
+  margin-bottom: 30px;
+}
+.header .text .btn-started {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.partners .container {
+  background: #fcfcfc;
+  position: relative;
+  padding: 20px 50px;
+  border-radius: 20px;
+  border: 3px solid #49D983;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.partners .container h2 {
+  color: #656E56;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.partners .container .item {
+  position: relative;
+}
+.about {
+  margin-top: -100px;
+  padding: 120px 0 50px 0;
+  background: #49d983;
+  background: linear-gradient(221deg, #49d983 0%, #c6e2d1 89%);
+}
+.about .text {
+  display: flex;
+  align-items: center;
+}
+.about .text h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+.about .text span {
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+.about .text p {
+  font-size: 18px;
+}

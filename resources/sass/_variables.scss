@@ -1,7 +1,12 @@
-// Body
-$body-bg: #f8fafc;
+// COLORS
+$primaryColor: #34495e;
+$red: #E31A56;
+$green: #49D983;
+$white: white;
+$grey: #656E56;
 
-// Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+// BACKGROUND
+.bg-green {
+    background: $green;
+    color: $white !important;
+}

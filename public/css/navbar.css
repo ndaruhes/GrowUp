@@ -1,0 +1,27 @@
+.bg-green {
+  background: #49D983;
+  color: white !important;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  background: #E31A56;
+  background: linear-gradient(to right, #E31A56 0%, #49d983 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.navbar {
+  padding: 20px 0;
+}
+
+.nav-link {
+  color: #34495e !important;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.signup-btn {
+  border-radius: 10px;
+}
