@@ -3,6 +3,10 @@
   color: white !important;
 }
 
+.text-primary {
+  color: #34495e !important;
+}
+
 .navbar-brand {
   font-size: 25px;
   background: #E31A56;
