@@ -3,6 +3,11 @@
   color: white !important;
 }
 
+.bg-red {
+  background: #E31A56;
+  color: white !important;
+}
+
 .text-primary {
   color: #34495e !important;
 }
@@ -28,4 +33,8 @@
 
 .signup-btn {
   border-radius: 10px;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
 }

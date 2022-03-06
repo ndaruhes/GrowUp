@@ -49,12 +49,11 @@
             text-align: center;
             font-weight: bold;
             margin-bottom: 30px;
+            font-size: 30px;
         }
 
         .item {
             position: relative;
-
-            img {}
         }
     }
 }
@@ -86,6 +85,182 @@
 
         p {
             font-size: 18px;
+        }
+    }
+}
+
+// COURSES DESKTOP
+.courses {
+    padding: 100px 0;
+
+    .courses-header {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        .text-center {
+            width: 60%;
+
+            h2 {
+                font-weight: bold;
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .item {
+        margin-bottom: 20px;
+
+        .item-content {
+            display: block;
+            background: $white;
+            border-radius: 10px;
+            padding: 15px;
+            text-decoration: none;
+
+            .image {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .text {
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .btn-explore {
+        width: 300px;
+        padding: 10px 0;
+        font-size: 20px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    // HEADER MOBILE
+    .header {
+        padding: 0 0 50px 0;
+
+        .image-left {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .image-right {
+            display: none;
+        }
+
+        .text {
+            span {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            p {
+                font-size: 17px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    // PARTNERS MOBILE
+    .partners {
+        .container {
+            width: 95%;
+            padding: 10px 15px;
+            margin: 0 2.5%;
+
+            h2 {
+                margin-bottom: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    // ABOUT MOBILE
+    .about {
+        margin-top: -50px;
+        padding: 60px 0 30px 0;
+
+        .image {
+            margin-bottom: 20px;
+        }
+
+        .text {
+            h2 {
+                font-size: 25px;
+            }
+
+            span {
+                font-size: 20px;
+                display: block;
+            }
+
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+
+    // COURSES MOBILE
+    .courses {
+        padding: 40px 0;
+
+        .courses-header {
+            margin-bottom: 15px;
+
+            .text-center {
+                width: 100%;
+
+                h2 {
+                    font-size: 25px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .item {
+            padding: 0 5px;
+            margin-bottom: 10px;
+
+            .item-content {
+                padding: 7px;
+
+                .row {
+                    align-items: center;
+                    min-height: 50px;
+                }
+
+                .text {
+                    font-size: 15px;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .btn-explore {
+            width: 200px;
+            padding: 7px 0;
+            font-size: 17px;
+            margin-top: 15px;
         }
     }
 }

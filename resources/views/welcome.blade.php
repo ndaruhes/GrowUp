@@ -6,6 +6,9 @@
 @endsection
 
 @section('content')
+    {{-- NAVBAR --}}
+    @include('layouts.navbar')
+
     {{-- HEADER --}}
     <div class="header">
         <div class="container">
@@ -17,8 +20,8 @@
                     <div>
                         <span>Hello There, Welcome 👋</span>
                         <h1>A New Different Way to Improve Your Skills</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat cupiditate, voluptates enim
-                            consequatur dolorem harum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl faucibus viverra bibendum sed.
+                            Ipsum mauris est, semper tincidunt.</p>
                         <button class="btn bg-green btn-started">Get Started</button>
                     </div>
                 </div>
@@ -34,13 +37,13 @@
         <div class="container">
             <h2>In Collaboration With</h2>
             <div class="row justify-content-between align-items-between">
-                <div class="col-md-2 item">
+                <div class="col-md-2 col-3 item">
                     <img src="{{ asset('images/partners/ruangguru.png') }}" alt="ruangguru" class="w-100">
                 </div>
-                <div class="col-md-4 item">
+                <div class="col-md-4 col-4 item">
                     <img src="{{ asset('images/partners/goacademy.png') }}" alt="goacademy" class="w-100">
                 </div>
-                <div class="col-md-3 item">
+                <div class="col-md-3 col-4 item">
                     <img src="{{ asset('images/partners/coursera.png') }}" alt="coursera" class="w-100">
                 </div>
             </div>
@@ -56,7 +59,7 @@
                 </div>
                 <div class="col-md-6 text">
                     <div>
-                        <h2>About Us</h2>
+                        <h2>About GrowUp</h2>
                         <span>Our Story</span>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -75,22 +78,5 @@
     </div>
 
     {{-- COURSES --}}
-    <div class="courses">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="col-md-12 item">
-                        <div class="row">
-                            <div class="col-4 image">
-
-                            </div>
-                            <div class="col-8 text">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('components.home.courses')
 @endsection
