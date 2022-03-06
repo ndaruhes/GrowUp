@@ -1,73 +1,49 @@
-@extends('layouts.app')
+@extends("layouts.app")
+
+@section('title', 'Login | GrowUp')
+
+@section('cssExternal')
+    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+    {{-- AUTHENCATION NAVBAR --}}
+    <div class="auth-section-container">
+        <div class="row h-100">
+            <div class="col h-100 auth-section ">
+                <div class="header-wrapper">
+                    <h1>Welcome to</h1>
+                    <h1> <b class="red-text">G</b>row<b class="green-text">U</b>p</h1>
+                </div>
+                <div class="form-wrapper">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Name</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
+                        <div class="mb-3 form-check d-flex justify-content-center">
+                            <input type="checkbox" class="form-check-input me-2" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">I Agree with <b class="red-text">Terms</b> and <b class="red-text">Privacy</b></label>
                         </div>
+                        <button type="submit" class="btn bg-green w-100">Submit</button>
                     </form>
+                </div>
+                <p class="text-center mt-5">Already have an account? <a href=""><b class="red-text">Sign in</b></a></p>
+            </div>
+            <div class="col h-100 bg-green auth-section">
+                @include('layouts.authenticationNavbar')
+                <div class="image-wrapper d-flex justify-content-center">
+                    <img class="auth-section-image" src="{{asset("images/3dimages/Vectary texture.png")}}" alt="">
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

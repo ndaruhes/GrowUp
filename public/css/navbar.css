@@ -7,6 +7,14 @@
   color: #34495e !important;
 }
 
+.red-text {
+  color: #E31A56;
+}
+
+.green-text {
+  color: #49D983;
+}
+
 .navbar-brand {
   font-size: 25px;
   background: #E31A56;
