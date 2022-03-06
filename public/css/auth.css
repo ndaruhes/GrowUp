@@ -36,3 +36,9 @@ body, html {
   font-size: 48px !important;
   font-weight: bold !important;
 }
+
+.red-checkbox-container {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
