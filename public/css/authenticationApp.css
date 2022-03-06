@@ -1,0 +1,21 @@
+--primaryColor: #34495e;
+--red: #E31A56;
+--green: #49D983;
+--white: #FFFFFF;
+
+// BACKGROUND
+.bg-green {
+    background: var(--green) !important;
+    color: var(--white) !important;
+}
+
+.primary-text-color{
+    color: var(--primaryColor) !important;
+}
+
+
+// Auth Container
+.auth-section-container{
+    height: 100vh !important;
+}
+
