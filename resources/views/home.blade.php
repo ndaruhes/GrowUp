@@ -6,6 +6,9 @@
 
     {{-- CONTENT --}}
     <div class="container">
+        {{-- TEMPORARY LOGOUT BUTTON --}}
+        <a href="{{Auth::logout()}}">Log out</a>
+
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">

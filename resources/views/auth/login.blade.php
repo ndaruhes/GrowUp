@@ -19,23 +19,24 @@
                 </div>
 
                 <div class="form-wrapper">
-                    <form>
+                    <form action="{{route('login')}}" method="POST">
+                        @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail2" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input name="password" type="password" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3 form-check d-flex mx-2">
                             <div role="button" class="red-checkbox-container border bg-light">
                                 <img class="w-100 h-100 d-block d-none" src="{{asset("images/icons/checkbox.png")}}" alt="">
-                                <input type="checkbox" class="form-check-input me-2 custom-check-box d-none" id="exampleCheck1">
+                                <input name="remember" type="checkbox" class="form-check-input me-2 custom-check-box d-none" id="exampleCheck1">
                             </div>
                             <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                         </div>
-                        <button type="submit" class="btn bg-green w-100">Submit</button>
+                        <button type="submit" class="btn bg-red w-100">Submit</button>
                     </form>
                 </div>
                 <div class="text-center">
