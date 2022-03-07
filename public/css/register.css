@@ -25,16 +25,24 @@ body, html {
   height: 100%;
 }
 
-.auth-section-right {
-  display: block;
-}
-
 .auth-section-container {
   height: 100% !important;
 }
 
+.auth-section-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.auth-section-left {
+  overflow-y: auto;
+}
+
 .auth-section {
-  padding: 40px 150px;
+  padding: 40px 5%;
+  height: 100%;
 }
 
 .auth-section-image {
@@ -52,35 +60,26 @@ body, html {
   margin-right: 15px;
 }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 768px) {
   body, html {
     width: auto;
     height: auto;
   }
 
-  .auth-section-right {
-    display: none;
-  }
-
-  .auth-section {
-    padding: 0;
-  }
-
   .auth-section-container {
-    padding: 40px 180px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .auth-section-container {
-    padding: 40px 45px;
+    padding: 40px 25px;
   }
 
   .auth-section {
     padding: 20px 25px;
   }
 
+  .auth-section-right {
+    display: none !important;
+  }
+
   .header-wrapper > h1 {
-    font-size: 34px !important;
+    font-size: 26px !important;
     font-weight: bold !important;
   }
 

@@ -11,10 +11,10 @@
     <div class="auth-section-container">
         <div class="row h-100">
             {{-- LEFT SECTION (FORM) --}}
-            <div class="col h-100 auth-section">
+            <div class="col h-100 auth-section auth-section-left">
                 {{-- HEADER --}}
                 <div class="header-wrapper">
-                    <h1>Sign In to Your</h1>
+                    <h1 class="text-nowrap">Sign In to Your</h1>
                     <h1>Account</h1>
                 </div>
 
@@ -46,7 +46,7 @@
                 <p class="text-center mt-5">Already have an account? <a href=""><b class="red-text">Sign in</b></a></p>
             </div>
             {{-- RIGHT SECTION (FORM) --}}
-            <div class="col bg-red auth-section auth-section-right">
+            <div class="col bg-red auth-section auth-section-right auth-section-right">
                 <div class="image-wrapper d-flex justify-content-center">
                     <img class="auth-section-image" src="{{asset("images/3dimages/Vectary texture.png")}}" alt="">
                 </div>

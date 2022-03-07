@@ -11,7 +11,7 @@
     <div class="auth-section-container">
         <div class="row h-100">
             {{-- LEFT SECTION (FORM) --}}
-            <div class="col h-100 auth-section">
+            <div class="col auth-section auth-section-left">
                 {{-- HEADER --}}
                 <div class="header-wrapper">
                     <h1>Welcome to</h1>
@@ -37,7 +37,7 @@
                             <input name="password" type="password" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3 form-check d-flex mx-2">
-                            <div role="button" class="red-checkbox-container border bg-light">
+                            <div role="button" class="red-checkbox-container border bg-light flex-shrink-0">
                                 <img class="w-100 h-100 d-block d-none" src="{{asset("images/icons/checkbox.png")}}" alt="">
                                 <input type="checkbox" class="form-check-input me-2 custom-check-box d-none" id="exampleCheck1">
                             </div>
