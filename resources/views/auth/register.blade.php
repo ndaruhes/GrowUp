@@ -32,7 +32,7 @@
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <div class="mb-3 form-check d-flex justify-content-center">
+                        <div class="mb-3 form-check d-flex mx-2">
                             <div role="button" class="red-checkbox-container border bg-light">
                                 <img class="w-100 h-100 d-block d-none" src="{{asset("images/icons/checkbox.png")}}" alt="">
                                 <input type="checkbox" class="form-check-input me-2 custom-check-box d-none" id="exampleCheck1">
