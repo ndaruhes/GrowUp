@@ -25,10 +25,8 @@ body, html {
   height: 100%;
 }
 
-hr {
-  border: 1.5px solid;
-  border-radius: 5px;
-  margin: 0;
+.auth-section-container {
+  height: 100% !important;
 }
 
 .auth-section-right {
@@ -40,10 +38,6 @@ hr {
 
 .auth-section-left {
   overflow-y: auto;
-}
-
-.auth-section-container {
-  height: 100% !important;
 }
 
 .auth-section {
@@ -58,11 +52,6 @@ hr {
 .header-wrapper > h1 {
   font-size: 48px !important;
   font-weight: bold !important;
-}
-
-.forgot-password-text {
-  display: inline-block;
-  margin: 25px 0px;
 }
 
 .red-checkbox-container {

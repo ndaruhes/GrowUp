@@ -14,6 +14,14 @@
   color: #34495e !important;
 }
 
+.red-text {
+  color: #E31A56;
+}
+
+.green-text {
+  color: #49D983;
+}
+
 * {
   margin: 0;
   padding: 0;
