@@ -28,3 +28,24 @@
   font-family: "Poppins", sans-serif;
   color: #34495e;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #666;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232323;
+}
+
+.break {
+  clear: both;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}

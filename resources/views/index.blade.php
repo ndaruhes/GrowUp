@@ -6,15 +6,12 @@
 @endsection
 
 @section('content')
-    {{-- NAVBAR --}}
-    @include('layouts.navbar')
-
     {{-- HEADER --}}
     <div class="header">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 image-left text-center">
-                    <img src="{{ asset('images/hero.png') }}" class="w-75" alt="hero.png">
+                    <img src="{{ asset('images/3dimages/hero.png') }}" class="w-75" alt="hero.png">
                 </div>
                 <div class="col-md-6 text">
                     <div>
@@ -26,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 image-right text-center">
-                    <img src="{{ asset('images/hero.png') }}" class="w-75" alt="hero.png">
+                    <img src="{{ asset('images/3dimages/hero.png') }}" class="w-75" alt="hero.png">
                 </div>
             </div>
         </div>
@@ -55,7 +52,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 image text-center">
-                    <img src="{{ asset('images/about.png') }}" alt="about.png" class="w-75">
+                    <img src="{{ asset('images/3dimages/about.png') }}" alt="about.png" class="w-75">
                 </div>
                 <div class="col-md-6 text">
                     <div>

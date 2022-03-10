@@ -46,3 +46,12 @@
 .navbar-light .navbar-toggler {
   border: none;
 }
+
+.avatar {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin: -5px 0;
+  float: left;
+  margin-right: 10px;
+}

@@ -7,7 +7,6 @@
 @endsection
 
 @section('content')
-    @include('layouts.navbar')
     <div class="auth-section-container">
         <div class="row h-100">
             {{-- LEFT SECTION (FORM) --}}
@@ -48,7 +47,7 @@
             {{-- RIGHT SECTION (FORM) --}}
             <div class="col bg-red auth-section auth-section-right auth-section-right">
                 <div class="image-wrapper d-flex justify-content-center">
-                    <img class="auth-section-image" src="{{asset("images/3dimages/Vectary texture.png")}}" alt="">
+                    <img class="auth-section-image" src="{{asset("images/3dimages/auth.png")}}" alt="auth.png">
                 </div>
             </div>
         </div>

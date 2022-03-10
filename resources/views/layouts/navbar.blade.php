@@ -1,3 +1,6 @@
+@php
+$user = Auth::user();
+@endphp
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand" href="#">GrowUp</a>
@@ -32,11 +35,15 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ Auth::user()->name }}
+                            <img src="{{ asset('images/avatar.png') }}" class="rounded-circle avatar shadow"
+                                alt="avatar">
+                            {{ $user->name }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="#"><i class="uil uil-user-md me-1"></i>My Profile</a>
+                                <a class="dropdown-item"
+                                    href="{{ $user->role == 'Member' ? url('/member') : url('/mentor') }}"><i
+                                        class="uil uil-apps me-1"></i>Dashboard</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}"

@@ -19,4 +19,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['namespace' => 'App\Http\Controllers'], function () {
+    // MEMBER ROUTES
+    Route::group(['prefix' => 'member', 'middleware' => 'RoleMember'], function () {
+        Route::get('', 'HomeController@index')->name('home');
+    });
+
+    // MENTOR ROUTES
+    Route::group(['prefix' => 'mentor', 'middleware' => 'RoleMentor'], function () {
+        Route::get('', 'HomeController@index')->name('home');
+    });
+});
