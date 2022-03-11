@@ -27,3 +27,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Test
 Route::post('/home', [CourseController::class, 'createCourse'])->name('createCourse');
+Route::delete('/home/{id}', [CourseController::class, 'deleteCourse'])->name('deleteCourse');
+// Route::patch('')

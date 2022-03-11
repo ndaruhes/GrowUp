@@ -29,6 +29,12 @@
                 <label for="inputEmail4" class="form-label">Nama</label>
                 <input name="course_name" type="text" class="form-control" id="inputEmail4">
             </div>
+            <select name="category_id" class="form-select" aria-label="Default select example">
+                <option  selected>Select Category</option>
+                @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{$category->category_name}}</option>
+                @endforeach
+            </select>
             <div class="col-12">
             <button type="submit" class="btn btn-primary">Sign in</button>
             </div>
@@ -40,6 +46,7 @@
                 <th scope="col">#COURSE_ID</th>
                 <th scope="col">Course Name</th>
                 <th scope="col">Mentor ID</th>
+                <th scope="col">Category Name</th>
                 <th scope="col">Delete</th>
                 </tr>
             </thead>
@@ -50,7 +57,15 @@
                             <th scope="row">{{$course->id}}</th>
                             <td>{{$course->course_name}}</td>
                             <td>{{Auth::user()->name}}</td>
-                            <td>{{$course->mentor_id}}</td>
+                            <td>{{$course->category()->first()->category_name}}</td>
+                            <td>
+                                <form method="POST" action="{{route('deleteCourse', $course->id)}}">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button class="btn btn-primary" type="submit">Delete</button>
+                                </form>
+                            </td>
+
                         </tr>
                     @endforeach
 
