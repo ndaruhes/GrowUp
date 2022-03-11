@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('personal_access_tokens', function (Blueprint $table) {
+        Schema::create('course', function (Blueprint $table) {
             $table->id();
-            $table->string('mentor_name');
+            $table->string('course_name');
+            $table->unsignedBigInteger('mentor_id');
+            $table->unsignedBigInteger('category_id');
+            $table->timestamps();
         });
     }
 

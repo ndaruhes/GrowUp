@@ -41,4 +41,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //Relationship
+    public function courses()
+    {
+        return $this->hasMany(CourseModel::class, 'mentor_id', 'id');
+    }
+
 }

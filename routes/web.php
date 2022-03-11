@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\CourseController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'getView'])->name('login');
+
+
+//Test
+Route::post('/home', [CourseController::class, 'createCourse'])->name('createCourse');
