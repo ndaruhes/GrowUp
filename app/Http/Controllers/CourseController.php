@@ -24,8 +24,11 @@ class CourseController extends Controller
         return redirect()->back();
     }
 
-    public function updateCourse($id){
-        CourseModel::find($id)->delete();
-        return redirect()->back();
+    public function updateCourse(Request $data, $id){
+        CourseModel::find($id)->update([
+            'course_name' => $data->course_name,
+            'category_id' => $data->category_id
+        ]);
+        return redirect(route('home'));
     }
 }

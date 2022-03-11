@@ -48,6 +48,7 @@
                 <th scope="col">Mentor ID</th>
                 <th scope="col">Category Name</th>
                 <th scope="col">Delete</th>
+                <th scope="col">Update</th>
                 </tr>
             </thead>
             <tbody>
@@ -65,6 +66,7 @@
                                     <button class="btn btn-primary" type="submit">Delete</button>
                                 </form>
                             </td>
+                            <td><button class="btn btn-primary" type="submit"><a href="{{route('updateCourse',$course->id)}}">Update</a></button></td>
 
                         </tr>
                     @endforeach
