@@ -1,5 +1,6 @@
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 
 /* VARIABLES */
 @import 'variables';
@@ -7,8 +8,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    color: $primaryColor;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body {
+    color: $primaryColor !important;
 }
 
 ::-webkit-scrollbar {
@@ -30,6 +34,37 @@
     clear: both;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .form-group {
     margin-bottom: 20px;
+}
+
+// RESET DEFAULT
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
+
+button:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ccc;
+    box-shadow: 0 0 0 #ccc inset, 0 0 0 #ccc;
+    outline: 0 none;
 }

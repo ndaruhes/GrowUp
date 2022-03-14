@@ -3,7 +3,10 @@ $user = Auth::user();
 @endphp
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="#">GrowUp</a>
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="{{ asset('images/logo.png') }}" alt="logo" width="35">
+            <span class="text-red">G</span>row<span class="text-green">U</span>p
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,7 +38,7 @@ $user = Auth::user();
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ asset('images/avatar.png') }}" class="rounded-circle avatar shadow"
+                            <img src="{{ asset('images/avatar.png') }}" class="rounded-circle avatar shadow-sm"
                                 alt="avatar">
                             {{ $user->name }}
                         </a>

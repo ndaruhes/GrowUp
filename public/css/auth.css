@@ -8,16 +8,40 @@
   color: white !important;
 }
 
+.bg-green-gradient {
+  background: #49d983;
+  background: linear-gradient(221deg, #49d983 0%, #c6e2d1 89%);
+  color: white !important;
+}
+
+.bg-outline-green {
+  color: #49D983 !important;
+  border: 1px solid #49D983;
+}
+.bg-outline-green:hover {
+  background: #49D983 !important;
+  color: white !important;
+}
+
+.bg-outline-red {
+  color: #E31A56 !important;
+  border: 1px solid #E31A56;
+}
+.bg-outline-red:hover {
+  background: #E31A56 !important;
+  color: white !important;
+}
+
 .text-primary {
   color: #34495e !important;
 }
 
-.red-text {
-  color: #E31A56;
+.text-red {
+  color: #E31A56 !important;
 }
 
-.green-text {
-  color: #49D983;
+.text-green {
+  color: #49D983 !important;
 }
 
 body, html {

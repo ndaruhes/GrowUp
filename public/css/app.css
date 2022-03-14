@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Fredoka&display=swap);
 /* VARIABLES */
 .bg-green {
   background: #49D983;
@@ -10,23 +11,50 @@
   color: white !important;
 }
 
+.bg-green-gradient {
+  background: #49d983;
+  background: linear-gradient(221deg, #49d983 0%, #c6e2d1 89%);
+  color: white !important;
+}
+
+.bg-outline-green {
+  color: #49D983 !important;
+  border: 1px solid #49D983;
+}
+.bg-outline-green:hover {
+  background: #49D983 !important;
+  color: white !important;
+}
+
+.bg-outline-red {
+  color: #E31A56 !important;
+  border: 1px solid #E31A56;
+}
+.bg-outline-red:hover {
+  background: #E31A56 !important;
+  color: white !important;
+}
+
 .text-primary {
   color: #34495e !important;
 }
 
-.red-text {
-  color: #E31A56;
+.text-red {
+  color: #E31A56 !important;
 }
 
-.green-text {
-  color: #49D983;
+.text-green {
+  color: #49D983 !important;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  color: #34495e;
+  font-family: "Fredoka", sans-serif;
+}
+
+body {
+  color: #34495e !important;
 }
 
 ::-webkit-scrollbar {
@@ -46,6 +74,36 @@
   clear: both;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .form-group {
   margin-bottom: 20px;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+button:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+  border-color: #ccc;
+  box-shadow: 0 0 0 #ccc inset, 0 0 0 #ccc;
+  outline: 0 none;
 }

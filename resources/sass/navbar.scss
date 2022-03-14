@@ -2,24 +2,24 @@
 
 .navbar-brand {
     font-size: 25px;
-    background: #E31A56;
-    background: -webkit-linear-gradient(to right, #E31A56 0%, #49d983 100%);
-    background: -moz-linear-gradient(to right, #E31A56 0%, #49d983 100%);
-    background: linear-gradient(to right, #E31A56 0%, #49d983 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    // background: #E31A56;
+    // background: -webkit-linear-gradient(to right, #E31A56 0%, #49d983 100%);
+    // background: -moz-linear-gradient(to right, #E31A56 0%, #49d983 100%);
+    // background: linear-gradient(to right, #E31A56 0%, #49d983 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
     font-weight: bold;
+    color: $primaryColor !important;
 }
 
 .navbar {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .nav-link {
     color: $primaryColor !important;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .signup-btn {
