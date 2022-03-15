@@ -2,10 +2,35 @@
 
 // HEADER DESKTOP
 .header {
-    padding: 30px 0;
 
     .image-left {
         display: none;
+    }
+
+    .image-right {
+        position: relative;
+
+        .header-asset1,
+        .header-asset2 {
+            position: absolute;
+            width: 200px;
+            animation: sky 12s reverse infinite;
+            z-index: 1000;
+        }
+
+        .header-asset1 {
+            right: 100px;
+            top: 50px;
+        }
+
+        .header-asset2 {
+            left: 70px;
+            bottom: 100px;
+        }
+
+        .w-75 {
+            animation: sky 12s linear infinite;
+        }
     }
 
     .text {
@@ -36,7 +61,9 @@
 
 // PARTNERS DESKTOP
 .partners {
-    .container {
+    .content {
+        width: 70%;
+        margin: 0 15%;
         background: #fcfcfc;
         position: relative;
         padding: 20px 50px;
@@ -155,8 +182,31 @@
         padding: 0 0 50px 0;
 
         .image-left {
+            position: relative;
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+
+            .header-asset1,
+            .header-asset2 {
+                position: absolute;
+                width: 125px;
+                animation: sky 12s reverse infinite;
+                z-index: 1000;
+            }
+
+            .header-asset1 {
+                right: 20px;
+                top: 25px;
+            }
+
+            .header-asset2 {
+                left: 20px;
+                bottom: 50px;
+            }
+
+            .w-75 {
+                animation: sky 12s linear infinite;
+            }
         }
 
         .image-right {
@@ -181,7 +231,7 @@
 
     // PARTNERS MOBILE
     .partners {
-        .container {
+        .content {
             width: 95%;
             padding: 10px 15px;
             margin: 0 2.5%;

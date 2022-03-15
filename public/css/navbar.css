@@ -14,6 +14,12 @@
   color: white !important;
 }
 
+.bg-red-gradient {
+  background: #e31a56;
+  background: linear-gradient(189deg, #e31a56 0%, #ffdce7 100%);
+  color: white !important;
+}
+
 .bg-outline-green {
   color: #49D983 !important;
   border: 1px solid #49D983;
@@ -32,7 +38,7 @@
   color: white !important;
 }
 
-.text-primary {
+.text-primaryColor {
   color: #34495e !important;
 }
 
@@ -44,6 +50,41 @@
   color: #49D983 !important;
 }
 
+@-webkit-keyframes sky {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 20px);
+  }
+  50% {
+    transform: translate(20px, 0);
+  }
+  75% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes sky {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 20px);
+  }
+  50% {
+    transform: translate(20px, 0);
+  }
+  75% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 .navbar-brand {
   font-size: 25px;
   font-weight: bold;

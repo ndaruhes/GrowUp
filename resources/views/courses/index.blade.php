@@ -1,4 +1,4 @@
-@extends('dashboard')
+@extends('layouts.dashboard')
 
 @section('title', 'Courses | GrowUp')
 
@@ -13,9 +13,46 @@
             My Courses
         </h1>
         <div class="line"></div>
-        <button class="btn btn-dark btn-sm add-btn" data-bs-toggle="modal" data-bs-target="#addModal">Tambah<i
+        <button class="btn btn-dark btn-sm add-btn" data-bs-toggle="modal" data-bs-target="#addModal">Create Course<i
                 class="uil uil-plus ms-1"></i></button>
     </div>
 
     {{-- CONTENT --}}
+    <div class="table-wrapper bg-light">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th class="th-25">Cover</th>
+                    <th class="th-30">Title</th>
+                    <th class="th-30">Description</th>
+                    <th class="th-15 text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($courses as $course)
+                    <tr>
+                        <td class="fw-bold">{{ $loop->iteration }}</td>
+                        <td>
+                            <img src="{{ $course->cover != null ? asset('storage/images/cover/' . $course->cover) : asset('images/no-image.png') }}"
+                                alt="{{ $course->title }}" class="rounded shadow-sm w-100">
+                        </td>
+                        <td>
+                            <span>{{ $course->title }}</span>
+                            <small class="badge bg-green-gradient">Rp{{ $course->price }}</small>
+                        </td>
+                        <td>{{ $course->description }}</td>
+                        <td class="action-btn-table">
+                            <a href="#" class="text-dark"><i class="uil uil-eye"></i></a>
+                            <a href="{{ route('editCourse', $course->id) }}" class="text-primary mx-1"><i
+                                    class="uil uil-edit"></i></a>
+                            <a href="#" data-uri="{{ route('deleteCourse', $course->id) }}" class="text-danger"
+                                data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i
+                                    class="uil uil-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection

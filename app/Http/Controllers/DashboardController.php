@@ -14,7 +14,7 @@ class DashboardController extends Controller
     public function index()
     {
         return view('dashboard', [
-            'categories' => CategoryController::getAll()
+            'categories' => CategoryController::index()
         ]);
     }
 }

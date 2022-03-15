@@ -3,47 +3,120 @@
 namespace App\Http\Controllers;
 
 
-use Illuminate\Support\Facades\Auth;
+use App\Models\Course;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-
-use App\Models\CourseModel;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class CourseController extends Controller
 {
     public function index()
     {
+        $courses = Course::all();
         return view('courses.index', [
-            'categories' => CategoryController::getAll()
+            'courses' => $courses,
+            'categories' => CategoryController::index()
         ]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        return view('courses.create');
-    }
+        $request->validate([
+            'cover' => 'required',
+            'title' => 'required|string|min:3|max:100',
+            'price' => 'required|numeric',
+            'description' => 'required|string|min:5|max:500',
+            'category' => 'required|numeric'
+        ]);
 
-    public function createCourse(Request $data)
-    {
-        CourseModel::create([
-            'course_name' => $data->course_name,
+        $files = $request->file('cover');
+        $fullFileName = $files->getClientOriginalName();
+        $fileName = pathinfo($fullFileName)['filename'];
+        $extension = $files->getClientOriginalExtension();
+        $cover = $fileName . "-" . Str::random(10) . "-" . date('YmdHis') . "." . $extension;
+        $files->storeAs('public/images/cover', $cover);
+
+        Course::create([
+            'cover' => $cover,
+            'title' => $request->title,
+            'price' => $request->price,
+            'description' => $request->description,
             'mentor_id' => Auth::user()->id,
-            'category_id' => $data->category_id
+            'category_id' => $request->category
         ]);
-        return redirect()->back();
+
+        return redirect()->back()->with('success_message', 'You have successfully created a course');
     }
 
-    public function deleteCourse($id)
+    public function edit($id)
     {
-        CourseModel::find($id)->delete();
-        return redirect()->back();
+        $course = Course::findOrFail($id);
+        return view('courses.edit', [
+            'course' => $course,
+            'categories' => CategoryController::index()
+        ]);
     }
 
-    public function updateCourse(Request $data, $id)
+    public function update(Request $request, $id)
     {
-        CourseModel::find($id)->update([
-            'course_name' => $data->course_name,
-            'category_id' => $data->category_id
-        ]);
-        return redirect(route('home'));
+        if ($request->file('cover') == null) {
+            $request->validate([
+                'title' => 'required|string|min:3|max:100',
+                'price' => 'required|numeric',
+                'description' => 'required|string|min:5|max:500',
+                'category' => 'required|numeric'
+            ]);
+            $course = Course::findOrFail($id);
+            $course->update([
+                'title' => $request->title,
+                'price' => $request->price,
+                'description' => $request->description,
+                'category_id' => $request->category
+            ]);
+
+            return redirect()->back()->with('success_message', 'You have successfully changed the course');
+        } else {
+            $request->validate([
+                'cover' => 'required',
+                'title' => 'required|string|min:3|max:100',
+                'price' => 'required|numeric',
+                'description' => 'required|string|min:5|max:500',
+                'category' => 'required|numeric'
+            ]);
+
+            $files = $request->file('cover');
+            $fullFileName = $files->getClientOriginalName();
+            $fileName = pathinfo($fullFileName)['filename'];
+            $extension = $files->getClientOriginalExtension();
+            $cover = $fileName . "-" . Str::random(10) . "-" . date('YmdHis') . "." . $extension;
+            $files->storeAs('public/images/cover', $cover);
+
+            $course = Course::findOrFail($id);
+            if (Storage::exists('public/images/cover/' . $course->cover)) {
+                Storage::delete('public/images/cover/' . $course->cover);
+            }
+
+            $course->update([
+                'cover' => $cover,
+                'title' => $request->title,
+                'price' => $request->price,
+                'description' => $request->description,
+                'category_id' => $request->category
+            ]);
+
+            return redirect('/mentor/courses')->with('success_message', 'You have successfully changed the course');
+        }
+    }
+
+    public function delete($id)
+    {
+        $course = Course::findOrFail($id);
+        if (Storage::exists('public/images/cover/' . $course->cover)) {
+            Storage::delete('public/images/cover/' . $course->cover);
+        }
+        $course->delete();
+
+        return redirect('/mentor/courses')->with('success_message', 'You have successfully deleted the course');
     }
 }

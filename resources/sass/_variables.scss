@@ -23,6 +23,12 @@ $grey: #656E56;
     color: $white !important;
 }
 
+.bg-red-gradient {
+    background: rgb(227, 26, 86);
+    background: linear-gradient(189deg, rgba(227, 26, 86, 1) 0%, rgba(255, 220, 231, 1) 100%);
+    color: $white !important;
+}
+
 // BACKGROUND OUTLINE
 .bg-outline-green {
     color: $green !important;
@@ -45,7 +51,7 @@ $grey: #656E56;
 }
 
 // TEXT
-.text-primary {
+.text-primaryColor {
     color: $primaryColor !important;
 }
 
@@ -55,4 +61,27 @@ $grey: #656E56;
 
 .text-green {
     color: $green !important;
+}
+
+// ANIMATION
+@keyframes sky {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(20px, 20px);
+    }
+
+    50% {
+        transform: translate(20px, 0);
+    }
+
+    75% {
+        transform: translate(0, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }

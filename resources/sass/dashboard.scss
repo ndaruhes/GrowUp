@@ -4,6 +4,7 @@
     .dashboard-menu-panel {
         a {
             margin-right: 10px;
+            font-weight: bold;
         }
     }
 }
@@ -42,6 +43,7 @@
 
         .title {
             font-size: 18px;
+            font-weight: bold;
         }
 
         .value {
@@ -77,6 +79,18 @@
             a {
                 cursor: pointer;
             }
+        }
+
+        .th-15 {
+            width: 15%;
+        }
+
+        .th-25 {
+            width: 25%;
+        }
+
+        .th-30 {
+            width: 30%;
         }
     }
 }
