@@ -20,6 +20,15 @@ class CourseController extends Controller
         ]);
     }
 
+    public function searchCourse(Request $request)
+    {
+        $searchedCourses = Course::where('title', 'like', '%' . $request->search . '%')->get();
+        return view('pages.search', [
+            'searchedCourses' => $searchedCourses,
+            'categories' => CategoryController::index()
+        ]);
+    }
+
     public function store(Request $request)
     {
         $request->validate([

@@ -19,6 +19,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/', 'PageController@index');
     Route::get('/profile', 'PageController@profile')->middleware('auth');
     Route::get('/explore', 'PageController@explore');
+    Route::post('/explore/search', 'CourseController@searchCourse')->name('searchCourse');
 
     // MEMBER ROUTES
     Route::group(['prefix' => 'member', 'middleware' => 'RoleMember'], function () {

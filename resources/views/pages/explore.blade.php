@@ -15,8 +15,11 @@
                         <img src="{{ asset('images/rocket.png') }}" alt="rocket.png">
                         <span>Explore All Courses</span>
                     </div>
-                    <p class="description"> {{ $dataanalyst[0]->category->description }}</p>
-                    <form action="">
+                    <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it</p>
+                    <form action="{{ route('searchCourse') }}" method="POST">
+                        @csrf
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="search" name="search"
                                 placeholder="Search Courses here">
@@ -40,7 +43,7 @@
                                         <div class="row">
                                             <div class="col-5 image">
                                                 <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
-                                                    alt="{{ $courses->title }}" class="shadow-sm w-100">
+                                                    alt="{{ $courses->title }}" class="w-100">
                                             </div>
                                             <div class="col-7 text">
                                                 <span class="title">{{ $courses->title }}</span>
@@ -77,7 +80,7 @@
                                         <div class="row">
                                             <div class="col-5 image">
                                                 <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
-                                                    alt="{{ $courses->title }}" class="shadow-sm w-100">
+                                                    alt="{{ $courses->title }}" class="w-100">
                                             </div>
                                             <div class="col-7 text">
                                                 <span class="title">{{ $courses->title }}</span>
@@ -114,7 +117,7 @@
                                         <div class="row">
                                             <div class="col-5 image">
                                                 <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
-                                                    alt="{{ $courses->title }}" class="shadow-sm w-100">
+                                                    alt="{{ $courses->title }}" class="w-100">
                                             </div>
                                             <div class="col-7 text">
                                                 <span class="title">{{ $courses->title }}</span>

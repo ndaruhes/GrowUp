@@ -17,11 +17,11 @@ $user = Auth::user();
                     <a class="nav-link" href="{{ url('/') }}"><i class="uil uil-estate me-1"></i>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="uil uil-rocket me-1"></i>About</a>
+                    <a class="nav-link" href="#"><i class="uil uil-lightbulb-alt me-1"></i>About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/explore') }}"><i
-                            class="uil uil-lightbulb-alt me-1"></i>Courses</a>
+                            class="uil uil-rocket me-1"></i>Courses</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="uil uil-phone-volume me-1"></i>Contact</a>

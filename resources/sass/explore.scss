@@ -1,10 +1,13 @@
 @import 'variables';
 
 .wrapper {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .explore {
+    // padding: 20px;
+    border-radius: 10px;
+
     .explore-heading {
         margin-bottom: 40px;
 
@@ -46,6 +49,7 @@
 
         .item-content {
             background: #F8F9FA;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             border-radius: 10px;
             padding: 10px;
             min-height: 90px;
