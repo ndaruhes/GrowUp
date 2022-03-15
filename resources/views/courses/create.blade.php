@@ -61,11 +61,12 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Course Price</label>
+                                <label>Course Price <small class="text-warning">*optional</small></label>
                                 <div class="input-group">
                                     <span class="input-group-text" id="price">Rp</span>
                                     <input type="number" class="form-control @error('price') is-invalid @enderror"
-                                        placeholder="Course Price..." name="price" value="{{ old('price') }}">
+                                        placeholder="Course Price..." name="price" value="{{ old('price') }}"
+                                        min="1">
                                 </div>
                                 @error('price')
                                     <small class="text-danger">{{ $message }}</small>

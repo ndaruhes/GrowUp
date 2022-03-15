@@ -18,6 +18,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     // PAGES
     Route::get('/', 'PageController@index');
     Route::get('/profile', 'PageController@profile')->middleware('auth');
+    Route::get('/explore', 'PageController@explore');
 
     // MEMBER ROUTES
     Route::group(['prefix' => 'member', 'middleware' => 'RoleMember'], function () {

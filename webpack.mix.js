@@ -20,5 +20,6 @@ mix.js('resources/js/app.js', 'public/js/')
     .sass('resources/sass/auth.scss', 'public/css/')
     .sass('resources/sass/register.scss', 'public/css/')
     .sass('resources/sass/banner.scss', 'public/css/')
+    .sass('resources/sass/explore.scss', 'public/css/')
     .disableNotifications()
     .sourceMaps();

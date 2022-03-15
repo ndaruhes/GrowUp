@@ -13,7 +13,7 @@ class CourseController extends Controller
 {
     public function index()
     {
-        $courses = Course::all();
+        $courses = Course::where('mentor_id', Auth::user()->id)->get();
         return view('courses.index', [
             'courses' => $courses,
             'categories' => CategoryController::index()
@@ -25,7 +25,6 @@ class CourseController extends Controller
         $request->validate([
             'cover' => 'required',
             'title' => 'required|string|min:3|max:100',
-            'price' => 'required|numeric',
             'description' => 'required|string|min:5|max:500',
             'category' => 'required|numeric'
         ]);
@@ -63,7 +62,6 @@ class CourseController extends Controller
         if ($request->file('cover') == null) {
             $request->validate([
                 'title' => 'required|string|min:3|max:100',
-                'price' => 'required|numeric',
                 'description' => 'required|string|min:5|max:500',
                 'category' => 'required|numeric'
             ]);
@@ -75,12 +73,11 @@ class CourseController extends Controller
                 'category_id' => $request->category
             ]);
 
-            return redirect()->back()->with('success_message', 'You have successfully changed the course');
+            return redirect('/mentor/courses')->with('success_message', 'You have successfully changed the course');
         } else {
             $request->validate([
                 'cover' => 'required',
                 'title' => 'required|string|min:3|max:100',
-                'price' => 'required|numeric',
                 'description' => 'required|string|min:5|max:500',
                 'category' => 'required|numeric'
             ]);

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('cover');
             $table->string('title');
             $table->string('description');
-            $table->integer('price');
+            $table->integer('price')->nullable();
             $table->integer('category_id');
             $table->integer('mentor_id');
             $table->timestamps();

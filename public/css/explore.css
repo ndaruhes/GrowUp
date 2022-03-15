@@ -85,35 +85,70 @@
     transform: translate(0, 0);
   }
 }
-.navbar-brand {
-  font-size: 25px;
+.wrapper {
+  margin-top: 40px;
+}
+
+.explore .explore-heading {
+  margin-bottom: 40px;
+}
+.explore .explore-heading .title {
+  margin-bottom: 10px;
+}
+.explore .explore-heading .title img {
+  width: 35px;
+}
+.explore .explore-heading .title span {
+  font-size: 23px;
   font-weight: bold;
-  color: #34495e !important;
+  margin-left: 10px;
 }
-
-.navbar {
-  padding: 15px 0;
+.explore .explore-heading .description {
+  font-size: 18px;
 }
-
-.nav-link {
-  color: #34495e !important;
-  font-weight: 600;
+.explore .courses {
+  margin-bottom: 40px;
+}
+.explore .courses .category-title {
+  margin-bottom: 10px;
+}
+.explore .courses .category-title img {
+  width: 30px;
+}
+.explore .courses .category-title span {
   font-size: 20px;
+  margin-left: 5px;
+  font-weight: bold;
 }
-
-.signup-btn {
+.explore .courses .item-content {
+  background: #F8F9FA;
   border-radius: 10px;
+  padding: 10px;
+  min-height: 90px;
+  display: block;
+  text-decoration: none;
 }
-
-.navbar-light .navbar-toggler {
-  border: none;
+.explore .courses .item-content .image img {
+  border-radius: 5px;
 }
-
-.avatar {
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  margin: -5px 0;
-  float: left;
-  margin-right: 10px;
+.explore .courses .item-content .text {
+  padding-left: 0;
+}
+.explore .courses .item-content .text span {
+  display: block;
+}
+.explore .courses .item-content .text .title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #34495e;
+}
+.explore .courses .item-content .text .price {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.explore .courses .item-content .text .mentor {
+  font-size: 12px;
+  padding: 3px 5px;
+  font-weight: bold;
+  border-radius: 5px;
 }

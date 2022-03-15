@@ -20,7 +20,8 @@ $user = Auth::user();
                     <a class="nav-link" href="#"><i class="uil uil-rocket me-1"></i>About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="uil uil-lightbulb-alt me-1"></i>Course</a>
+                    <a class="nav-link" href="{{ url('/explore') }}"><i
+                            class="uil uil-lightbulb-alt me-1"></i>Courses</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="uil uil-phone-volume me-1"></i>Contact</a>

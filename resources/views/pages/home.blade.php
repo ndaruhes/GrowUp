@@ -55,10 +55,10 @@
     <div class="about">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 image text-center" data-aos="zoom-in-up">
+                <div class="col-md-6 image text-center" data-aos="fade-up">
                     <img src="{{ asset('images/3dimages/about.png') }}" alt="about.png" class="w-75">
                 </div>
-                <div class="col-md-6 text" data-aos="zoom-in-down">
+                <div class="col-md-6 text" data-aos="fade-down">
                     <div>
                         <h2>About GrowUp</h2>
                         <span>Our Story</span>
@@ -95,7 +95,7 @@
                         <a href="#" class="col-md-12 item-content">
                             <div class="row">
                                 <div class="col-md-3 col-4 image">
-                                    <img src="{{ asset('images/courses-icon/data-analyst.png') }}" alt="data-analyst">
+                                    <img src="{{ $category->icon }}" alt="{{ $category->title }}">
                                 </div>
                                 <div class="col-md-9 col-8 text">
                                     {{ $category->title }}
@@ -105,7 +105,7 @@
                     </div>
                 @endforeach
                 <div class="text-center">
-                    <a href="" class="btn bg-red btn-explore">Explore More</a>
+                    <a href="{{ url('/explore') }}" class="btn bg-red btn-explore">Explore More</a>
                 </div>
             </div>
         </div>
