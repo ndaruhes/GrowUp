@@ -1,12 +1,6 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\CourseController;
-use App\Models\CategoryModel;
-use App\Models\CourseModel;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,20 +15,24 @@ use App\Models\CourseModel;
 Auth::routes();
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
+    // PAGES
     Route::get('/', 'PageController@index');
     Route::get('/profile', 'PageController@profile')->middleware('auth');
 
     // MEMBER ROUTES
     Route::group(['prefix' => 'member', 'middleware' => 'RoleMember'], function () {
         Route::get('/', 'DashboardController@index')->name('home');
+
+        // Courses
         Route::get('/courses', 'CourseController@index');
     });
 
     // MENTOR ROUTES
     Route::group(['prefix' => 'mentor', 'middleware' => 'RoleMentor'], function () {
-        // 
+        // Dashboard
         Route::get('/', 'DashboardController@index')->name('home');
 
+        // Courses
         Route::group(['prefix' => 'courses'], function () {
             Route::get('/', 'CourseController@index');
             Route::post('/create', 'CourseController@store')->name('createCourse');
@@ -43,18 +41,4 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
             Route::delete('/delete/{id}', 'CourseController@delete')->name('deleteCourse');
         });
     });
-
-    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-    //Test (Temporary Route)
-    // Route::post('/home', [CourseController::class, 'createCourse'])->name('createCourse');
-    // Route::delete('/home/{id}', [CourseController::class, 'deleteCourse'])->name('deleteCourse');
-    // Route::patch('/home/{id}', [CourseController::class, 'updateCourse'])->name('updateCourse');
-    // Route::get('/home/{id}', function ($id) {
-    //     return view('updateCourse', [
-    //         'courseData' => CourseModel::find($id)->first(),
-    //         'categories' => CategoryController::getAll()
-    //     ]);
-    // });
 });
