@@ -22,6 +22,10 @@ class CourseController extends Controller
 
     public function searchCourse(Request $request)
     {
+        $request->validate([
+            'search' => 'required'
+        ]);
+
         $searchedCourses = Course::where('title', 'like', '%' . $request->search . '%')->get();
         return view('pages.search', [
             'searchedCourses' => $searchedCourses,

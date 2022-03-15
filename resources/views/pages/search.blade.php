@@ -21,8 +21,8 @@
                     <form action="{{ route('searchCourse') }}" method="POST">
                         @csrf
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="search" name="search"
-                                placeholder="Search Courses here">
+                            <input type="text" class="form-control @error('search') is-invalid @enderror" id="search"
+                                name="search" placeholder="Search Courses here" value="{{ old('search') }}">
                             <label for="search">Search Courses</label>
                         </div>
                     </form>
