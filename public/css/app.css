@@ -11,6 +11,11 @@
   color: white !important;
 }
 
+.bg-white {
+  background-color: white;
+  color: #34495e !important;
+}
+
 .bg-green-gradient {
   background: #49d983;
   background: linear-gradient(221deg, #49d983 0%, #c6e2d1 89%);
