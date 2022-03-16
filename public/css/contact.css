@@ -91,14 +91,14 @@
   }
 }
 .contact-section {
-  padding: 15px;
-  box-shadow: 1px 1px 5px;
+  margin-top: 20px;
   border-radius: 25px;
 }
 .contact-section .contact-container {
   margin: 0;
 }
-.contact-section .contact-container .contact-information-container, .contact-section .contact-container .contact-form-container {
+.contact-section .contact-container .contact-information-container,
+.contact-section .contact-container .contact-form-container {
   padding: 50px 5% !important;
   border-radius: 25px;
 }
@@ -167,14 +167,15 @@
   height: 50px;
   border-radius: 10px;
   margin-top: auto;
+  transition: 0.4s;
 }
 .contact-section .contact-container .contact-form-container .contact-form .button-wrapper button:hover {
-  background-color: #E31A56 !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
 }
 .contact-section .contact-container .contact-form-container .contact-form .button-wrapper button:focus {
-  background-color: #E31A56 !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
 }
-.contact-section .contact-container .contact-form-container .contact-form .message-textarea {
+.contact-section .contact-container .contact-form-container .contact-form .button-wrapper .message-textarea {
   height: 150px;
   max-height: 150px;
   min-height: 150px;

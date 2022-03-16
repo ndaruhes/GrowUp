@@ -1,15 +1,15 @@
-@import 'variables.scss';
+@import 'variables';
 
 //CONTACT CONTAINER
 .contact-section {
-    padding: 15px;
-    box-shadow: 1px 1px 5px;
+    margin-top: 20px;
     border-radius: 25px;
 
     .contact-container {
         margin: 0;
 
-        .contact-information-container, .contact-form-container {
+        .contact-information-container,
+        .contact-form-container {
             padding: 50px 5% !important;
             border-radius: 25px;
         }
@@ -33,7 +33,7 @@
                         height: 40px;
                     }
 
-                    p{
+                    p {
                         margin: 0;
                     }
                 }
@@ -85,7 +85,7 @@
                     border-bottom: 5px solid $green;
                 }
 
-                .button-wrapper{
+                .button-wrapper {
                     flex-grow: 1;
                     margin-top: 50px;
                     display: flex;
@@ -94,24 +94,24 @@
                         height: 50px;
                         border-radius: 10px;
                         margin-top: auto;
+                        transition: 0.4s;
+
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
+                        }
+
+                        &:focus {
+                            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
+                        }
                     }
 
-                    button:hover {
-                        background-color: $red !important;
+                    .message-textarea {
+                        height: 150px;
+                        max-height: 150px;
+                        min-height: 150px;
                     }
-
-                    button:focus {
-                        background-color: $red !important;
-                    }
-                }
-
-                .message-textarea {
-                    height: 150px;
-                    max-height: 150px;
-                    min-height: 150px;
                 }
             }
         }
     }
-
 }
