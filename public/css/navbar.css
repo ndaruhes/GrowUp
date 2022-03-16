@@ -117,3 +117,7 @@
   float: left;
   margin-right: 10px;
 }
+
+.dropdown-menu {
+  z-index: 1000;
+}

@@ -61,12 +61,22 @@ class CourseController extends Controller
         return redirect()->back()->with('success_message', 'You have successfully created a course');
     }
 
+    public function show($id)
+    {
+        $url = explode('/', url()->current());
+        $course = Course::findOrFail($id);
+        return view('courses.show', [
+            'course' => $course,
+            'managements' => (new ManagementController)->getAll(end($url))
+        ]);
+    }
+
     public function edit($id)
     {
         $course = Course::findOrFail($id);
         return view('courses.edit', [
             'course' => $course,
-            'categories' => CategoryController::index()
+            'categories' => CategoryController::index(),
         ]);
     }
 

@@ -18,7 +18,7 @@
     </div>
 
     {{-- CONTENT --}}
-    @if ($courses->count() == 0)
+    @if ($courses->count() != 0)
         <div class="table-wrapper bg-light">
             <table class="table">
                 <thead>
@@ -46,9 +46,10 @@
                                     <small class="badge bg-green-gradient">Rp{{ number_format($course->price) }}</small>
                                 @endif
                             </td>
-                            <td>{{ $course->description }}</td>
+                            <td>{{ substr($course->description, 0, 50) . '...' }}</td>
                             <td class="action-btn-table">
-                                <a href="#" class="text-dark"><i class="uil uil-eye"></i></a>
+                                <a href="{{ route('showCourse', $course->id) }}" class="text-dark"><i
+                                        class="uil uil-eye"></i></a>
                                 <a href="{{ route('editCourse', $course->id) }}" class="text-primary mx-1"><i
                                         class="uil uil-edit"></i></a>
                                 <a href="#" data-uri="{{ route('deleteCourse', $course->id) }}" class="text-danger"

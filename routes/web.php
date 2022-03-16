@@ -38,9 +38,24 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::group(['prefix' => 'courses'], function () {
             Route::get('/', 'CourseController@index');
             Route::post('/create', 'CourseController@store')->name('createCourse');
+            Route::get('/show/{id}', 'CourseController@show')->name('showCourse');
             Route::get('/edit/{id}', 'CourseController@edit')->name('editCourse');
             Route::put('/edit/{id}', 'CourseController@update')->name('updateCourse');
             Route::delete('/delete/{id}', 'CourseController@delete')->name('deleteCourse');
+        });
+
+        Route::group(['prefix' => 'forum'], function () {
+            // Route::get('/', 'CourseController@index');
+        });
+
+        // Management
+        Route::group(['prefix' => 'management'], function () {
+            Route::get('/', 'ManagementController@index');
+            Route::post('/create', 'ManagementController@store')->name('createManagement');
+            Route::get('/download/{id}', 'ManagementController@download')->name('downloadManagement');
+            Route::get('/edit/{id}', 'ManagementController@edit')->name('editManagement');
+            Route::put('/edit/{id}', 'ManagementController@update')->name('updateManagement');
+            Route::delete('/delete/{id}', 'ManagementController@delete')->name('deleteManagement');
         });
     });
 });

@@ -2,8 +2,8 @@
 $(document).ready(function () {
     $('#confirmDeleteModal').on('show.bs.modal', function (e) {
         $(this).find('#confirm_delete').attr('action', $(e.relatedTarget).data('uri'));
-    });
-});
+    })
+})
 
 // AOS
 const options = {
@@ -24,7 +24,7 @@ const options = {
     anchorPlacement: 'top-bottom',
 }
 
-AOS.init(options);
+AOS.init(options)
 
 
 // TOAST
@@ -32,4 +32,4 @@ const toastElList = [].slice.call(document.querySelectorAll('.toast'))
 const toastList = toastElList.map(function (toastEl) {
     return new bootstrap.Toast(toastEl)
 })
-toastList.forEach(toast => toast.show());
+toastList.forEach(toast => toast.show())

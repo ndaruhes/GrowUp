@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import 'variables';
 
 // HEADER DESKTOP
 .header {
@@ -15,7 +15,7 @@
             position: absolute;
             width: 200px;
             animation: sky 12s reverse infinite;
-            z-index: 1000;
+            z-index: 999;
         }
 
         .header-asset1 {
@@ -191,7 +191,7 @@
                 position: absolute;
                 width: 125px;
                 animation: sky 12s reverse infinite;
-                z-index: 1000;
+                z-index: 999;
             }
 
             .header-asset1 {

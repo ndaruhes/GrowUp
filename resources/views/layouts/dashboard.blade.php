@@ -15,6 +15,9 @@
                 <a href="{{ Auth::user()->role == 'Mentor' ? url('mentor/courses') : url('member/courses') }}"
                     class="btn bg-outline-green btn-sm"><i class="uil uil-notebooks me-1"></i>My Courses
                 </a>
+                <a href="{{ Auth::user()->role == 'Mentor' ? url('mentor/forum') : url('member/forum') }}"
+                    class="btn bg-outline-green btn-sm"><i class="uil uil-comments-alt me-1"></i>Forum
+                </a>
                 <a href="/profile" class="btn bg-outline-green btn-sm"><i class="uil uil-user-md me-1"></i>Profile
                 </a>
             </div>

@@ -21,4 +21,9 @@ class Course extends Model
     {
         return $this->belongsTo('App\Models\User', 'mentor_id', 'id');
     }
+
+    public function management()
+    {
+        return $this->hasMany('App\Models\Management', 'course_id');
+    }
 }

@@ -94,9 +94,9 @@
 
 @section('jsExternal')
     <script>
-        let cover = document.getElementById('cover');
+        let cover = document.getElementById('cover')
         let coverPreview = document.getElementById('cover-preview')
-        let changeCover = document.getElementById('changeCover');
+        let changeCover = document.getElementById('changeCover')
         cover.onchange = (e) => {
             const [file] = cover.files
             if (file) {

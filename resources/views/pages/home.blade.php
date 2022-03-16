@@ -79,7 +79,7 @@
     </div>
 
     {{-- COURSES --}}
-    <div class="courses bg-light">
+    <div class="courses">
         <div class="container">
             <div class="courses-header" data-aos="fade-down">
                 <div class="text-center">

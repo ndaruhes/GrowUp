@@ -96,7 +96,7 @@
   position: absolute;
   width: 200px;
   animation: sky 12s reverse infinite;
-  z-index: 1000;
+  z-index: 999;
 }
 .header .image-right .header-asset1 {
   right: 100px;
@@ -239,7 +239,7 @@
     position: absolute;
     width: 125px;
     animation: sky 12s reverse infinite;
-    z-index: 1000;
+    z-index: 999;
   }
   .header .image-left .header-asset1 {
     right: 20px;

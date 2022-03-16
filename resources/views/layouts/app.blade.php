@@ -26,19 +26,19 @@
     @yield('content')
 
     <!-- MODAL DELETE -->
-    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered confirm" role="document">
+        <div class="modal-dialog modal-dialog-centered confirm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Delete Confirmation</h5>
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">Delete Confirmation</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     Are you sure you want to delete?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
                     <form id="confirm_delete" method="POST" action="">
                         @method('delete')
                         @csrf
@@ -50,13 +50,14 @@
     </div>
 
     {{-- TOAST --}}
-    @if (session('success_message'))
+    @if (session('success_message') || session('error_message'))
         <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
-            <div class="toast align-items-center text-primaryColor bg-green-gradient border-0" role="alert"
-                aria-live="assertive" aria-atomic="true">
+            <div class="toast align-items-center text-white border-0 {{ session('success_message') ? 'bg-success' : 'bg-danger' }}"
+                role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">
-                        <i class="fas fa-check me-2"></i> {{ session('success_message') }}
+                        <i class="fas fa-check me-2"></i>
+                        {{ session('success_message') ? session('success_message') : session('error_message') }}
                     </div>
                     <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
                         aria-label="Close"></button>
@@ -66,7 +67,13 @@
     @endif
 
     {{-- FOOTER --}}
-    @include('layouts.footer')
+    @php
+        $currURL = explode('/', Request::path());
+        $authURL = ['register', 'login'];
+    @endphp
+    @if ($currURL != in_array($currURL[0], $authURL))
+        @include('layouts.footer')
+    @endif
 
     {{-- SCRIPT --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

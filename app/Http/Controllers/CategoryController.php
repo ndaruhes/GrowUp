@@ -12,4 +12,9 @@ class CategoryController extends Controller
     {
         return Category::all();
     }
+
+    public static function show($id)
+    {
+        return Category::findOrFail($id);
+    }
 }
