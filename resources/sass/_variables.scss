@@ -16,6 +16,11 @@ $grey: #656E56;
     color: $white !important;
 }
 
+.bg-white {
+    background-color: $white;
+    color: $primaryColor !important;
+}
+
 // BACKGROUND GRADIENT
 .bg-green-gradient {
     background: rgb(73, 217, 131);

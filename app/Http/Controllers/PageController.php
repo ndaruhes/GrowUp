@@ -34,7 +34,7 @@ class PageController extends Controller
 
     public function contact()
     {
-        return view('pages.contactus');
+        return view('pages.contact');
     }
 
     public function cleanString($str)

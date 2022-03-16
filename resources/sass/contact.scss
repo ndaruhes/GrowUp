@@ -1,3 +1,113 @@
 @import 'variables.scss';
 
+//CONTACT CONTAINER
+.contact-section {
+    padding: 15px;
+    box-shadow: 1px 1px 5px;
+    border-radius: 25px;
+
+    .contact-container {
+        margin: 0;
+
+        .contact-information-container, .contact-form-container {
+            padding: 50px 5% !important;
+            border-radius: 25px;
+        }
+
+        //CONTACT INFORMATION
+        .contact-information-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .contact-information {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .contact {
+                    align-items: center;
+                    gap: 5px;
+
+                    img {
+                        height: 40px;
+                    }
+
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+
+            .social-media-container {
+                display: flex;
+                border-radius: 10px;
+                align-items: center;
+
+                img {
+                    height: 40px;
+                }
+
+                .app-icon {
+                    padding: 4px;
+                    border-radius: 10px;
+                    box-shadow: 0.5px 0 6px $primaryColor;
+                }
+
+                .social-media-icon {
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-grow: 1;
+
+                    a {
+                        text-decoration: none;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        //CONTACT FORM
+        .contact-form-container {
+            .contact-form {
+                height: 100%;
+
+                .contact-input {
+                    border: 0;
+                    border-bottom: 5px solid $green;
+                }
+
+                .button-wrapper{
+                    margin-top: 40px;
+
+                    button {
+                        height: 48px;
+                        border-radius: 10px;
+                    }
+
+                    button:hover {
+                        background-color: $red !important;
+                    }
+
+                    button:focus {
+                        background-color: $red !important;
+                    }
+                }
+
+                .message-textarea {
+                    height: 150px;
+                    max-height: 150px;
+                    min-height: 150px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .contact-information-container {
+        gap: 40px;
+    }
+}
 

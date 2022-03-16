@@ -1,0 +1,177 @@
+.bg-green {
+  background: #49D983;
+  color: white !important;
+}
+
+.bg-red {
+  background: #E31A56;
+  color: white !important;
+}
+
+.bg-white {
+  background-color: white;
+  color: #34495e !important;
+}
+
+.bg-green-gradient {
+  background: #49d983;
+  background: linear-gradient(221deg, #49d983 0%, #c6e2d1 89%);
+  color: white !important;
+}
+
+.bg-red-gradient {
+  background: #e31a56;
+  background: linear-gradient(189deg, #e31a56 0%, #ffdce7 100%);
+  color: white !important;
+}
+
+.bg-outline-green {
+  color: #49D983 !important;
+  border: 1px solid #49D983;
+}
+.bg-outline-green:hover {
+  background: #49D983 !important;
+  color: white !important;
+}
+
+.bg-outline-red {
+  color: #E31A56 !important;
+  border: 1px solid #E31A56;
+}
+.bg-outline-red:hover {
+  background: #E31A56 !important;
+  color: white !important;
+}
+
+.text-primaryColor {
+  color: #34495e !important;
+}
+
+.text-red {
+  color: #E31A56 !important;
+}
+
+.text-green {
+  color: #49D983 !important;
+}
+
+@-webkit-keyframes sky {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 20px);
+  }
+  50% {
+    transform: translate(20px, 0);
+  }
+  75% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes sky {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 20px);
+  }
+  50% {
+    transform: translate(20px, 0);
+  }
+  75% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.contact-section {
+  padding: 15px;
+  box-shadow: 1px 1px 5px;
+  border-radius: 25px;
+}
+.contact-section .contact-container {
+  margin: 0;
+}
+.contact-section .contact-container .contact-information-container, .contact-section .contact-container .contact-form-container {
+  padding: 50px 5% !important;
+  border-radius: 25px;
+}
+.contact-section .contact-container .contact-information-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-section .contact-container .contact-information-container .contact-information {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-section .contact-container .contact-information-container .contact-information .contact {
+  align-items: center;
+  gap: 5px;
+}
+.contact-section .contact-container .contact-information-container .contact-information .contact img {
+  height: 40px;
+}
+.contact-section .contact-container .contact-information-container .contact-information .contact p {
+  margin: 0;
+}
+.contact-section .contact-container .contact-information-container .social-media-container {
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+}
+.contact-section .contact-container .contact-information-container .social-media-container img {
+  height: 40px;
+}
+.contact-section .contact-container .contact-information-container .social-media-container .app-icon {
+  padding: 4px;
+  border-radius: 10px;
+  box-shadow: 0.5px 0 6px #34495e;
+}
+.contact-section .contact-container .contact-information-container .social-media-container .social-media-icon {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+.contact-section .contact-container .contact-information-container .social-media-container .social-media-icon a {
+  text-decoration: none;
+  display: inline-block;
+}
+.contact-section .contact-container .contact-form-container .contact-form {
+  height: 100%;
+}
+.contact-section .contact-container .contact-form-container .contact-form .contact-input {
+  border: 0;
+  border-bottom: 5px solid #49D983;
+}
+.contact-section .contact-container .contact-form-container .contact-form .button-wrapper {
+  margin-top: 40px;
+}
+.contact-section .contact-container .contact-form-container .contact-form .button-wrapper button {
+  height: 48px;
+  border-radius: 10px;
+}
+.contact-section .contact-container .contact-form-container .contact-form .button-wrapper button:hover {
+  background-color: #E31A56 !important;
+}
+.contact-section .contact-container .contact-form-container .contact-form .button-wrapper button:focus {
+  background-color: #E31A56 !important;
+}
+.contact-section .contact-container .contact-form-container .contact-form .message-textarea {
+  height: 150px;
+  max-height: 150px;
+  min-height: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-information-container {
+    gap: 40px;
+  }
+}
