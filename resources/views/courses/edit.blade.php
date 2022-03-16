@@ -56,7 +56,7 @@
                         </div>
                         <div class="col-md-10 col-9 p-0 modal-user-info">
                             <span>{{ Auth::user()->name }}</span>
-                            <small class="badge bg-green-gradient">{{ Auth::user()->role }}</small>
+                            <small class="badge bg-green">{{ Auth::user()->role }}</small>
                         </div>
                     </div>
                 </div>

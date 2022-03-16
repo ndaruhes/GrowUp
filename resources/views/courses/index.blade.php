@@ -41,9 +41,9 @@
                             <td>
                                 <span class="d-block">{{ $course->title }}</span>
                                 @if ($course->price == null)
-                                    <small class="badge bg-green-gradient"><i class="uil uil-rocket me-1"></i>Free</small>
+                                    <small class="badge bg-green"><i class="uil uil-rocket me-1"></i>Free</small>
                                 @else
-                                    <small class="badge bg-green-gradient">Rp{{ number_format($course->price) }}</small>
+                                    <small class="badge bg-green">Rp{{ number_format($course->price) }}</small>
                                 @endif
                             </td>
                             <td>{{ substr($course->description, 0, 50) . '...' }}</td>

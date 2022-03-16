@@ -10,24 +10,24 @@
     <div class="header">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 image-left text-center" data-aos="fade-down">
+                <div class="col-md-5 image-left text-center" data-aos="fade-down">
                     <img src="{{ asset('images/header-asset1.png') }}" alt="header-asset1.png" class="header-asset1">
                     <img src="{{ asset('images/header-asset2.png') }}" alt="header-asset2.png" class="header-asset2">
                     <img src="{{ asset('images/3dimages/hero.png') }}" class="w-75" alt="hero.png">
                 </div>
-                <div class="col-md-6 text" data-aos="fade-up">
+                <div class="col-md-7 text" data-aos="fade-up">
                     <div>
-                        <span>Hello There, Welcome 👋</span>
-                        <h1>A New Different Way to Improve Your Skills</h1>
+                        <span>Start Growing With Us 🚀</span>
+                        <h1>Kembangkan Skill Anda Bersama Mentor Berpengalaman</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl faucibus viverra bibendum sed.
                             Ipsum mauris est, semper tincidunt.</p>
-                        <button class="btn bg-green btn-started">Get Started</button>
+                        <button class="btn bg-green btn-started me-2">Yukk, Gas Eksplor</button>
                     </div>
                 </div>
-                <div class="col-md-6 image-right text-center" data-aos="fade-down">
+                <div class="col-md-5 image-right text-center" data-aos="fade-down">
                     <img src="{{ asset('images/header-asset1.png') }}" alt="header-asset1.png" class="header-asset1">
                     <img src="{{ asset('images/header-asset2.png') }}" alt="header-asset2.png" class="header-asset2">
-                    <img src="{{ asset('images/3dimages/hero.png') }}" class="w-75" alt="hero.png">
+                    <img src="{{ asset('images/3dimages/hero.png') }}" class="w-100" alt="hero.png">
                 </div>
             </div>
         </div>

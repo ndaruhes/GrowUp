@@ -27,7 +27,7 @@
                         </div>
                     </form>
                 </div>
-
+                
                 {{-- SEARCH RESULT --}}
                 <div class="courses">
                     <div class="category-title d-flex align-items-center">

@@ -52,7 +52,7 @@
     {{-- TOAST --}}
     @if (session('success_message') || session('error_message'))
         <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
-            <div class="toast align-items-center text-white border-0 {{ session('success_message') ? 'bg-success' : 'bg-danger' }}"
+            <div class="toast align-items-center text-white border-0 {{ session('success_message') ? 'bg-green' : 'bg-red' }}"
                 role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">
