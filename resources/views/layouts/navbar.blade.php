@@ -24,7 +24,7 @@ $user = Auth::user();
                             class="uil uil-rocket me-1"></i>Courses</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="uil uil-phone-volume me-1"></i>Contact</a>
+                    <a class="nav-link" href="{{ url('/contact') }}"><i class="uil uil-phone-volume me-1"></i>Contact</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
