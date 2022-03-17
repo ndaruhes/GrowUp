@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-md-7 text" data-aos="fade-up">
                     <div>
-                        <span>Start Growing With Us 🚀</span>
+                        <span id="slogan"></span>
                         <h1>Kembangkan Skill Anda Bersama Mentor Berpengalaman</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl faucibus viverra bibendum sed.
                             Ipsum mauris est, semper tincidunt.</p>

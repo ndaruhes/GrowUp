@@ -27,7 +27,7 @@
                         </div>
                     </form>
                 </div>
-                
+
                 {{-- SEARCH RESULT --}}
                 <div class="courses">
                     <div class="category-title d-flex align-items-center">
@@ -48,7 +48,7 @@
                                                 <span class="title">{{ $courses->title }}</span>
                                                 @if ($courses->price == null)
                                                     <span class="price text-red"><i
-                                                            class="uil uil-rocket me-1"></i>Free</span>
+                                                            class="uil uil-rocket me-1"></i>Gratis</span>
                                                 @else
                                                     <span
                                                         class="price text-red">Rp{{ number_format($courses->price) }}</span>

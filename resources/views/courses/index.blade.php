@@ -4,7 +4,9 @@
 
 @section('dashboard_content')
     {{-- ADD COURSE MODAL --}}
-    @include('courses.create')
+    @if (Auth::user()->role == 'Mentor')
+        @include('courses.create')
+    @endif
 
     {{-- TITLE --}}
     <div class="section-title">
@@ -13,8 +15,10 @@
             My Courses
         </h1>
         <div class="line"></div>
-        <button class="btn btn-dark btn-sm add-btn" data-bs-toggle="modal" data-bs-target="#addModal">Create Course<i
-                class="uil uil-plus ms-1"></i></button>
+        @if (Auth::user()->role == 'Mentor')
+            <button class="btn btn-dark btn-sm add-btn" data-bs-toggle="modal" data-bs-target="#addModal">Create Course<i
+                    class="uil uil-plus ms-1"></i></button>
+        @endif
     </div>
 
     {{-- CONTENT --}}
@@ -50,11 +54,13 @@
                             <td class="action-btn-table">
                                 <a href="{{ route('showCourse', $course->id) }}" class="text-dark"><i
                                         class="uil uil-eye"></i></a>
-                                <a href="{{ route('editCourse', $course->id) }}" class="text-primary mx-1"><i
-                                        class="uil uil-edit"></i></a>
-                                <a href="#" data-uri="{{ route('deleteCourse', $course->id) }}" class="text-danger"
-                                    data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i
-                                        class="uil uil-trash-alt"></i></a>
+                                @if (Auth::user()->role == 'Mentor')
+                                    <a href="{{ route('editCourse', $course->id) }}" class="text-primary mx-1"><i
+                                            class="uil uil-edit"></i></a>
+                                    <a href="#" data-uri="{{ route('deleteCourse', $course->id) }}" class="text-danger"
+                                        data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i
+                                            class="uil uil-trash-alt"></i></a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

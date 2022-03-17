@@ -64,7 +64,7 @@ class CourseController extends Controller
         $course = Course::findOrFail($id);
         return view('courses.show', [
             'course' => $course,
-            'managements' => (new ManagementController)->getAll(end($url))
+            'sessions' => (new SessionController)->getAll(end($url))
         ]);
     }
 

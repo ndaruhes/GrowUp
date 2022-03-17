@@ -22,8 +22,8 @@ class Course extends Model
         return $this->belongsTo('App\Models\User', 'mentor_id', 'id');
     }
 
-    public function management()
+    public function session()
     {
-        return $this->hasMany('App\Models\Management', 'course_id');
+        return $this->hasMany('App\Models\Session', 'course_id');
     }
 }

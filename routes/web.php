@@ -50,13 +50,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         });
 
         // Management
-        Route::group(['prefix' => 'management'], function () {
-            Route::get('/', 'ManagementController@index');
-            Route::post('/create', 'ManagementController@store')->name('createManagement');
-            Route::get('/download/{id}', 'ManagementController@download')->name('downloadManagement');
-            Route::get('/edit/{id}', 'ManagementController@edit')->name('editManagement');
-            Route::put('/edit/{id}', 'ManagementController@update')->name('updateManagement');
-            Route::delete('/delete/{id}', 'ManagementController@delete')->name('deleteManagement');
+        Route::group(['prefix' => 'session'], function () {
+            Route::get('/', 'SessionController@index');
+            Route::post('/create', 'SessionController@store')->name('createSession');
+            Route::get('/download/{id}', 'SessionController@downloadResource')->name('downloadResource');
+            Route::get('/edit/{id}/{num}', 'SessionController@edit')->name('editSession');
+            Route::put('/edit/{id}', 'SessionController@update')->name('updateSession');
+            Route::delete('/delete/{id}', 'SessionController@delete')->name('deleteSession');
         });
     });
 });

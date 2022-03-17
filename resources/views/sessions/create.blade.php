@@ -2,12 +2,12 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createMeetLabel"><i class="uil uil-plus me-1"></i>Make a
-                    Meeting</h5>
+                <h5 class="modal-title" id="createMeetLabel"><i class="uil uil-plus me-1"></i>Buat Jadwal Pertemuan
+                </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('createManagement') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('createSession') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
@@ -20,7 +20,7 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Keterangan Materi</label>
+                                <label>Deskripsi Materi</label>
                                 <textarea rows="4" class="form-control @error('description') is-invalid @enderror" placeholder="Keterangan Materi..."
                                     name="description">{{ old('description') }}</textarea>
                                 @error('description')

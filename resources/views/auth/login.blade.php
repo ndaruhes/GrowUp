@@ -22,7 +22,7 @@
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input name="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                id="email">
+                                id="email" value="{{ old('email') }}">
                             @error('email')
                                 <small class=" text-danger">{{ $message }}</small>
                             @enderror
@@ -30,7 +30,7 @@
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
                             <input name="password" type="password"
-                                class="form-control @error('password') is-invalid @enderror" id="password">
+                                class="form-control @error('password') is-invalid @enderror" id="password" value="{{ old('password') }}">
                             @error('password')
                                 <small class=" text-danger">{{ $message }}</small>
                             @enderror

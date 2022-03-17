@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Management extends Model
+class Session extends Model
 {
     use HasFactory;
-    protected $table = 'managements';
+    protected $table = 'sessions';
     protected $guarded = [
         'id',
     ];

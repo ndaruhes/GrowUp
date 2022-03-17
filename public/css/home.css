@@ -139,6 +139,10 @@
   padding: 15px 0;
   font-size: 22px;
   font-weight: bold;
+  transition: 0.4s;
+}
+.header .text .btn-started:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
 }
 
 .partners .content {
