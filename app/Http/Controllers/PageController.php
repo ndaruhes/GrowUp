@@ -37,6 +37,11 @@ class PageController extends Controller
         return view('pages.contact');
     }
 
+    public function about()
+    {
+        return view('pages.about');
+    }
+
     public function cleanString($str)
     {
         $str = str_replace(' ', '', $str);

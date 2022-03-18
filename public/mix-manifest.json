@@ -9,5 +9,6 @@
     "/css/explore.css": "/css/explore.css",
     "/css/banner.css": "/css/banner.css",
     "/css/register.css": "/css/register.css",
-    "/css/auth.css": "/css/auth.css"
+    "/css/auth.css": "/css/auth.css",
+    "/css/about.css": "/css/about.css"
 }
