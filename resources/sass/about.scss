@@ -7,9 +7,11 @@ header {
     background-size: cover;
     overflow: hidden;
 }
+
 .container {
     height: 100%;
 }
+
 .col-container {
     height: 100%;
     align-items: center;
@@ -65,7 +67,6 @@ header {
 
             h2, h3 {
                 font-weight: bold;
-                white-space: nowrap;
             }
 
             hr {
@@ -80,6 +81,7 @@ header {
         margin: 40px 0;
         display: flex;
         justify-content: center;
+        
         .card-wrapper {
             display: flex;
             flex-direction: column;
@@ -109,6 +111,7 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+
     .card-container {
         margin: 40px 0;
         display: flex;

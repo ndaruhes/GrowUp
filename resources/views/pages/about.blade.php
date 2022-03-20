@@ -27,7 +27,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-right d-flex align-items-center justify-content-center flex-shrink-1 flex-grow-1 my-4">
+            <div class="col-lg-4 col-right d-none d-lg-flex align-items-center justify-content-end flex-shrink-1 flex-grow-1 my-4">
                 <img src="{{ asset('images/about-image/join-card.png') }}" alt="">
             </div>
         </div>
