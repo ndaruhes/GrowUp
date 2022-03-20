@@ -32,7 +32,7 @@
                     <div class="contact-social-media">
                         <div class="social-media-container bg-white">
                             <div class="app-icon">
-                                <img src="{{ asset('images/icons/Apps.png') }}" alt="">
+                                <img src="{{ asset('images/contact-icon/Apps.png') }}" alt="">
                             </div>
                             <div class="social-media-icon">
                                 <a href="">
