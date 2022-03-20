@@ -10,8 +10,8 @@
     <footer>
     <div class="row justify-content-between">
         <div class="col footer-header-wrapper">
-        <h5 class="text-green footer-header">GrowUp</h5>
-        <p>A New Different Way to Improve Your Skills</p>
+            <h5 class="text-green footer-header">GrowUp</h5>
+            <p>A New Different Way to Improve Your Skills</p>
         </div>
 
         <div class="col">

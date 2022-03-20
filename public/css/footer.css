@@ -7,24 +7,21 @@ footer .row {
 footer .row .col {
   min-width: 296px;
 }
-
-.footer-header-wrapper .footer-header {
+footer .footer-header-wrapper .footer-header {
   font-size: 36px;
   font-weight: 800;
 }
-.footer-header-wrapper p {
+footer .footer-header-wrapper p {
   width: 200px;
 }
-
-.send-icon {
+footer .send-icon {
   height: 20px;
 }
-
-.footer-social-media-wrapper {
+footer .footer-social-media-wrapper {
   display: flex;
   gap: 12px;
 }
-.footer-social-media-wrapper img {
+footer .footer-social-media-wrapper img {
   height: 28px;
 }
 

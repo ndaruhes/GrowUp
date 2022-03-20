@@ -8,30 +8,33 @@ footer {
             min-width: 296px;
         }
     }
-}
 
-.footer-header-wrapper {
-    .footer-header {
-        font-size: 36px;
-        font-weight: 800;
+    .footer-header-wrapper {
+        .footer-header {
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        p {
+            width: 200px;
+        }
     }
 
-    p {
-        width: 200px;
+    .send-icon {
+        height: 20px;
+    }
+
+    .footer-social-media-wrapper {
+        display: flex;
+        gap: 12px;
+        
+        img {
+            height: 28px;
+        }
     }
 }
 
-.send-icon {
-    height: 20px;
-}
 
-.footer-social-media-wrapper {
-    display: flex;
-    gap: 12px;
-    img {
-        height: 28px;
-    }
-}
 
 @media screen and (max-width: 768px) {
     footer {
