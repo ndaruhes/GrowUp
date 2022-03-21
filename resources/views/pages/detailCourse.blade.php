@@ -12,7 +12,7 @@
     {{-- CLASS DETAIL --}}
     <div class="container">
         <div class="row">
-            <div class="col-md-5 info">
+            <div class="col-md-4 info">
                 <img src="{{ asset('storage/images/cover/' . $course->cover) }}" alt="{{ $course->title }}"
                     class="w-100">
                 <span class="title mb-1">{{ $course->title }}</span>
@@ -48,7 +48,8 @@
                                     ({{ \Carbon\Carbon::parse($session->schedule)->format('d M Y') . ', ' . $session->time }})
                                 </button>
                             </h2>
-                            <div id="flush-collapse{{ $session->id }}" class="accordion-collapse collapse"
+                            <div id="flush-collapse{{ $session->id }}"
+                                class="accordion-collapse collapse @if ($loop->iteration == 1) show @endif"
                                 aria-labelledby="flush-heading{{ $session->id }}"
                                 data-bs-parent="#accordionFlushSession">
                                 <div class="accordion-body">
