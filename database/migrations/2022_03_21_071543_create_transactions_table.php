@@ -13,16 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sessions', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('description');
-            $table->string('meeting_link');
-            $table->string('resources');
-            $table->date('schedule');
-            $table->string('time');
             $table->integer('course_id');
-            $table->enum('done_status', ['True', 'False'])->default("False");
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
@@ -34,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sessions');
+        Schema::dropIfExists('transactions');
     }
 };

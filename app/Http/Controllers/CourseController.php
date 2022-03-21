@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Course;
+use App\Models\Transaction;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +14,8 @@ class CourseController extends Controller
 {
     public function index()
     {
-        $courses = Course::where('mentor_id', Auth::user()->id)->get();
+        $user = Auth::user();
+        $courses = $user->role == 'Mentor' ? Course::where('mentor_id', $user->id)->get() : Transaction::where('user_id', $user->id)->get();
         return view('courses.index', [
             'courses' => $courses,
             'categories' => CategoryController::index()

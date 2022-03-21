@@ -22,6 +22,6 @@
     </div>
     <div class="user-info">
         <span class="title"><i class="uil uil-calendar-alt me-1"></i>Tanggal Registrasi</span>
-        <span class="value">{{ \Carbon\Carbon::parse(Auth::user()->created_at)->format('M d, Y') }}</span>
+        <span class="value">{{ \Carbon\Carbon::parse(Auth::user()->created_at)->format('d M Y') }}</span>
     </div>
 @endsection

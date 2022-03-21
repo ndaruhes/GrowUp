@@ -94,9 +94,23 @@
   margin-top: 20px;
 }
 
-.explore {
-  border-radius: 10px;
+.categories-menu {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+.categories-menu::-webkit-scrollbar {
+  display: none;
+}
+.categories-menu .categories-menu-panel {
+  width: 1450px;
+}
+.categories-menu .categories-menu-panel a {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
 .explore .explore-heading {
   margin-bottom: 40px;
 }
@@ -105,59 +119,110 @@
 }
 .explore .explore-heading .title img {
   width: 35px;
+  margin-left: 10px;
 }
 .explore .explore-heading .title span {
   font-size: 23px;
   font-weight: bold;
-  margin-left: 10px;
 }
 .explore .explore-heading .description {
+  width: 70%;
   font-size: 18px;
 }
 .explore .courses {
   margin-bottom: 40px;
 }
 .explore .courses .category-title {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .explore .courses .category-title img {
   width: 30px;
 }
 .explore .courses .category-title span {
   font-size: 20px;
-  margin-left: 5px;
+  margin-left: 7px;
   font-weight: bold;
 }
 .explore .courses .item-content {
-  background: #F8F9FA;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border-radius: 10px;
-  padding: 10px;
   min-height: 90px;
   display: block;
   text-decoration: none;
 }
+.explore .courses .item-content .image {
+  margin-bottom: 10px;
+}
 .explore .courses .item-content .image img {
   border-radius: 5px;
-}
-.explore .courses .item-content .text {
-  padding-left: 0;
 }
 .explore .courses .item-content .text span {
   display: block;
 }
 .explore .courses .item-content .text .title {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   color: #34495e;
 }
-.explore .courses .item-content .text .price {
-  font-size: 15px;
-  margin-bottom: 10px;
-}
 .explore .courses .item-content .text .mentor {
-  font-size: 12px;
-  padding: 3px 5px;
-  font-weight: bold;
+  font-size: 15px;
   border-radius: 5px;
+  color: grey;
+  margin-bottom: 5px;
+}
+.explore .courses .item-content .text .price {
+  font-size: 18px;
+  color: #E31A56;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin-top: 10px;
+  }
+
+  .categories-menu .categories-menu-panel {
+    width: 500px;
+  }
+  .categories-menu .categories-menu-panel a {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .explore .explore-heading .title {
+    margin-bottom: 5px;
+  }
+  .explore .explore-heading .title img {
+    width: 25px;
+  }
+  .explore .explore-heading .title span {
+    font-size: 20px;
+  }
+  .explore .explore-heading .description {
+    width: 100%;
+    font-size: 17px;
+  }
+  .explore .courses .category-title img {
+    width: 25px;
+  }
+  .explore .courses .category-title span {
+    font-size: 18px;
+  }
+  .explore .courses .item-content {
+    min-height: auto;
+  }
+  .explore .courses .item-content .image {
+    margin-bottom: 0;
+  }
+  .explore .courses .item-content .text {
+    padding-left: 0;
+  }
+  .explore .courses .item-content .text .title {
+    font-size: 15px;
+  }
+  .explore .courses .item-content .text .mentor {
+    font-size: 14px;
+    margin: 3px 0;
+  }
+  .explore .courses .item-content .text .price {
+    font-size: 15px;
+  }
 }

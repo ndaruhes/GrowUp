@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Course;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CourseSeeder extends Seeder
 {
@@ -15,7 +16,18 @@ class CourseSeeder extends Seeder
     public function run()
     {
         $courses = [
-            ['sampul.png', 'Membuat REST API dengan ExpressJS', 'Belajar lebih jauh mengenai pengertian, fungsi, dan cara kerja dari Express JS pada pengembangan aplikasi di sisi back end secara fleksibel.', '', '7', '1']
+            ['WhatsApp Image 2022-03-13 at 20.11.56 (1)-iJWGigJu9O-20220321044222.jpeg', 'Membuat REST API Menggunakan ExpressJS', 'Belajar lebih jauh mengenai pengertian, fungsi, dan cara kerja dari Express JS pada pengembangan aplikasi di sisi back end secara fleksibel.', null, '7', '1']
         ];
+
+        foreach ($courses as $course) {
+            Course::create([
+                'cover' => $course[0],
+                'title' => $course[1],
+                'description' => $course[2],
+                'price' => $course[3],
+                'category_id' => $course[4],
+                'mentor_id' => $course[5],
+            ]);
+        }
     }
 }

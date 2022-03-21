@@ -4,10 +4,27 @@
     margin-top: 20px;
 }
 
-.explore {
-    // padding: 20px;
-    border-radius: 10px;
+.categories-menu {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .categories-menu-panel {
+        width: 1450px;
+
+        a {
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    }
+}
+
+.explore {
     .explore-heading {
         margin-bottom: 40px;
 
@@ -16,16 +33,17 @@
 
             img {
                 width: 35px;
+                margin-left: 10px;
             }
 
             span {
                 font-size: 23px;
                 font-weight: bold;
-                margin-left: 10px;
             }
         }
 
         .description {
+            width: 70%;
             font-size: 18px;
         }
     }
@@ -34,7 +52,7 @@
         margin-bottom: 40px;
 
         .category-title {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
 
             img {
                 width: 30px;
@@ -42,53 +60,125 @@
 
             span {
                 font-size: 20px;
-                margin-left: 5px;
+                margin-left: 7px;
                 font-weight: bold;
             }
         }
 
         .item-content {
-            background: #F8F9FA;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            border-radius: 10px;
-            padding: 10px;
             min-height: 90px;
             display: block;
             text-decoration: none;
 
             .image {
+                margin-bottom: 10px;
+
                 img {
                     border-radius: 5px;
                 }
             }
 
             .text {
-                padding-left: 0;
 
                 span {
                     display: block;
                 }
 
                 .title {
-                    font-size: 15px;
+                    font-size: 18px;
                     font-weight: bold;
                     color: $primaryColor;
                 }
 
-                .price {
+                .mentor {
                     font-size: 15px;
-                    margin-bottom: 10px;
+                    border-radius: 5px;
+                    color: grey;
+                    margin-bottom: 5px;
                 }
 
-                .mentor {
-                    font-size: 12px;
-                    padding: 3px 5px;
+                .price {
+                    font-size: 18px;
+                    color: $red;
                     font-weight: bold;
-                    border-radius: 5px;
                 }
             }
         }
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .wrapper {
+        margin-top: 10px;
     }
 
+    .categories-menu {
+        .categories-menu-panel {
+            width: 500px;
+
+            a {
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .explore {
+        .explore-heading {
+
+            .title {
+                margin-bottom: 5px;
+
+                img {
+                    width: 25px;
+                }
+
+                span {
+                    font-size: 20px;
+                }
+            }
+
+            .description {
+                width: 100%;
+                font-size: 17px;
+            }
+        }
+
+        .courses {
+            .category-title {
+                img {
+                    width: 25px;
+                }
+
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            .item-content {
+                min-height: auto;
+
+                .image {
+                    margin-bottom: 0;
+                }
+
+                .text {
+                    padding-left: 0;
+
+                    .title {
+                        font-size: 15px;
+                    }
+
+                    .mentor {
+                        font-size: 14px;
+                        margin: 3px 0;
+                    }
+
+                    .price {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
 }

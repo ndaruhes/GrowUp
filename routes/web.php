@@ -20,14 +20,19 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/profile', 'PageController@profile')->middleware('auth');
     Route::get('/explore', 'PageController@explore');
     Route::get('/contact', 'PageController@contact')->name('contact');
+    Route::get('/courses/explore/{id}', 'PageController@detailCourse')->name('detailCourse');
     Route::post('/explore/search', 'CourseController@searchCourse')->name('searchCourse');
+    Route::post('/checkout/{id}', 'TransactionController@checkout')->name('checkout');
+    Route::get('/download/{id}', 'SessionController@downloadResource')->name('downloadResource');
 
     // MENTEE ROUTES
     Route::group(['prefix' => 'mentee', 'middleware' => 'RoleMentee'], function () {
         Route::get('/', 'DashboardController@index')->name('home');
 
         // Kelas
-        Route::get('/courses', 'CourseController@index');
+        Route::group(['prefix' => 'courses'], function () {
+            Route::get('/', 'CourseController@index');
+        });
     });
 
     // MENTOR ROUTES
@@ -45,6 +50,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
             Route::delete('/delete/{id}', 'CourseController@delete')->name('deleteCourse');
         });
 
+        // Forum
         Route::group(['prefix' => 'forum'], function () {
             // Route::get('/', 'CourseController@index');
         });
@@ -53,7 +59,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::group(['prefix' => 'session'], function () {
             Route::get('/', 'SessionController@index');
             Route::post('/create', 'SessionController@store')->name('createSession');
-            Route::get('/download/{id}', 'SessionController@downloadResource')->name('downloadResource');
             Route::get('/edit/{id}/{num}', 'SessionController@edit')->name('editSession');
             Route::put('/edit/{id}', 'SessionController@update')->name('updateSession');
             Route::delete('/delete/{id}', 'SessionController@delete')->name('deleteSession');

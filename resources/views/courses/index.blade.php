@@ -1,10 +1,10 @@
 @extends('layouts.dashboard')
-
-@section('title', 'Kelola Kelas | GrowUp')
+@php $user = Auth::user(); @endphp
+@section('title', $user->role == 'Mentor' ? 'Kelola Kelas' : 'Kelas Saya' . ' | GrowUp')
 
 @section('dashboard_content')
     {{-- ADD COURSE MODAL --}}
-    @if (Auth::user()->role == 'Mentor')
+    @if ($user->role == 'Mentor')
         @include('courses.create')
     @endif
 
@@ -15,7 +15,7 @@
             Daftar Kelas
         </h1>
         <div class="line"></div>
-        @if (Auth::user()->role == 'Mentor')
+        @if ($user->role == 'Mentor')
             <button class="btn btn-dark btn-sm add-btn" data-bs-toggle="modal" data-bs-target="#addModal">Buat Kelas<i
                     class="uil uil-plus ms-1"></i></button>
         @endif
@@ -36,33 +36,67 @@
                 </thead>
                 <tbody>
                     @foreach ($courses as $course)
-                        <tr>
-                            <td class="fw-bold">{{ $loop->iteration }}</td>
-                            <td>
-                                <img src="{{ $course->cover != null ? asset('storage/images/cover/' . $course->cover) : asset('images/no-image.png') }}"
-                                    alt="{{ $course->title }}" class="rounded shadow-sm w-100">
-                            </td>
-                            <td>
-                                <span class="d-block">{{ $course->title }}</span>
-                                @if ($course->price == null)
-                                    <small class="badge bg-green"><i class="uil uil-rocket me-1"></i>Gratis</small>
-                                @else
-                                    <small class="badge bg-green">Rp{{ number_format($course->price) }}</small>
-                                @endif
-                            </td>
-                            <td>{{ substr($course->description, 0, 50) . '...' }}</td>
-                            <td class="action-btn-table">
-                                <a href="{{ route('showCourse', $course->id) }}" class="text-dark"><i
-                                        class="uil uil-eye"></i></a>
-                                @if (Auth::user()->role == 'Mentor')
-                                    <a href="{{ route('editCourse', $course->id) }}" class="text-primary mx-1"><i
-                                            class="uil uil-edit"></i></a>
-                                    <a href="#" data-uri="{{ route('deleteCourse', $course->id) }}" class="text-danger"
-                                        data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i
-                                            class="uil uil-trash-alt"></i></a>
-                                @endif
-                            </td>
-                        </tr>
+                        @if ($user->role == 'Mentor')
+                            <tr>
+                                <td class="fw-bold">{{ $loop->iteration }}</td>
+                                <td>
+                                    <img src="{{ $course->cover != null ? asset('storage/images/cover/' . $course->cover) : asset('images/no-image.png') }}"
+                                        alt="{{ $course->title }}" class="rounded shadow-sm w-100">
+                                </td>
+                                <td>
+                                    <span class="d-block">{{ $course->title }}</span>
+                                    @if ($course->price == null)
+                                        <small class="badge bg-green"><i class="uil uil-rocket me-1"></i>Gratis</small>
+                                    @else
+                                        <small class="badge bg-green">Rp{{ number_format($course->price) }}</small>
+                                    @endif
+                                </td>
+                                <td>{{ substr($course->description, 0, 50) . '...' }}</td>
+                                <td class="action-btn-table">
+                                    <a href="{{ route('showCourse', $course->id) }}" class="text-dark"><i
+                                            class="uil uil-eye"></i></a>
+                                    @if ($user->role == 'Mentor')
+                                        <a href="{{ route('editCourse', $course->id) }}" class="text-primary mx-1"><i
+                                                class="uil uil-edit"></i></a>
+                                        <a href="#" data-uri="{{ route('deleteCourse', $course->id) }}"
+                                            class="text-danger" data-bs-toggle="modal"
+                                            data-bs-target="#confirmDeleteModal"><i class="uil uil-trash-alt"></i></a>
+                                    @endif
+                                </td>
+                            </tr>
+                        @else
+                            <tr>
+                                <td class="fw-bold">{{ $loop->iteration }}</td>
+                                <td>
+                                    <img src="{{ $course->course->cover != null? asset('storage/images/cover/' . $course->course->cover): asset('images/no-image.png') }}"
+                                        alt="{{ $course->course->title }}" class="rounded shadow-sm w-100">
+                                </td>
+                                <td>
+                                    <span class="d-block">{{ $course->course->title }}</span>
+                                    @if ($course->course->price == null)
+                                        <small class="badge bg-green"><i class="uil uil-rocket me-1"></i>Gratis</small>
+                                    @else
+                                        <small
+                                            class="badge bg-green">Rp{{ number_format($course->course->price) }}</small>
+                                    @endif
+                                </td>
+                                <td>{{ substr($course->course->description, 0, 50) . '...' }}</td>
+                                <td class="action-btn-table">
+                                    @if ($user->role == 'Mentor')
+                                        <a href="{{ route('detailCourse', $course->course->id) }}"
+                                            class="text-dark"><i class="uil uil-eye"></i></a>
+                                        <a href="{{ route('editCourse', $course->id) }}" class="text-primary mx-1"><i
+                                                class="uil uil-edit"></i></a>
+                                        <a href="#" data-uri="{{ route('deleteCourse', $course->id) }}"
+                                            class="text-danger" data-bs-toggle="modal"
+                                            data-bs-target="#confirmDeleteModal"><i class="uil uil-trash-alt"></i></a>
+                                    @else
+                                        <a href="{{ route('detailCourse', $course->course->id) }}"
+                                            class="btn btn-sm btn-primary"><i class="uil uil-eye me-1"></i>Lihat</a>
+                                    @endif
+                                </td>
+                            </tr>
+                        @endif
                     @endforeach
                 </tbody>
             </table>

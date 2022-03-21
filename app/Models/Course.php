@@ -26,4 +26,9 @@ class Course extends Model
     {
         return $this->hasMany('App\Models\Session', 'course_id');
     }
+
+    public function transaction()
+    {
+        return $this->hasMany('App\Models\Transaction', 'course_id');
+    }
 }

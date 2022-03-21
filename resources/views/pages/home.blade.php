@@ -20,7 +20,7 @@
                         <span id="slogan"></span>
                         <h1>Kembangkan Skill Anda Bersama Mentor Berpengalaman</h1>
                         <p>Cara baru yang berbeda untuk meningkatkan skill Anda. Ayo gabung dan tumbuh bersama kami.</p>
-                        <button class="btn bg-green btn-started me-2">Yukk, Gas Eksplor</button>
+                        <a href="#about" class="btn bg-green btn-started me-2">Yukk, Gas Eksplor</a>
                     </div>
                 </div>
                 <div class="col-md-5 image-right text-center" data-aos="fade-down">
@@ -51,7 +51,7 @@
     </div>
 
     {{-- ABOUT --}}
-    <div class="about">
+    <div class="about" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 image text-center" data-aos="fade-up">

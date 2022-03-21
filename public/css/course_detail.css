@@ -1,6 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Fredoka&display=swap);
-/* VARIABLES */
 .bg-green {
   background: #49D983;
   color: white !important;
@@ -93,67 +90,48 @@
     transform: translate(0, 0);
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Fredoka", sans-serif;
-}
-
-body {
-  color: #34495e !important;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #666;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #232323;
-}
-
-.break {
-  clear: both;
-}
-
-.cursor-disabled {
-  cursor: not-allowed;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.form-group {
+.info {
   margin-bottom: 20px;
 }
-
-textarea:hover,
-input:hover,
-textarea:active,
-input:active,
-textarea:focus,
-input:focus,
-button:focus,
-button:active,
-button:hover,
-label:focus,
-.btn:active,
-.btn.active {
-  outline: 0px !important;
-  -webkit-appearance: none;
-  box-shadow: none !important;
+.info img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.info span {
+  display: block;
+}
+.info .title {
+  font-size: 23px;
+  font-weight: bold;
+}
+.info .description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.info a {
+  font-size: 18px;
+  font-weight: bold;
 }
 
-button:focus,
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=password]:focus {
-  border-color: #ccc;
-  box-shadow: 0 0 0 #ccc inset, 0 0 0 #ccc;
-  outline: 0 none;
+.detail .accordion {
+  background: #F8F9FA;
+  padding: 10px;
+  border-radius: 10px;
+}
+.detail .accordion .accordion-flush .accordion-item .accordion-button {
+  background: #F8F9FA !important;
+}
+.detail .accordion .accordion-button {
+  background: #F8F9FA !important;
+}
+.detail .accordion .accordion-body {
+  background: #F8F9FA !important;
+}
+.detail .accordion .accordion-body p b {
+  display: block;
+}
+.detail .accordion .accordion-button:not(.collapsed) {
+  color: #34495e !important;
+  background: #F8F9FA !important;
+  border-bottom: 1px solid #DFDFDF !important;
 }
