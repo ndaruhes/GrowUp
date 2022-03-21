@@ -126,3 +126,9 @@
 .dropdown-menu {
   z-index: 1000;
 }
+
+@media screen and (max-width: 768px) {
+  .nav-link {
+    font-size: 18px;
+  }
+}
