@@ -25,8 +25,8 @@ class LoginController extends Controller
     protected function authenticated()
     {
         $userRole = Auth::user()->role;
-        if ($userRole == 'Member') {
-            return redirect('member');
+        if ($userRole == 'Mentee') {
+            return redirect('mentee');
         } else if ($userRole == 'Mentor') {
             return redirect('mentor');
         }

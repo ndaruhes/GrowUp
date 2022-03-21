@@ -55,7 +55,7 @@ class CourseController extends Controller
             'category_id' => $request->category
         ]);
 
-        return redirect()->back()->with('success_message', 'You have successfully created a course');
+        return redirect()->back()->with('success_message', 'Yeyy, Kelasmu berhasil dibuat');
     }
 
     public function show($id)
@@ -93,7 +93,7 @@ class CourseController extends Controller
                 'category_id' => $request->category
             ]);
 
-            return redirect('/mentor/courses')->with('success_message', 'You have successfully changed the course');
+            return redirect('/mentor/courses')->with('success_message', 'Yeyy, Kelasmu berhasil diubah');
         } else {
             $request->validate([
                 'cover' => 'required',
@@ -122,7 +122,7 @@ class CourseController extends Controller
                 'category_id' => $request->category
             ]);
 
-            return redirect('/mentor/courses')->with('success_message', 'You have successfully changed the course');
+            return redirect('/mentor/courses')->with('success_message', 'Yeyy, Kelasmu berhasil diubah');
         }
     }
 
@@ -134,6 +134,6 @@ class CourseController extends Controller
         }
         $course->delete();
 
-        return redirect('/mentor/courses')->with('success_message', 'You have successfully deleted the course');
+        return redirect('/mentor/courses')->with('success_message', 'Yeyy, Kelasmu berhasil dihapus');
     }
 }

@@ -1,13 +1,13 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Edit Pertemuan} | GrowUp')
+@section('title', 'Ubah Pertemuan | GrowUp')
 
 @section('dashboard_content')
     {{-- TITLE --}}
     <div class="section-title">
         <h1>
             <i class="uil uil-edit"></i>
-            Edit Pertemuan {{ $num }}
+            Ubah Pertemuan {{ $num }}
         </h1>
         <div class="line"></div>
     </div>
@@ -15,7 +15,7 @@
     {{-- COURSE DESCRIPTION --}}
     <div class="course-heading">
         <span class="title">{{ $session->course->title }}</span>
-        <small class="badge bg-green-gradient">{{ $session->course->category->title }}</small>
+        <small class="badge bg-green">{{ $session->course->category->title }}</small>
         <small
             class="text-red fw-bold">{{ $session->course->price == null ? 'Gratis' : 'Rp' . number_format($session->course->price) }}</small>
         <span class="description">{{ $session->course->description }}</span>

@@ -59,7 +59,26 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => Hash::make($data['password'])
         ]);
+    }
+
+    public function createMentor(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|min:5',
+            'email' => 'required|email|min:5',
+            'password' => 'required|string|min:5',
+            'password_confirmation' => 'required|string|confirmed',
+        ]);
+
+        User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+            'role' => 'Mentor'
+        ]);
+
+        return redirect('/login')->with('success_message', 'You have successfully registered as a mentor');
     }
 }

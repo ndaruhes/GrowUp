@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Home | GrowUp')
+@section('title', 'Beranda | GrowUp')
 @section('cssExternal')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
@@ -19,8 +19,7 @@
                     <div>
                         <span id="slogan"></span>
                         <h1>Kembangkan Skill Anda Bersama Mentor Berpengalaman</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl faucibus viverra bibendum sed.
-                            Ipsum mauris est, semper tincidunt.</p>
+                        <p>Cara baru yang berbeda untuk meningkatkan skill Anda. Ayo gabung dan tumbuh bersama kami.</p>
                         <button class="btn bg-green btn-started me-2">Yukk, Gas Eksplor</button>
                     </div>
                 </div>
@@ -36,7 +35,7 @@
     {{-- PARTNERS --}}
     <div class="partners" data-aos="fade-up">
         <div class="content">
-            <h2>In Collaboration With</h2>
+            <h2>Berkolaborasi Dengan</h2>
             <div class="row justify-content-between align-items-between">
                 <div class="col-md-2 col-3 item">
                     <img src="{{ asset('images/partners/ruangguru.png') }}" alt="ruangguru" class="w-100">
@@ -83,7 +82,7 @@
         <div class="container">
             <div class="courses-header" data-aos="fade-down">
                 <div class="text-center">
-                    <h2>Explore Courses</h2>
+                    <h2>Eksplor Kelas</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl faucibus viverra bibendum sed. Ipsum
                         mauris est, semper tincidunt.
                     </p>
@@ -105,7 +104,8 @@
                     </div>
                 @endforeach
                 <div class="text-center">
-                    <a href="{{ url('/explore') }}" class="btn bg-red btn-explore">Explore More</a>
+                    <a href="{{ url('/explore') }}" class="btn bg-red btn-explore">Lihat Semua Kelas <i
+                            class="uil uil-rocket ms-1"></i></a>
                 </div>
             </div>
         </div>

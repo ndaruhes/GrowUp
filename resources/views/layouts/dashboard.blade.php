@@ -3,7 +3,10 @@
 
 @section('content')
     {{-- URL PATH --}}
-    @php $currURL = explode('/', Request::path()); @endphp
+    @php
+    $currURL = explode('/', Request::path());
+    $user = Auth::user();
+    @endphp
 
     {{-- BANNER --}}
     @include('layouts.banner')
@@ -12,13 +15,14 @@
         {{-- DASHBOARD MENU --}}
         <div class="dashboard-menu">
             <div class="dashboard-menu-panel">
-                <a href="{{ Auth::user()->role == 'Mentor' ? url('mentor/courses') : url('member/courses') }}"
-                    class="btn bg-outline-green btn-sm"><i class="uil uil-notebooks me-1"></i>My Courses
+                <a href="{{ $user->role == 'Mentor' ? url('mentor/courses') : url('mentee/courses') }}"
+                    class="btn bg-outline-green btn-sm"><i
+                        class="uil uil-notebooks me-1"></i>{{ $user->role == 'Mentor' ? 'Kelola Kelas' : 'Kelas Saya' }}
                 </a>
-                <a href="{{ Auth::user()->role == 'Mentor' ? url('mentor/forum') : url('member/forum') }}"
-                    class="btn bg-outline-green btn-sm"><i class="uil uil-comments-alt me-1"></i>Forum
+                <a href="{{ $user->role == 'Mentor' ? url('mentor/forum') : url('mentee/forum') }}"
+                    class="btn bg-outline-green btn-sm"><i class="uil uil-comments-alt me-1"></i>Forum Diskusi
                 </a>
-                <a href="/profile" class="btn bg-outline-green btn-sm"><i class="uil uil-user-md me-1"></i>Profile
+                <a href="/profile" class="btn bg-outline-green btn-sm"><i class="uil uil-user-circle me-1"></i>Profil
                 </a>
             </div>
         </div>

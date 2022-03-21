@@ -13,7 +13,7 @@
                 <div class="explore-heading">
                     <div class="title d-flex align-items-center">
                         <img src="{{ asset('images/rocket.png') }}" alt="rocket.png">
-                        <span>Explore All Courses</span>
+                        <span>Eksplor Semua Kelas</span>
                     </div>
                     <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
@@ -22,8 +22,8 @@
                         @csrf
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control @error('search') is-invalid @enderror" id="search"
-                                name="search" placeholder="Search Courses here" value="{{ old('search') }}">
-                            <label for="search">Search Courses</label>
+                                name="search" placeholder="Cari kelas disini..." value="{{ old('search') }}">
+                            <label for="search">Cari kelas disini...</label>
                         </div>
                     </form>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="courses">
                     <div class="category-title d-flex align-items-center">
                         <img src=" {{ asset('images/magnifier.png') }}" alt="magnifier.png">
-                        <span>Search Result</span>
+                        <span>Hasil Pencarian</span>
                     </div>
                     @if ($searchedCourses->count() != 0)
                         <div class="row">
@@ -62,8 +62,8 @@
                             @endforeach
                         </div>
                     @else
-                        <div class="alert alert-warning">The course you were looking for could not be found<i
-                                class="uil uil-confused ms-1"></i></div>
+                        <div class="alert alert-warning">Kelas yang kamu cari nggk ketemu nih<i
+                                class="uil uil-sad-squint ms-1"></i><i class="uil uil-confused ms-1"></i></div>
                     @endif
                 </div>
             </div>

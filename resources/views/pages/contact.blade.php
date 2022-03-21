@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us | GrowUp')
+@section('title', 'Hubungi Kami | GrowUp')
 
 @section('cssExternal')
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Explore Courses | GrowUp')
+@section('title', 'Eksplor Kelas | GrowUp')
 @section('cssExternal')
     <link rel="stylesheet" href="{{ asset('css/explore.css') }}">
 @endsection
@@ -13,7 +13,7 @@
                 <div class="explore-heading">
                     <div class="title d-flex align-items-center">
                         <img src="{{ asset('images/rocket.png') }}" alt="rocket.png">
-                        <span>Explore All Courses</span>
+                        <span>Eksplor Semua Kelas</span>
                     </div>
                     <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
@@ -22,8 +22,8 @@
                         @csrf
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control @error('search') is-invalid @enderror" id="search"
-                                name="search" placeholder="Search Courses here" value="{{ old('search') }}">
-                            <label for="search">Search Courses</label>
+                                name="search" placeholder="Cari kelas disini..." value="{{ old('search') }}">
+                            <label for="search">Cari kelas disini...</label>
                         </div>
                     </form>
                 </div>
@@ -75,6 +75,43 @@
                         </div>
                         <div class="row">
                             @foreach ($graphicdesign as $courses)
+                                <div class="col-md-4 col-6">
+                                    <a href="#" class="col-md-12 item-content d-flex align-items-center">
+                                        <div class="row">
+                                            <div class="col-5 image">
+                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $courses->title }}" class="w-100">
+                                            </div>
+                                            <div class="col-7 text">
+                                                <span class="title">{{ $courses->title }}</span>
+                                                @if ($courses->price == null)
+                                                    <span class="price text-red"><i
+                                                            class="uil uil-rocket me-1"></i>Gratis</span>
+                                                @else
+                                                    <span
+                                                        class="price text-red">Rp{{ number_format($courses->price) }}</span>
+                                                @endif
+                                                <small class="mentor bg-green-gradient"><i
+                                                        class="uil uil-user me-1"></i>{{ $courses->user->name }}</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                @endif
+
+                {{-- WEB DEVELOPMENT --}}
+                @if ($webdevelopment->count() != 0)
+                    <div class="courses">
+                        <div class="category-title d-flex align-items-center">
+                            <img src=" {{ $webdevelopment[0]->category->icon }}"
+                                alt="{{ $webdevelopment[0]->category->title }}">
+                            <span>{{ $webdevelopment[0]->category->title }}</span>
+                        </div>
+                        <div class="row">
+                            @foreach ($webdevelopment as $courses)
                                 <div class="col-md-4 col-6">
                                     <a href="#" class="col-md-12 item-content d-flex align-items-center">
                                         <div class="row">

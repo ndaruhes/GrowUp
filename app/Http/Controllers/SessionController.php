@@ -43,7 +43,7 @@ class SessionController extends Controller
             'course_id' => end($url)
         ]);
 
-        return redirect()->back()->with('success_message', 'Jadwal pertemuan berhasil dibuat');
+        return redirect()->back()->with('success_message', 'Yeyy, Jadwal pertemuan berhasil dibuat');
     }
 
     public function edit($id, $num)
@@ -74,7 +74,7 @@ class SessionController extends Controller
                 'time' => $request->time,
             ]);
 
-            return redirect()->route('showCourse', $session->course_id)->with('success_message', 'Berhasil mengedit pertemuan');
+            return redirect()->route('showCourse', $session->course_id)->with('success_message', 'Yeyy, Jadwal pertemuan berhasil diubah');
         } else {
             $request->validate([
                 'title' => 'required|string|min:3|max:100',
@@ -106,7 +106,7 @@ class SessionController extends Controller
                 'time' => $request->time,
             ]);
 
-            return redirect()->route('showCourse', $session->course_id)->with('success_message', 'Berhasil mengedit pertemuan');
+            return redirect()->route('showCourse', $session->course_id)->with('success_message', 'Yeyy, Jadwal pertemuan berhasil diubah');
         }
     }
 
@@ -116,7 +116,7 @@ class SessionController extends Controller
         if (Storage::exists('public/resources/courses/' . $session->resources)) {
             return Storage::download('public/resources/courses/' . $session->resources);
         } else {
-            return redirect()->back()->with('error_message', 'Resources tidak ditemukan');
+            return redirect()->back()->with('error_message', 'Materi tidak ditemukan');
         }
     }
 
@@ -128,6 +128,6 @@ class SessionController extends Controller
         }
         $session->delete();
 
-        return redirect()->back()->with('success_message', 'Berhasil menghapus jadwal pertemuan');
+        return redirect()->back()->with('success_message', 'Yeyy, Jadwal pertemuan berhasil dihapus');
     }
 }

@@ -1,5 +1,5 @@
 @extends('layouts.dashboard')
-@section('title', 'Course Detail | GrowUp')
+@section('title', 'Detail Kelas | GrowUp')
 
 @section('dashboard_content')
     {{-- MAKE A MEETING MODAL --}}
@@ -9,18 +9,18 @@
     <div class="section-title">
         <h1>
             <i class="uil uil-eye"></i>
-            Course Detail
+            Detail Kelas
         </h1>
         <div class="line"></div>
     </div>
 
     {{-- COURSE DESCRIPTION --}}
     <div class="course-heading">
-        <span class="title">{{ $course->title }}</span>
-        <small class="badge bg-green-gradient">{{ $course->category->title }}</small>
+        <span class="title mb-1">{{ $course->title }}</span>
+        <small class="badge bg-green">{{ $course->category->title }}</small>
         <small
             class="text-red fw-bold">{{ $course->price == null ? 'Gratis' : 'Rp' . number_format($course->price) }}</small>
-        <span class="description">{{ $course->description }}</span>
+        <span class="description mt-3">{{ $course->description }}</span>
     </div>
 
     {{-- SESSIONS --}}
@@ -34,7 +34,7 @@
                         <tr>
                             <th class="th-20">#</th>
                             <th class="th-25">Judul Materi</th>
-                            <th class="th-30">Deskripsi</th>
+                            <th class="th-30">Deskripsi Materi</th>
                             <th class="th-15 text-center">Aksi</th>
                         </tr>
                     </thead>
@@ -59,6 +59,7 @@
                                     <a href="#" data-uri="{{ route('deleteSession', $session->id) }}"
                                         class="text-danger" data-bs-toggle="modal"
                                         data-bs-target="#confirmDeleteModal"><i class="uil uil-trash-alt"></i></a>
+                                    <a href="#" class="text-success"><i class="uil uil-check-circle"></i></a>
                                 </td>
                             </tr>
                         @endforeach

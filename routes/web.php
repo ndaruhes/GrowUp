@@ -22,11 +22,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/contact', 'PageController@contact')->name('contact');
     Route::post('/explore/search', 'CourseController@searchCourse')->name('searchCourse');
 
-    // MEMBER ROUTES
-    Route::group(['prefix' => 'member', 'middleware' => 'RoleMember'], function () {
+    // MENTEE ROUTES
+    Route::group(['prefix' => 'mentee', 'middleware' => 'RoleMentee'], function () {
         Route::get('/', 'DashboardController@index')->name('home');
 
-        // Courses
+        // Kelas
         Route::get('/courses', 'CourseController@index');
     });
 
@@ -35,7 +35,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         // Dashboard
         Route::get('/', 'DashboardController@index')->name('home');
 
-        // Courses
+        // Kelas
         Route::group(['prefix' => 'courses'], function () {
             Route::get('/', 'CourseController@index');
             Route::post('/create', 'CourseController@store')->name('createCourse');
@@ -49,7 +49,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
             // Route::get('/', 'CourseController@index');
         });
 
-        // Management
+        // Pertemuan
         Route::group(['prefix' => 'session'], function () {
             Route::get('/', 'SessionController@index');
             Route::post('/create', 'SessionController@store')->name('createSession');

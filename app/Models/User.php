@@ -15,6 +15,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
 
     protected $hidden = [
@@ -30,5 +31,4 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Course', 'mentor_id');
     }
-
 }

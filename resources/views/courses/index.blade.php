@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Courses | GrowUp')
+@section('title', 'Kelola Kelas | GrowUp')
 
 @section('dashboard_content')
     {{-- ADD COURSE MODAL --}}
@@ -12,11 +12,11 @@
     <div class="section-title">
         <h1>
             <i class="uil uil-notebooks"></i>
-            My Courses
+            Daftar Kelas
         </h1>
         <div class="line"></div>
         @if (Auth::user()->role == 'Mentor')
-            <button class="btn btn-dark btn-sm add-btn" data-bs-toggle="modal" data-bs-target="#addModal">Create Course<i
+            <button class="btn btn-dark btn-sm add-btn" data-bs-toggle="modal" data-bs-target="#addModal">Buat Kelas<i
                     class="uil uil-plus ms-1"></i></button>
         @endif
     </div>
@@ -28,10 +28,10 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th class="th-25">Cover</th>
-                        <th class="th-30">Title</th>
-                        <th class="th-30">Description</th>
-                        <th class="th-15 text-center">Action</th>
+                        <th class="th-25">Sampul</th>
+                        <th class="th-30">Nama Kelas</th>
+                        <th class="th-30">Deskripsi Kelas</th>
+                        <th class="th-15 text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,7 +45,7 @@
                             <td>
                                 <span class="d-block">{{ $course->title }}</span>
                                 @if ($course->price == null)
-                                    <small class="badge bg-green"><i class="uil uil-rocket me-1"></i>Free</small>
+                                    <small class="badge bg-green"><i class="uil uil-rocket me-1"></i>Gratis</small>
                                 @else
                                     <small class="badge bg-green">Rp{{ number_format($course->price) }}</small>
                                 @endif
@@ -68,6 +68,6 @@
             </table>
         </div>
     @else
-        <div class="alert alert-warning">You haven't held any courses yet</div>
+        <div class="alert alert-warning">Kamu belum memiliki kelas apapun</div>
     @endif
 @endsection

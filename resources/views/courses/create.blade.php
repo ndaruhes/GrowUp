@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addModalLabel"><i class="uil uil-plus me-1"></i>Create Course</h5>
+                <h5 class="modal-title" id="addModalLabel"><i class="uil uil-plus me-1"></i>Buat Kelas Baru</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                     ref="modalClose"></button>
             </div>
@@ -18,7 +18,7 @@
                                         class="w-100 rounded shadow-sm cursor-pointer" id="cover-preview">
                                 </label>
                                 <button type="button" class="btn bg-red btn-sm mt-3 shadow-sm d-none"
-                                    id="changeCover">Change Cover <i class="uil uil-image-upload ms-1"></i></button>
+                                    id="changeCover">Ganti Sampul <i class="uil uil-image-upload ms-1"></i></button>
                                 @error('cover')
                                     <small class=" text-danger">{{ $message }}</small>
                                 @enderror
@@ -26,13 +26,13 @@
                             <div class="form-group">
                                 <div class="form-floating">
                                     <select class="form-select @error('category') is-invalid @enderror" id="category"
-                                        aria-label="Course Category" name="category">
-                                        <option selected>Course Category</option>
+                                        aria-label="Kategori Kelas" name="category">
+                                        <option selected>Kategori Kelas</option>
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->title }}</option>
                                         @endforeach
                                     </select>
-                                    <label for="category">Course Category</label>
+                                    <label for="category">Kategori Kelas</label>
                                 </div>
                                 @error('category')
                                     <small class="text-danger">{{ $message }}</small>
@@ -53,36 +53,35 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Course Title</label>
+                                <label>Judul Kelas</label>
                                 <input type="text" class="form-control @error('title') is-invalid @enderror"
-                                    placeholder="Course Title..." name="title" value="{{ old('title') }}">
+                                    placeholder="Judul Kelas..." name="title" value="{{ old('title') }}">
                                 @error('title')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Course Price <small class="text-warning">*optional</small></label>
+                                <label>Harga Kelas <small class="text-warning">*tidak wajib</small></label>
                                 <div class="input-group">
                                     <span class="input-group-text" id="price">Rp</span>
                                     <input type="number" class="form-control @error('price') is-invalid @enderror"
-                                        placeholder="Course Price..." name="price" value="{{ old('price') }}"
-                                        min="1">
+                                        placeholder="Harga Kelas..." name="price" value="{{ old('price') }}" min="1">
                                 </div>
                                 @error('price')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Course Description</label>
+                                <label>Deskripsi Kelas</label>
                                 <textarea class="form-control @error('description') is-invalid @enderror" rows="4"
-                                    placeholder="Course Description Goes Here..."
+                                    placeholder="Masukkan Deskripsi Kelas..."
                                     name="description">{{ old('description') }}</textarea>
                                 @error('description')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
                             <button type="submit" class="btn btn-primary btn-sm d-flex">
-                                Submit
+                                Simpan
                             </button>
                         </div>
                     </div>
