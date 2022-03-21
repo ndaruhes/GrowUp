@@ -81,6 +81,26 @@
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
                 </div>
+                <div class="row">
+                    <div class="col-6 form-group">
+                        <label>Tanggal Mulai Kelas</label>
+                        <input type="date" class="form-control @error('started_at') is-invalid @enderror"
+                            placeholder="Tanggal Mulai Kelas..." name="started_at"
+                            value="{{ !old('started_at') ? $course->started_at : old('started_at') }}">
+                        @error('started_at')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
+                    </div>
+                    <div class="col-6 form-group">
+                        <label>Tanggal Berakhir Kelas</label>
+                        <input type="date" class="form-control @error('ended_at') is-invalid @enderror"
+                            placeholder="Tanggal Berakhir Kelas..." name="ended_at"
+                            value="{{ !old('ended_at') ? $course->ended_at : old('ended_at') }}">
+                        @error('ended_at')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
+                    </div>
+                </div>
                 <div class="form-group">
                     <label>Deskripsi Kelas</label>
                     <textarea class="form-control @error('description') is-invalid @enderror" rows="4"

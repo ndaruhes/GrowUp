@@ -21,6 +21,8 @@ return new class extends Migration
             $table->integer('price')->nullable();
             $table->integer('category_id');
             $table->integer('mentor_id');
+            $table->date('started_at');
+            $table->date('ended_at');
             $table->timestamps();
         });
     }

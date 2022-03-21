@@ -40,14 +40,12 @@ class PageController extends Controller
     {
         $url = explode('/', url()->current());
         $course = Course::findOrFail($id);
-        $transaction = null;
-        if (Auth::user()) {
-            $transaction = Transaction::where('course_id', $id)->where('user_id', Auth::user()->id)->first();
-        }
+        $transaction = Transaction::where('course_id', $id);
         return view('pages.detailCourse', [
             'course' => $course,
             'sessions' => (new SessionController)->getAll(end($url)),
-            'hasTransaction' => $transaction
+            'transaction' => $transaction->get(),
+            'hasTransaction' => Auth::user() ? $transaction->where('user_id', Auth::user()->id)->first() : null,
         ]);
     }
 

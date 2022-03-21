@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Transaction extends Model
 {
     use HasFactory;
-    protected $fillable = ['course_id', 'user_id'];
+    protected $guarded = ['id'];
 
     public function course()
     {

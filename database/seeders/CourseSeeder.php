@@ -16,7 +16,7 @@ class CourseSeeder extends Seeder
     public function run()
     {
         $courses = [
-            ['WhatsApp Image 2022-03-13 at 20.11.56 (1)-iJWGigJu9O-20220321044222.jpeg', 'Membuat REST API Menggunakan ExpressJS', 'Belajar lebih jauh mengenai pengertian, fungsi, dan cara kerja dari Express JS pada pengembangan aplikasi di sisi back end secara fleksibel.', null, '7', '1']
+            ['WhatsApp Image 2022-03-13 at 20.11.56 (1)-iJWGigJu9O-20220321044222.jpeg', 'Membuat REST API Menggunakan ExpressJS', 'Belajar lebih jauh mengenai pengertian, fungsi, dan cara kerja dari Express JS pada pengembangan aplikasi di sisi back end secara fleksibel.', null, '7', '1', null, null]
         ];
 
         foreach ($courses as $course) {
@@ -27,6 +27,8 @@ class CourseSeeder extends Seeder
                 'price' => $course[3],
                 'category_id' => $course[4],
                 'mentor_id' => $course[5],
+                'started_at' => $course[6],
+                'ended_at' => $course[7],
             ]);
         }
     }

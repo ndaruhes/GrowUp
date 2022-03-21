@@ -38,7 +38,9 @@ class CourseController extends Controller
             'cover' => 'required',
             'title' => 'required|string|min:3|max:100',
             'description' => 'required|string|min:5|max:500',
-            'category' => 'required|numeric'
+            'category' => 'required|numeric',
+            'started_at' => 'required|date',
+            'ended_at' => 'required|date'
         ]);
 
         $files = $request->file('cover');
@@ -54,7 +56,9 @@ class CourseController extends Controller
             'price' => $request->price,
             'description' => $request->description,
             'mentor_id' => Auth::user()->id,
-            'category_id' => $request->category
+            'category_id' => $request->category,
+            'started_at' => $request->started_at,
+            'ended_at' => $request->ended_at
         ]);
 
         return redirect()->back()->with('success_message', 'Yeyy, Kelasmu berhasil dibuat');
@@ -85,14 +89,18 @@ class CourseController extends Controller
             $request->validate([
                 'title' => 'required|string|min:3|max:100',
                 'description' => 'required|string|min:5|max:500',
-                'category' => 'required|numeric'
+                'category' => 'required|numeric',
+                'started_at' => 'required|date',
+                'ended_at' => 'required|date'
             ]);
             $course = Course::findOrFail($id);
             $course->update([
                 'title' => $request->title,
                 'price' => $request->price,
                 'description' => $request->description,
-                'category_id' => $request->category
+                'category_id' => $request->category,
+                'started_at' => $request->started_at,
+                'ended_at' => $request->ended_at
             ]);
 
             return redirect('/mentor/courses')->with('success_message', 'Yeyy, Kelasmu berhasil diubah');
@@ -101,7 +109,9 @@ class CourseController extends Controller
                 'cover' => 'required',
                 'title' => 'required|string|min:3|max:100',
                 'description' => 'required|string|min:5|max:500',
-                'category' => 'required|numeric'
+                'category' => 'required|numeric',
+                'started_at' => 'required|date',
+                'ended_at' => 'required|date'
             ]);
 
             $files = $request->file('cover');
@@ -121,7 +131,9 @@ class CourseController extends Controller
                 'title' => $request->title,
                 'price' => $request->price,
                 'description' => $request->description,
-                'category_id' => $request->category
+                'category_id' => $request->category,
+                'started_at' => $request->started_at,
+                'ended_at' => $request->ended_at
             ]);
 
             return redirect('/mentor/courses')->with('success_message', 'Yeyy, Kelasmu berhasil diubah');
