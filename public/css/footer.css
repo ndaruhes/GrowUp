@@ -1,6 +1,7 @@
-footer {
-  margin: 120px 0 0 0;
+.footer-container {
+  background-color: #F8F9FA;
 }
+
 footer .row {
   gap: 34px;
 }
@@ -28,19 +29,19 @@ footer .footer-social-media-wrapper img {
 @media screen and (max-width: 768px) {
   footer .row {
     flex-direction: column;
-    text-align: center;
   }
-
-  .footer-end {
+  footer .send-icon {
+    height: 15px;
+  }
+  footer .footer-end {
     flex-direction: column;
     align-items: center;
   }
-
-  .footer-header-wrapper .footer-header {
+  footer .footer-header-wrapper .footer-header {
     font-size: 36px;
     font-weight: 800;
   }
-  .footer-header-wrapper p {
+  footer .footer-header-wrapper p {
     display: inline-block;
   }
 }
