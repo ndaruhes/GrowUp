@@ -17,8 +17,7 @@
                 </div>
                 <div class="col-md-7 text" data-aos="fade-up">
                     <div>
-                        {{-- <span id="slogan"></span> --}}
-                        <span id="slogans">A New Different Way to Improve Your Skills</span>
+                        <span id="slogan"></span>
                         <h1>Kembangkan Skill Anda Bersama Mentor Berpengalaman</h1>
                         <p>
                             <b>GrowUp</b> mempunyai cara baru yang berbeda untuk meningkatkan
@@ -94,7 +93,7 @@
             </div>
             <div class="row">
                 @foreach ($categories as $category)
-                    <div class="col-md-4 col-6 item" data-aos="fade-up">
+                    <div class="col-md-4 col-6 item">
                         <a href="#" class="col-md-12 item-content">
                             <div class="row">
                                 <div class="col-md-3 col-4 image">
