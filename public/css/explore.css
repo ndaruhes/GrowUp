@@ -151,12 +151,18 @@
   min-height: 90px;
   display: block;
   text-decoration: none;
+  border-radius: 5px;
 }
 .explore .courses .item-content .image {
   margin-bottom: 10px;
 }
 .explore .courses .item-content .image img {
   border-radius: 5px;
+  min-height: 160px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.explore .courses .item-content .text {
+  padding: 5px 15px 15px 15px;
 }
 .explore .courses .item-content .text span {
   display: block;
@@ -165,6 +171,10 @@
   font-size: 18px;
   font-weight: bold;
   color: #34495e;
+}
+.explore .courses .item-content .text .title:hover {
+  color: #E31A56;
+  transition: 0.4s;
 }
 .explore .courses .item-content .text .mentor {
   font-size: 15px;

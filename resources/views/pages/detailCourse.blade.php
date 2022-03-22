@@ -13,9 +13,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 info">
-                <img src="{{ asset('storage/images/cover/' . $course->cover) }}" alt="{{ $course->title }}"
-                    class="w-100">
+                @if (explode('/', $course->cover)[0] != 'https:')
+                    <img src="{{ $course->cover != null ? asset('storage/images/cover/' . $course->cover) : asset('images/no-image.png') }}"
+                        alt="{{ $course->title }}" class="w-100">
+                @else
+                    <img src="{{ $course->cover }}" alt="{{ $course->title }}" class="w-100">
+                @endif
                 <span class="title mb-1">{{ $course->title }}</span>
+                <span
+                    class="mentor">{{ Auth::user() && Auth::user()->id == $course->mentor_id? 'Kamu adalah mentor di kelas ini 👏': $course->user->name }}</span>
                 <small class="category badge bg-green">{{ $course->category->title }}</small>
                 <small class="price text-red fw-bold">
                     {{ $course->price != null ? 'Rp' . number_format($course->price) : 'Gratis' }}
@@ -69,55 +75,59 @@
                                         @for ($i = 1; $i <= $course->rating; $i++)
                                             <i class="uis uis-star text-yellow"></i>
                                         @endfor
-                                        {{-- <i class="uil uil-comments-alt me-1"></i>{{ $transaction->count() }} --}}
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {{-- CLASS SESSION --}}
-                        <div class="accordion accordion-flush" id="accordionFlushSession">
-                            @foreach ($sessions as $session)
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-heading{{ $session->id }}">
-                                        <button class="accordion-button collapsed d-flex justify-content-between"
-                                            type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#flush-collapse{{ $session->id }}" aria-expanded="false"
-                                            aria-controls="flush-collapse{{ $session->id }}">
-                                            <b>Pertemuan {{ $loop->iteration }}</b> &nbsp;
-                                            ({{ \Carbon\Carbon::parse($session->schedule)->format('d M') . ', ' . $session->time }})
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapse{{ $session->id }}"
-                                        class="accordion-collapse collapse @if ($loop->iteration == 1) show @endif"
-                                        aria-labelledby="flush-heading{{ $session->id }}"
-                                        data-bs-parent="#accordionFlushSession">
-                                        <div class="accordion-body">
-                                            <p>
-                                                <b>Topik Materi</b>
-                                                <span>{{ $session->title }}</span>
-                                            </p>
-                                            <p>
-                                                <b>Deskripsi Materi</b>
-                                                <span>{{ $session->description }}</span>
-                                            </p>
-                                            <p>
-                                                <b>Link Meeting</b>
-                                                <a class="text-decoration-none d-block cursor-pointer"
-                                                    @if (!Auth::user()) data-bs-toggle="modal" data-bs-target="#loginModal" @elseif ($hasTransaction == null) data-bs-toggle="modal" data-bs-target="#gabungKelasModal" @else href="{{ $session->meeting_link }}" target="_blank" @endif>Join
-                                                    Kelas<i class="uil uil-presentation-play ms-1"></i></a>
-                                            </p>
-                                            <p>
-                                                <b>Materi Pembelajaran</b>
-                                                <a class="text-decoration-none d-block cursor-pointer"
-                                                    @if (!Auth::user()) data-bs-toggle="modal" data-bs-target="#loginModal" @elseif ($hasTransaction == null) data-bs-toggle="modal" data-bs-target="#gabungKelasModal" @else href="{{ route('downloadResource', $session->id) }}" @endif>Unduh
-                                                    Materi<i class="uil uil-download-alt ms-1"></i></a>
-                                            </p>
+                        @if ($sessions->count() != null)
+                            <div class="accordion accordion-flush" id="accordionFlushSession">
+                                @foreach ($sessions as $session)
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-heading{{ $session->id }}">
+                                            <button class="accordion-button collapsed d-flex justify-content-between"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapse{{ $session->id }}" aria-expanded="false"
+                                                aria-controls="flush-collapse{{ $session->id }}">
+                                                <b>Pertemuan {{ $loop->iteration }}</b> &nbsp;
+                                                ({{ \Carbon\Carbon::parse($session->schedule)->format('d M') . ', ' . $session->time }})
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapse{{ $session->id }}"
+                                            class="accordion-collapse collapse @if ($loop->iteration == 1) show @endif"
+                                            aria-labelledby="flush-heading{{ $session->id }}"
+                                            data-bs-parent="#accordionFlushSession">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    <b>Topik Materi</b>
+                                                    <span>{{ $session->title }}</span>
+                                                </p>
+                                                <p>
+                                                    <b>Deskripsi Materi</b>
+                                                    <span>{{ $session->description }}</span>
+                                                </p>
+                                                <p>
+                                                    <b>Link Meeting</b>
+                                                    <a class="text-decoration-none d-block cursor-pointer"
+                                                        @if (!Auth::user()) data-bs-toggle="modal" data-bs-target="#loginModal" @elseif ($hasTransaction == null) data-bs-toggle="modal" data-bs-target="#gabungKelasModal" @else href="{{ $session->meeting_link }}" target="_blank" @endif>Join
+                                                        Kelas<i class="uil uil-presentation-play ms-1"></i></a>
+                                                </p>
+                                                <p>
+                                                    <b>Materi Pembelajaran</b>
+                                                    <a class="text-decoration-none d-block cursor-pointer"
+                                                        @if (!Auth::user()) data-bs-toggle="modal" data-bs-target="#loginModal" @elseif ($hasTransaction == null) data-bs-toggle="modal" data-bs-target="#gabungKelasModal" @else href="{{ route('downloadResource', $session->id) }}" @endif>Unduh
+                                                        Materi<i class="uil uil-download-alt ms-1"></i></a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
-                        </div>
+                                @endforeach
+                            </div>
+                        @else
+                            <div class="alert alert-warning">Mentor belum mengatur pertemuan dikelas ini. Ditunggu aja ya 😁
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>

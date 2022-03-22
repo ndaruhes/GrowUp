@@ -21,6 +21,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/explore', 'PageController@explore');
     Route::get('/contact', 'PageController@contact')->name('contact');
     Route::get('/courses/explore/{id}', 'PageController@detailCourse')->name('detailCourse');
+    Route::get('/about', 'PageController@about')->name('about');
     Route::post('/explore/search', 'CourseController@searchCourse')->name('searchCourse');
     Route::post('/checkout/{id}', 'TransactionController@checkout')->name('checkout');
     Route::get('/download/{id}', 'SessionController@downloadResource')->name('downloadResource');

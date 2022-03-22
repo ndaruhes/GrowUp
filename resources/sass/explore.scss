@@ -69,16 +69,20 @@
             min-height: 90px;
             display: block;
             text-decoration: none;
+            border-radius: 5px;
 
             .image {
                 margin-bottom: 10px;
 
                 img {
                     border-radius: 5px;
+                    min-height: 160px;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                 }
             }
 
             .text {
+                padding: 5px 15px 15px 15px;
 
                 span {
                     display: block;
@@ -88,6 +92,11 @@
                     font-size: 18px;
                     font-weight: bold;
                     color: $primaryColor;
+
+                    &:hover {
+                        color: $red;
+                        transition: 0.4s;
+                    }
                 }
 
                 .mentor {

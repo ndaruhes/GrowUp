@@ -17,9 +17,13 @@
                 </div>
                 <div class="col-md-7 text" data-aos="fade-up">
                     <div>
-                        <span id="slogan"></span>
+                        {{-- <span id="slogan"></span> --}}
+                        <span id="slogans">A New Different Way to Improve Your Skills</span>
                         <h1>Kembangkan Skill Anda Bersama Mentor Berpengalaman</h1>
-                        <p>Cara baru yang berbeda untuk meningkatkan skill Anda. Ayo gabung dan tumbuh bersama kami.</p>
+                        <p>
+                            <b>GrowUp</b> mempunyai cara baru yang berbeda untuk meningkatkan
+                            skill Anda. Ayo gabung dan tumbuh bersama kami.
+                        </p>
                         <a href="#about" class="btn bg-green btn-started me-2">Yukk, Gas Eksplor</a>
                     </div>
                 </div>
@@ -109,4 +113,5 @@
                 </div>
             </div>
         </div>
-    @endsection
+    </div>
+@endsection

@@ -16,7 +16,10 @@ class CourseSeeder extends Seeder
     public function run()
     {
         $courses = [
-            ['WhatsApp Image 2022-03-13 at 20.11.56 (1)-iJWGigJu9O-20220321044222.jpeg', 'Membuat REST API Menggunakan ExpressJS', 'Belajar lebih jauh mengenai pengertian, fungsi, dan cara kerja dari Express JS pada pengembangan aplikasi di sisi back end secara fleksibel.', null, '2022-04-29', '2022-05-29', '30', '5', '7', '1']
+            ['https://i.ibb.co/mHXjxYX/course-1.png', 'Membuat REST API Menggunakan ExpressJS & MongoDB', 'Belajar lebih jauh mengenai pengertian, fungsi, dan cara kerja dari Express JS pada pengembangan aplikasi di sisi back end secara fleksibel.', '450000', '2022-07-24', '2022-08-30', '30', '5', '7', '1'],
+            ['https://i.ibb.co/RyPVv6Q/course-2.jpg', 'Full Stack Laravel Development: Framework Terbaik Masa Kini', 'Belajar lebih jauh mengenai pengertian, fungsi, dan cara kerja dari Express JS pada pengembangan aplikasi di sisi back end secara fleksibel.', '350000', '2022-04-29', '2022-05-29', '30', '3', '7', '2'],
+            ['https://i.ibb.co/dKPxpsT/course-3.jpg', 'Tailwind CSS: Membuat Tampilan Website Menjadi Cantik', 'Belajar lebih jauh mengenai pengertian, fungsi, dan cara kerja dari Express JS pada pengembangan aplikasi di sisi back end secara fleksibel.', null, '2022-04-29', '2022-05-29', '30', '4', '7', '1'],
+            ['https://i.ibb.co/VCwZNYd/course-4.png', 'PHP & MySQL Pemula: Belajar Dari Dasar Sampai Mahir', 'Belajar lebih jauh mengenai pengertian, fungsi, dan cara kerja dari Express JS pada pengembangan aplikasi di sisi back end secara fleksibel.', '150000', '2022-04-29', '2022-05-29', '30', '5', '7', '2']
         ];
 
         foreach ($courses as $course) {

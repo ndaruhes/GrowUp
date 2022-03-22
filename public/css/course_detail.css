@@ -112,6 +112,12 @@
   font-size: 18px;
   margin-bottom: 20px;
 }
+.info .mentor {
+  font-size: 15px;
+  font-weight: bold;
+  color: grey;
+  margin-bottom: 5px;
+}
 .info a {
   font-size: 18px;
   font-weight: bold;

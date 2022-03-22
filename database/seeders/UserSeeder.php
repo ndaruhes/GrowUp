@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
     {
         $users = [
             ['Muhamad Ndaru', 'ndaru@gmail.com', 'Mentor', '12345678'],
-            ['Vaness', 'vaness@gmail.com', 'Mentee', '12345678'],
+            ['Vaness Barnabas', 'vaness@gmail.com', 'Mentee', '12345678'],
             ['Albert Barnabas', 'albert@gmail.com', 'Mentee', '12345678']
         ];
 

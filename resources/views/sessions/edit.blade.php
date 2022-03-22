@@ -13,12 +13,11 @@
     </div>
 
     {{-- COURSE DESCRIPTION --}}
-    <div class="course-heading">
+    <div class="course-heading mb-3">
         <span class="title">{{ $session->course->title }}</span>
         <small class="badge bg-green">{{ $session->course->category->title }}</small>
         <small
             class="text-red fw-bold">{{ $session->course->price == null ? 'Gratis' : 'Rp' . number_format($session->course->price) }}</small>
-        <span class="description">{{ $session->course->description }}</span>
     </div>
 
     {{-- FORM EDIT SESSION --}}

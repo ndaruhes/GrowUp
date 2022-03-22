@@ -11,10 +11,10 @@
             <div class="explore-heading">
                 <div class="title d-flex align-items-center">
                     <span>Eksplor Semua Kelas</span>
-                    <img src="{{ asset('images/rocket.png') }}" alt="rocket.png">
+                    <img src="{{ asset('images/nerd.png') }}" alt="nerd.png">
                 </div>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <p class="description">Siap ambil bagian dan bersaing di industri 4.0? Ayo belajar dan tingkatkan
+                    keterampilanmu bersama mentor berpengalaman GrowUp. Cari dan eksplor kelas kesukaanmu.</p>
 
                 {{-- FORM SEARCH --}}
                 <form action="{{ route('searchCourse') }}" method="POST">
@@ -51,8 +51,13 @@
                                     class="col-md-12 item-content d-flex align-items-center">
                                     <div class="row align-items-center">
                                         <div class="col-md-12 col-5 image">
-                                            <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
-                                                alt="{{ $courses->title }}" class="w-100">
+                                            @if (explode('/', $courses->cover)[0] != 'https:')
+                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $courses->title }}" class="w-100">
+                                            @else
+                                                <img src="{{ $courses->cover }}" alt="{{ $courses->title }}"
+                                                    class="w-100">
+                                            @endif
                                         </div>
                                         <div class="col-md-12 col-7 text">
                                             <span class="title">{{ $courses->title }}</span>

@@ -26,12 +26,11 @@
                 <a href="#" class="col-md-12 item-content">
                     <div class="row align-items-center">
                         <div class="col-4 icon">
-                            <img src="{{ asset('images/courses-icon/graphic-design.png') }}" class="w-100"
-                                alt="icon">
+                            <img src="{{ asset('images/dashboard-icon/wallet.png') }}" class="w-100" alt="icon">
                         </div>
                         <div class="col-8 text">
                             <span class="title">Pendapatan</span>
-                            <span class="subtitle price text-green">
+                            <span class="subtitle price text-green fw-bold">
                                 Rp{{ number_format($salary) }}
                             </span>
                         </div>
@@ -42,8 +41,7 @@
                 <a href="{{ url(strtolower($user->role) . '/courses') }}" class="col-md-12 item-content">
                     <div class="row align-items-center">
                         <div class="col-4 icon">
-                            <img src="{{ asset('images/courses-icon/graphic-design.png') }}" class="w-100"
-                                alt="icon">
+                            <img src="{{ asset('images/dashboard-icon/class.png') }}" class="w-100" alt="icon">
                         </div>
                         <div class="col-8 text">
                             <span class="title">Total Kelas</span>
@@ -58,8 +56,7 @@
                 <a href="#" class="col-md-12 item-content">
                     <div class="row align-items-center">
                         <div class="col-4 icon">
-                            <img src="{{ asset('images/courses-icon/graphic-design.png') }}" class="w-100"
-                                alt="icon">
+                            <img src="{{ asset('images/dashboard-icon/users.png') }}" class="w-100" alt="icon">
                         </div>
                         <div class="col-8 text">
                             <span class="title">Total Mentee</span>
@@ -74,8 +71,7 @@
                 <a href="#" class="col-md-12 item-content">
                     <div class="row align-items-center">
                         <div class="col-4 icon">
-                            <img src="{{ asset('images/courses-icon/graphic-design.png') }}" class="w-100"
-                                alt="icon">
+                            <img src="{{ asset('images/dashboard-icon/forum.png') }}" class="w-100" alt="icon">
                         </div>
                         <div class="col-8 text">
                             <span class="title">Total Forum</span>
@@ -90,8 +86,7 @@
                 <a href="#" class="col-md-12 item-content">
                     <div class="row align-items-center">
                         <div class="col-4 icon">
-                            <img src="{{ asset('images/courses-icon/graphic-design.png') }}" class="w-100"
-                                alt="icon">
+                            <img src="{{ asset('images/dashboard-icon/rating.png') }}" class="w-100" alt="icon">
                         </div>
                         <div class="col-8 text">
                             <span class="title">Rating Kelas</span>
@@ -123,8 +118,7 @@
                 <a href="{{ url(strtolower($user->role) . '/courses') }}" class="col-md-12 item-content">
                     <div class="row align-items-center">
                         <div class="col-4 icon">
-                            <img src="{{ asset('images/courses-icon/graphic-design.png') }}" class="w-100"
-                                alt="icon">
+                            <img src="{{ asset('images/dashboard-icon/class.png') }}" class="w-100" alt="icon">
                         </div>
                         <div class="col-8 text">
                             <span class="title">Total Kelas</span>
@@ -139,8 +133,7 @@
                 <a href="#" class="col-md-12 item-content">
                     <div class="row align-items-center">
                         <div class="col-4 icon">
-                            <img src="{{ asset('images/courses-icon/graphic-design.png') }}" class="w-100"
-                                alt="icon">
+                            <img src="{{ asset('images/dashboard-icon/users.png') }}" class="w-100" alt="icon">
                         </div>
                         <div class="col-8 text">
                             <span class="title">Total Mentor</span>
@@ -155,8 +148,7 @@
                 <a href="#" class="col-md-12 item-content">
                     <div class="row align-items-center">
                         <div class="col-4 icon">
-                            <img src="{{ asset('images/courses-icon/graphic-design.png') }}" class="w-100"
-                                alt="icon">
+                            <img src="{{ asset('images/dashboard-icon/forum.png') }}" class="w-100" alt="icon">
                         </div>
                         <div class="col-8 text">
                             <span class="title">Total Forum</span>

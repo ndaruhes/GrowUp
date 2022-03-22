@@ -17,7 +17,8 @@ $user = Auth::user();
                     <a class="nav-link" href="{{ url('/') }}"><i class="uil uil-estate me-1"></i>Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="uil uil-lightbulb-alt me-1"></i>Tentang Kami</a>
+                    <a class="nav-link" href="{{ url('/about') }}"><i
+                            class="uil uil-lightbulb-alt me-1"></i>Tentang Kami</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/explore') }}"><i class="uil uil-rocket me-1"></i>Eksplor

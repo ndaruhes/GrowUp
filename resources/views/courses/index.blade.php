@@ -40,8 +40,13 @@
                             <tr>
                                 <td class="fw-bold">{{ $loop->iteration }}</td>
                                 <td>
-                                    <img src="{{ $course->cover != null ? asset('storage/images/cover/' . $course->cover) : asset('images/no-image.png') }}"
-                                        alt="{{ $course->title }}" class="rounded shadow-sm w-100">
+                                    @if (explode('/', $course->cover)[0] != 'https:')
+                                        <img src="{{ $course->cover != null ? asset('storage/images/cover/' . $course->cover) : asset('images/no-image.png') }}"
+                                            alt="{{ $course->title }}" class="rounded shadow-sm w-100">
+                                    @else
+                                        <img src="{{ $course->cover }}" alt="{{ $course->title }}"
+                                            class="rounded shadow w-100">
+                                    @endif
                                 </td>
                                 <td>
                                     <span class="d-block">{{ substr($course->title, 0, 35) . '...' }}</span>
@@ -75,8 +80,13 @@
                             <tr>
                                 <td class="fw-bold">{{ $loop->iteration }}</td>
                                 <td>
-                                    <img src="{{ $course->course->cover != null? asset('storage/images/cover/' . $course->course->cover): asset('images/no-image.png') }}"
-                                        alt="{{ $course->course->title }}" class="rounded shadow-sm w-100">
+                                    @if (explode('/', $course->course->cover)[0] != 'https:')
+                                        <img src="{{ $course->course->cover != null? asset('storage/images/cover/' . $course->course->cover): asset('images/no-image.png') }}"
+                                            alt="{{ $course->course->title }}" class="rounded shadow-sm w-100">
+                                    @else
+                                        <img src="{{ $course->course->cover }}" alt="{{ $course->course->title }}"
+                                            class="rounded shadow w-100">
+                                    @endif
                                 </td>
                                 <td>
                                     <span

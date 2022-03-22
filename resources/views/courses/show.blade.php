@@ -86,7 +86,7 @@
                                     <small>{{ \Carbon\Carbon::parse($session->schedule)->format('d M') . ' (' . $session->time . ')' }}</small>
                                 </td>
                                 <td>
-                                    <span class="d-block">{{ $session->title }}</span>
+                                    <span class="d-block">{{ substr($session->title, 0, 35) . '...' }}</span>
                                     <a href="{{ $session->meeting_link }}" class="text-sm text-decoration-none"><i
                                             class="uil uil-meeting-board me-1"></i>Join Meeting</a>
                                 </td>
