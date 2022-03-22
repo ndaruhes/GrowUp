@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->integer('course_id');
-            $table->integer('user_id');
+            $table->integer('mentee_id');
+            $table->integer('mentor_id');
             $table->timestamps();
         });
     }

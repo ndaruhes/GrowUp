@@ -47,12 +47,16 @@
   color: #34495e !important;
 }
 
+.text-green {
+  color: #49D983 !important;
+}
+
 .text-red {
   color: #E31A56 !important;
 }
 
-.text-green {
-  color: #49D983 !important;
+.text-yellow {
+  color: #FFC83D !important;
 }
 
 @-webkit-keyframes sky {
@@ -166,6 +170,9 @@
   font-size: 15px;
   border-radius: 5px;
   color: grey;
+}
+.explore .courses .item-content .text .rating {
+  font-size: 18px;
   margin-bottom: 5px;
 }
 .explore .courses .item-content .text .price {
@@ -220,7 +227,10 @@
   }
   .explore .courses .item-content .text .mentor {
     font-size: 14px;
-    margin: 3px 0;
+  }
+  .explore .courses .item-content .text .rating {
+    font-size: 15px;
+    margin-bottom: 5px;
   }
   .explore .courses .item-content .text .price {
     font-size: 15px;

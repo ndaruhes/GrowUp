@@ -47,12 +47,16 @@
   color: #34495e !important;
 }
 
+.text-green {
+  color: #49D983 !important;
+}
+
 .text-red {
   color: #E31A56 !important;
 }
 
-.text-green {
-  color: #49D983 !important;
+.text-yellow {
+  color: #FFC83D !important;
 }
 
 @-webkit-keyframes sky {

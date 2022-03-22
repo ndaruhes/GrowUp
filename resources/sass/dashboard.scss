@@ -67,8 +67,15 @@
         }
     }
 
-    .session {
-        margin-top: 30px;
+    .class-info {
+        margin: 20px 0;
+
+        .class-info-item {
+            font-size: 18px;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
     }
 }
 

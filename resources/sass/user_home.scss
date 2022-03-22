@@ -1,0 +1,46 @@
+@import 'variables';
+
+.item {
+    margin-bottom: 25px;
+
+    .item-content {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        background: #F8F9FA;
+        display: block;
+        text-decoration: none;
+        color: $primaryColor;
+
+        .text {
+            padding-left: 0;
+
+            span {
+                display: block;
+                font-size: 20px;
+            }
+
+            .title {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .item {
+        margin-bottom: 20px;
+        padding: 5px;
+
+        .item-content {
+            padding: 10px;
+
+            .text {
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

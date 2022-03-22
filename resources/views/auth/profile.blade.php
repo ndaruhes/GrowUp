@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Profile | GrowUp')
+@section('title', 'Profil | GrowUp')
 
 
 @section('dashboard_content')

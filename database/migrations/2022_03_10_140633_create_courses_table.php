@@ -19,10 +19,12 @@ return new class extends Migration
             $table->string('title');
             $table->string('description');
             $table->integer('price')->nullable();
-            $table->integer('category_id');
-            $table->integer('mentor_id');
             $table->date('started_at');
             $table->date('ended_at');
+            $table->integer('max_mentee');
+            $table->integer('rating')->nullable();
+            $table->integer('category_id');
+            $table->integer('mentor_id');
             $table->timestamps();
         });
     }

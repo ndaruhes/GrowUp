@@ -44,14 +44,21 @@
                                         alt="{{ $course->title }}" class="rounded shadow-sm w-100">
                                 </td>
                                 <td>
-                                    <span class="d-block">{{ $course->title }}</span>
-                                    @if ($course->price == null)
-                                        <small class="badge bg-green"><i class="uil uil-rocket me-1"></i>Gratis</small>
-                                    @else
-                                        <small class="badge bg-green">Rp{{ number_format($course->price) }}</small>
-                                    @endif
+                                    <span class="d-block">{{ substr($course->title, 0, 35) . '...' }}</span>
+                                    <small class="badge bg-green">
+                                        {{ $course->price == null ? 'Gratis' : 'Rp' . number_format($course->price) }}
+                                    </small>
+                                    <small class="badge bg-red">
+                                        {{ $course->category->title }}
+                                    </small>
                                 </td>
-                                <td>{{ substr($course->description, 0, 50) . '...' }}</td>
+                                <td>
+                                    <span class="d-block">{{ substr($course->description, 0, 40) . '...' }}</span>
+                                    <small class="badge bg-green">
+                                        <i class="uil uil-users-alt me-1"></i> {{ $course->transaction->count() }} /
+                                        {{ $course->max_mentee }}
+                                    </small>
+                                </td>
                                 <td class="action-btn-table">
                                     <a href="{{ route('showCourse', $course->id) }}" class="text-dark"><i
                                             class="uil uil-eye"></i></a>
@@ -72,15 +79,24 @@
                                         alt="{{ $course->course->title }}" class="rounded shadow-sm w-100">
                                 </td>
                                 <td>
-                                    <span class="d-block">{{ $course->course->title }}</span>
-                                    @if ($course->course->price == null)
-                                        <small class="badge bg-green"><i class="uil uil-rocket me-1"></i>Gratis</small>
-                                    @else
-                                        <small
-                                            class="badge bg-green">Rp{{ number_format($course->course->price) }}</small>
-                                    @endif
+                                    <span
+                                        class="d-block">{{ substr($course->course->title, 0, 35) . '...' }}</span>
+                                    <small class="badge bg-green">
+                                        {{ $course->price == null ? 'Gratis' : 'Rp' . number_format($course->price) }}
+                                    </small>
+                                    <small class="badge bg-red">
+                                        {{ $course->course->category->title }}
+                                    </small>
                                 </td>
-                                <td>{{ substr($course->course->description, 0, 50) . '...' }}</td>
+                                <td>
+                                    <span
+                                        class="d-block">{{ substr($course->course->description, 0, 40) . '...' }}</span>
+                                    <small class="badge bg-green">
+                                        <i class="uil uil-users-alt me-1"></i>
+                                        {{ $course->course->transaction->count() }} /
+                                        {{ $course->course->max_mentee }}
+                                    </small>
+                                </td>
                                 <td class="action-btn-table">
                                     @if ($user->role == 'Mentor')
                                         <a href="{{ route('detailCourse', $course->course->id) }}"
@@ -92,7 +108,9 @@
                                             data-bs-target="#confirmDeleteModal"><i class="uil uil-trash-alt"></i></a>
                                     @else
                                         <a href="{{ route('detailCourse', $course->course->id) }}"
-                                            class="btn btn-sm btn-primary"><i class="uil uil-eye me-1"></i>Lihat</a>
+                                            class="badge bg-dark text-decoration-none">
+                                            <i class="uil uil-eye me-1"></i>Lihat
+                                        </a>
                                     @endif
                                 </td>
                             </tr>
@@ -102,6 +120,8 @@
             </table>
         </div>
     @else
-        <div class="alert alert-warning">Kamu belum memiliki kelas apapun</div>
+        <div class="alert alert-warning">
+            {{ $user->role == 'Mentor' ? 'Kamu belum memiliki kelas apapun' : 'Kamu belum mengikuti kelas apapun' }}
+        </div>
     @endif
 @endsection

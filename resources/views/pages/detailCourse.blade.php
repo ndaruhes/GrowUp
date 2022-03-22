@@ -35,35 +35,41 @@
             <div class="col-md-7 detail">
                 <div class="container">
                     <div class="row">
-                        {{-- CLASS INFO TOP --}}
-                        <div class="class-info-top">
+                        {{-- CLASS INFO --}}
+                        <div class="class-info">
                             <div class="row">
                                 <div class="class-info-item col-md-3 col-6">
                                     <div>
                                         <b>Kelas Dimulai</b>
                                         <br>
-                                        <i class="uil uil-calendar-alt me-1"></i>{{ $transaction->count() }}
+                                        <i class="uil uil-hourglass me-1"></i>
+                                        {{ \Carbon\Carbon::parse($course->started_at)->format('d M Y') }}
                                     </div>
                                 </div>
                                 <div class="class-info-item col-md-3 col-6">
                                     <div>
                                         <b>Kelas Berakhir</b>
                                         <br>
-                                        <i class="uil uil-calendar-alt me-1"></i>{{ $transaction->count() }}
+                                        <i class="uil uil-calendar-alt me-1"></i>
+                                        {{ \Carbon\Carbon::parse($course->ended_at)->format('d M Y') }}
                                     </div>
                                 </div>
                                 <div class="class-info-item col-md-3 col-6">
                                     <div>
                                         <b>Total Mentee</b>
                                         <br>
-                                        <i class="uil uil-users-alt me-1"></i>{{ $transaction->count() }}
+                                        <i class="uil uil-users-alt me-1"></i>{{ $transaction->count() }} /
+                                        {{ $course->max_mentee }}
                                     </div>
                                 </div>
                                 <div class="class-info-item col-md-3 col-6">
                                     <div>
-                                        <b>Diskusi</b>
+                                        <b>Rating Kelas</b>
                                         <br>
-                                        <i class="uil uil-comments-alt me-1"></i>{{ $transaction->count() }}
+                                        @for ($i = 1; $i <= $course->rating; $i++)
+                                            <i class="uis uis-star text-yellow"></i>
+                                        @endfor
+                                        {{-- <i class="uil uil-comments-alt me-1"></i>{{ $transaction->count() }} --}}
                                     </div>
                                 </div>
                             </div>
@@ -97,56 +103,20 @@
                                             </p>
                                             <p>
                                                 <b>Link Meeting</b>
-                                                <a href="{{ $session->meeting_link }}" target="_blank"
-                                                    class="text-decoration-none d-block"
-                                                    @if (!Auth::user()) data-bs-toggle="modal" data-bs-target="#loginModal" @elseif ($hasTransaction == null) data-bs-toggle="modal" data-bs-target="#gabungKelasModal" @endif>Join
+                                                <a class="text-decoration-none d-block cursor-pointer"
+                                                    @if (!Auth::user()) data-bs-toggle="modal" data-bs-target="#loginModal" @elseif ($hasTransaction == null) data-bs-toggle="modal" data-bs-target="#gabungKelasModal" @else href="{{ $session->meeting_link }}" target="_blank" @endif>Join
                                                     Kelas<i class="uil uil-presentation-play ms-1"></i></a>
                                             </p>
                                             <p>
                                                 <b>Materi Pembelajaran</b>
-                                                <a href="{{ route('downloadResource', $session->id) }}"
-                                                    class="text-decoration-none d-block"
-                                                    @if (!Auth::user()) data-bs-toggle="modal" data-bs-target="#loginModal" @elseif ($hasTransaction == null) data-bs-toggle="modal" data-bs-target="#gabungKelasModal" @endif>Unduh
+                                                <a class="text-decoration-none d-block cursor-pointer"
+                                                    @if (!Auth::user()) data-bs-toggle="modal" data-bs-target="#loginModal" @elseif ($hasTransaction == null) data-bs-toggle="modal" data-bs-target="#gabungKelasModal" @else href="{{ route('downloadResource', $session->id) }}" @endif>Unduh
                                                     Materi<i class="uil uil-download-alt ms-1"></i></a>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             @endforeach
-                        </div>
-
-                        {{-- CLASS INFO BOTTOM --}}
-                        <div class="class-info-bottom">
-                            <div class="row">
-                                <div class="class-info-item col-md-3 col-6">
-                                    <div>
-                                        <b>Kelas Dimulai</b>
-                                        <br>
-                                        <i class="uil uil-calendar-alt me-1"></i>{{ $transaction->count() }}
-                                    </div>
-                                </div>
-                                <div class="class-info-item col-md-3 col-6">
-                                    <div>
-                                        <b>Kelas Berakhir</b>
-                                        <br>
-                                        <i class="uil uil-calendar-alt me-1"></i>{{ $transaction->count() }}
-                                    </div>
-                                </div>
-                                <div class="class-info-item col-md-3 col-6">
-                                    <div>
-                                        <b>Total Mentee</b>
-                                        <br>
-                                        <i class="uil uil-users-alt me-1"></i>{{ $transaction->count() }}
-                                    </div>
-                                </div>
-                                <div class="class-info-item col-md-3 col-6">
-                                    <div>
-                                        <b>Diskusi</b>
-                                        <br>
-                                        <i class="uil uil-comments-alt me-1"></i>{{ $transaction->count() }}
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

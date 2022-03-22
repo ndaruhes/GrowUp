@@ -23,7 +23,47 @@
         <span class="description mt-3">{{ $course->description }}</span>
     </div>
 
-    {{-- SESSIONS --}}
+    {{-- CLASS INFO --}}
+    <div class="class-info">
+        <div class="row">
+            <div class="class-info-item col-md-3 col-6">
+                <div>
+                    <b>Kelas Dimulai</b>
+                    <br>
+                    <i class="uil uil-hourglass me-1"></i>
+                    {{ \Carbon\Carbon::parse($course->started_at)->format('d M Y') }}
+                </div>
+            </div>
+            <div class="class-info-item col-md-3 col-6">
+                <div>
+                    <b>Kelas Berakhir</b>
+                    <br>
+                    <i class="uil uil-calendar-alt me-1"></i>
+                    {{ \Carbon\Carbon::parse($course->ended_at)->format('d M Y') }}
+                </div>
+            </div>
+            <div class="class-info-item col-md-3 col-6">
+                <div>
+                    <b>Total Mentee</b>
+                    <br>
+                    <i class="uil uil-users-alt me-1"></i>{{ $transaction->count() }} /
+                    {{ $course->max_mentee }}
+                </div>
+            </div>
+            <div class="class-info-item col-md-3 col-6">
+                <div>
+                    <b>Rating Kelas</b>
+                    <br>
+                    @for ($i = 1; $i <= $course->rating; $i++)
+                        <i class="uis uis-star text-yellow"></i>
+                    @endfor
+                    {{-- <i class="uil uil-comments-alt me-1"></i>{{ $transaction->count() }} --}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- CLASS SESSIONS --}}
     <div class="session">
         <a href="#" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#createMeet"><i
                 class="uil uil-plus me-1"></i>Buat Pertemuan</a>

@@ -14,7 +14,8 @@ class TransactionController extends Controller
         $course = Course::findOrFail($id);
         Transaction::create([
             'course_id' => $course->id,
-            'user_id' => Auth::user()->id
+            'mentee_id' => Auth::user()->id,
+            'mentor_id' => $course->mentor_id
         ]);
         return redirect()->back()->with('success_message', 'Yeyy, Kamu berhasil mendaftarkan kelasnya');
     }

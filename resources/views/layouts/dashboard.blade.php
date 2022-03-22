@@ -15,6 +15,9 @@
         {{-- DASHBOARD MENU --}}
         <div class="dashboard-menu">
             <div class="dashboard-menu-panel">
+                <a href="{{ $user->role == 'Mentor' ? url('mentor') : url('mentee') }}"
+                    class="btn bg-outline-green btn-sm"><i class="uil uil-apps me-1"></i>Dashboard
+                </a>
                 <a href="{{ $user->role == 'Mentor' ? url('mentor/courses') : url('mentee/courses') }}"
                     class="btn bg-outline-green btn-sm"><i
                         class="uil uil-notebooks me-1"></i>{{ $user->role == 'Mentor' ? 'Kelola Kelas' : 'Kelas Saya' }}

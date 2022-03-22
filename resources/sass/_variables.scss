@@ -4,6 +4,7 @@ $red: #E31A56;
 $green: #49D983;
 $white: white;
 $grey: #656E56;
+$yellow: #FFC83D;
 
 // BACKGROUND
 .bg-green {
@@ -60,12 +61,16 @@ $grey: #656E56;
     color: $primaryColor !important;
 }
 
+.text-green {
+    color: $green !important;
+}
+
 .text-red {
     color: $red !important;
 }
 
-.text-green {
-    color: $green !important;
+.text-yellow {
+    color: $yellow !important;
 }
 
 // ANIMATION

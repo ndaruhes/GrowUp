@@ -47,12 +47,16 @@
   color: #34495e !important;
 }
 
+.text-green {
+  color: #49D983 !important;
+}
+
 .text-red {
   color: #E31A56 !important;
 }
 
-.text-green {
-  color: #49D983 !important;
+.text-yellow {
+  color: #FFC83D !important;
 }
 
 @-webkit-keyframes sky {
@@ -140,8 +144,14 @@
   margin-top: 5px;
   font-size: 17px;
 }
-.content-left .session {
-  margin-top: 30px;
+.content-left .class-info {
+  margin: 20px 0;
+}
+.content-left .class-info .class-info-item {
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .table-wrapper {

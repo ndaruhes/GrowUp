@@ -15,10 +15,10 @@ class CourseController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $courses = $user->role == 'Mentor' ? Course::where('mentor_id', $user->id)->get() : Transaction::where('user_id', $user->id)->get();
+        $courses = $user->role == 'Mentor' ? Course::where('mentor_id', $user->id)->get() : Transaction::where('mentee_id', $user->id)->get();
         return view('courses.index', [
             'courses' => $courses,
-            'categories' => CategoryController::index()
+            'categories' => CategoryController::index(),
         ]);
     }
 
@@ -39,6 +39,7 @@ class CourseController extends Controller
             'title' => 'required|string|min:3|max:100',
             'description' => 'required|string|min:5|max:500',
             'category' => 'required|numeric',
+            'max_mentee' => 'required|numeric|min:3',
             'started_at' => 'required|date',
             'ended_at' => 'required|date'
         ]);
@@ -55,6 +56,7 @@ class CourseController extends Controller
             'title' => $request->title,
             'price' => $request->price,
             'description' => $request->description,
+            'max_mentee' => $request->max_mentee,
             'mentor_id' => Auth::user()->id,
             'category_id' => $request->category,
             'started_at' => $request->started_at,
@@ -68,9 +70,11 @@ class CourseController extends Controller
     {
         $url = explode('/', url()->current());
         $course = Course::findOrFail($id);
+        $transaction = Transaction::where('mentor_id', Auth::user()->id)->get();
         return view('courses.show', [
             'course' => $course,
-            'sessions' => (new SessionController)->getAll(end($url))
+            'sessions' => (new SessionController)->getAll(end($url)),
+            'transaction' => $transaction
         ]);
     }
 
@@ -90,6 +94,7 @@ class CourseController extends Controller
                 'title' => 'required|string|min:3|max:100',
                 'description' => 'required|string|min:5|max:500',
                 'category' => 'required|numeric',
+                'max_mentee' => 'required|numeric|min:3',
                 'started_at' => 'required|date',
                 'ended_at' => 'required|date'
             ]);
@@ -98,6 +103,7 @@ class CourseController extends Controller
                 'title' => $request->title,
                 'price' => $request->price,
                 'description' => $request->description,
+                'max_mentee' => $request->max_mentee,
                 'category_id' => $request->category,
                 'started_at' => $request->started_at,
                 'ended_at' => $request->ended_at
@@ -110,6 +116,7 @@ class CourseController extends Controller
                 'title' => 'required|string|min:3|max:100',
                 'description' => 'required|string|min:5|max:500',
                 'category' => 'required|numeric',
+                'max_mentee' => 'required|numeric|min:3',
                 'started_at' => 'required|date',
                 'ended_at' => 'required|date'
             ]);
@@ -131,6 +138,7 @@ class CourseController extends Controller
                 'title' => $request->title,
                 'price' => $request->price,
                 'description' => $request->description,
+                'max_mentee' => $request->max_mentee,
                 'category_id' => $request->category,
                 'started_at' => $request->started_at,
                 'ended_at' => $request->ended_at

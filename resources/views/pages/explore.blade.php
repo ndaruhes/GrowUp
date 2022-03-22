@@ -49,7 +49,7 @@
                             <div class="col-md-3 col-12">
                                 <a href="{{ route('detailCourse', $courses->id) }}"
                                     class="col-md-12 item-content d-flex align-items-center">
-                                    <div class="row align-items-center">
+                                    <div class="row">
                                         <div class="col-md-12 col-5 image">
                                             <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
                                                 alt="{{ $courses->title }}" class="w-100">
@@ -57,6 +57,11 @@
                                         <div class="col-md-12 col-7 text">
                                             <span class="title">{{ $courses->title }}</span>
                                             <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
                                             <span
                                                 class="price">{{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}</span>
                                         </div>
@@ -81,7 +86,7 @@
                             <div class="col-md-3 col-12">
                                 <a href="{{ route('detailCourse', $courses->id) }}"
                                     class="col-md-12 item-content d-flex align-items-center">
-                                    <div class="row align-items-center">
+                                    <div class="row">
                                         <div class="col-md-12 col-5 image">
                                             <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
                                                 alt="{{ $courses->title }}" class="w-100">
@@ -89,6 +94,11 @@
                                         <div class="col-md-12 col-7 text">
                                             <span class="title">{{ $courses->title }}</span>
                                             <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
                                             <span
                                                 class="price">{{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}</span>
                                         </div>
@@ -113,7 +123,7 @@
                             <div class="col-md-3 col-12">
                                 <a href="{{ route('detailCourse', $courses->id) }}"
                                     class="col-md-12 item-content d-flex align-items-center">
-                                    <div class="row align-items-center">
+                                    <div class="row">
                                         <div class="col-md-12 col-5 image">
                                             <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
                                                 alt="{{ $courses->title }}" class="w-100">
@@ -121,6 +131,11 @@
                                         <div class="col-md-12 col-7 text">
                                             <span class="title">{{ $courses->title }}</span>
                                             <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
                                             <span
                                                 class="price">{{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}</span>
                                         </div>
@@ -145,7 +160,7 @@
                             <div class="col-md-3 col-12">
                                 <a href="{{ route('detailCourse', $courses->id) }}"
                                     class="col-md-12 item-content d-flex align-items-center">
-                                    <div class="row align-items-center">
+                                    <div class="row">
                                         <div class="col-md-12 col-5 image">
                                             <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
                                                 alt="{{ $courses->title }}" class="w-100">
@@ -153,6 +168,11 @@
                                         <div class="col-md-12 col-7 text">
                                             <span class="title">{{ $courses->title }}</span>
                                             <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
                                             <span
                                                 class="price">{{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}</span>
                                         </div>

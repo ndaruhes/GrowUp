@@ -69,19 +69,28 @@
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
                 </div>
-                <div class="form-group">
-                    <label>Harga Kelas <small class="text-warning">*tidak wajib</small></label>
-                    <div class="input-group">
-                        <span class="input-group-text" id="price">Rp</span>
-                        <input type="number" class="form-control @error('price') is-invalid @enderror"
-                            placeholder="Harga Kelas..." name="price"
-                            value="{{ !old('price') ? $course->price : old('price') }}" min="1">
-                    </div>
-                    @error('price')
-                        <small class="text-danger">{{ $message }}</small>
-                    @enderror
-                </div>
                 <div class="row">
+                    <div class="col-6 form-group">
+                        <label>Harga Kelas <small class="text-warning">*tidak wajib</small></label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="price">Rp</span>
+                            <input type="number" class="form-control @error('price') is-invalid @enderror"
+                                placeholder="Harga Kelas..." name="price"
+                                value="{{ !old('price') ? $course->price : old('price') }}" min="1">
+                        </div>
+                        @error('price')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
+                    </div>
+                    <div class="col-6 form-group">
+                        <label>Maksimal Mentee</label>
+                        <input type="number" class="form-control @error('max_mentee') is-invalid @enderror"
+                            placeholder="Maksimal Peserta..." name="max_mentee"
+                            value="{{ !old('max_mentee') ? $course->max_mentee : old('max_mentee') }}" min="3">
+                        @error('max_mentee')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
+                    </div>
                     <div class="col-6 form-group">
                         <label>Tanggal Mulai Kelas</label>
                         <input type="date" class="form-control @error('started_at') is-invalid @enderror"

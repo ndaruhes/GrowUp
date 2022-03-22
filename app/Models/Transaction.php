@@ -15,8 +15,13 @@ class Transaction extends Model
         return $this->belongsTo('App\Models\Course', 'course_id', 'id');
     }
 
-    public function user()
+    public function mentee()
     {
-        return $this->belongsTo('App\Models\User', 'user_id', 'id');
+        return $this->belongsTo('App\Models\User', 'mentee_id', 'id');
+    }
+
+    public function mentor()
+    {
+        return $this->belongsTo('App\Models\User', 'mentor_id', 'id');
     }
 }
