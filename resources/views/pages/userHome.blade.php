@@ -8,20 +8,19 @@
 
 @section('dashboard_content')
     {{-- HOME DASHBOARD MENTOR --}}
-    @if ($user->role == 'Mentor')
-        <div class="row">
-            <div class="col-md-10 mb-3">
-                <div class="row align-items-center">
-                    <div class="col-md-2 col-3">
-                        <img src="{{ asset('/images/avatar.png') }}" alt="avatar.png"
-                            class="w-100 shadow-sm rounded-circle">
-                    </div>
-                    <div class="col-md-10 col-9 p-0 modal-user-info">
-                        <span class="fs-5">{{ $user->name }}</span>
-                        <small class="badge bg-green">{{ $user->role }}</small>
-                    </div>
-                </div>
+    <div class="col-md-10 mb-3">
+        <div class="row align-items-center">
+            <div class="col-md-2 col-3">
+                <img src="{{ asset('/images/avatar.png') }}" alt="avatar.png" class="w-100 shadow-sm rounded-circle">
             </div>
+            <div class="col-md-10 col-9 p-0 modal-user-info">
+                <span class="fs-5">{{ $user->name }}</span>
+                <small class="badge bg-green">{{ $user->role }}</small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @if ($user->role == 'Mentor')
             <div class="col-md-4 col-6 item">
                 <a href="#" class="col-md-12 item-content">
                     <div class="row align-items-center">
@@ -99,21 +98,7 @@
                     </div>
                 </a>
             </div>
-        </div>
-    @else
-        <div class="row">
-            <div class="col-md-10 mb-3">
-                <div class="row align-items-center">
-                    <div class="col-md-2 col-3">
-                        <img src="{{ asset('/images/avatar.png') }}" alt="avatar.png"
-                            class="w-100 shadow-sm rounded-circle">
-                    </div>
-                    <div class="col-md-10 col-9 p-0 modal-user-info">
-                        <span class="fs-5">{{ $user->name }}</span>
-                        <small class="badge bg-green">{{ $user->role }}</small>
-                    </div>
-                </div>
-            </div>
+        @else
             <div class="col-md-4 col-6 item">
                 <a href="{{ url(strtolower($user->role) . '/courses') }}" class="col-md-12 item-content">
                     <div class="row align-items-center">
@@ -159,6 +144,6 @@
                     </div>
                 </a>
             </div>
-        </div>
-    @endif
+        @endif
+    </div>
 @endsection

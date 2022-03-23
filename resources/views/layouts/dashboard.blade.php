@@ -36,7 +36,11 @@
                 @yield('dashboard_content')
             </div>
             <div class="col-md-5 content-right">
-                <img src="{{ asset('images/dashboard.png') }}" alt="dashboard.png" class="w-100">
+                <div class="grafik">
+                    <h4 class="fw-bold"><i class="uil uil-analytics me-1"></i>Grafik Pencapaian</h4>
+                    <hr>
+                    <canvas class="mentorChart" class="w-100" height="150"></canvas>
+                </div>
             </div>
         </div>
     </div>

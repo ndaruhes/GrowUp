@@ -114,3 +114,7 @@
         </div>
     </div>
 @endsection
+
+@section('jsExternal')
+    <script src="{{ asset('js/typed.js') }}"></script>
+@endsection

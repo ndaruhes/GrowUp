@@ -110,5 +110,4 @@
             <div class="alert alert-warning mt-3">Belum ada jadwal pertemuan di kelas ini</div>
         @endif
     </div>
-
 @endsection

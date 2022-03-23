@@ -67,8 +67,9 @@
                                                     <i class="uis uis-star text-yellow"></i>
                                                 @endfor
                                             </span>
-                                            <span
-                                                class="price">{{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}</span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
                                         </div>
                                     </div>
                                 </a>
@@ -109,8 +110,9 @@
                                                     <i class="uis uis-star text-yellow"></i>
                                                 @endfor
                                             </span>
-                                            <span
-                                                class="price">{{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}</span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
                                         </div>
                                     </div>
                                 </a>
@@ -151,8 +153,52 @@
                                                     <i class="uis uis-star text-yellow"></i>
                                                 @endfor
                                             </span>
-                                            <span
-                                                class="price">{{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}</span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+
+            {{-- WEB DEVELOPMENT --}}
+            @if ($japaneselanguage->count() != 0)
+                <div class="courses">
+                    <div class="category-title d-flex align-items-center">
+                        <img src=" {{ $japaneselanguage[0]->category->icon }}"
+                            alt="{{ $japaneselanguage[0]->category->title }}">
+                        <span>{{ $japaneselanguage[0]->category->title }}</span>
+                    </div>
+                    <div class="row">
+                        @foreach ($japaneselanguage as $courses)
+                            <div class="col-md-3 col-12">
+                                <a href="{{ route('detailCourse', $courses->id) }}"
+                                    class="col-md-12 item-content d-flex align-items-center">
+                                    <div class="row">
+                                        <div class="col-md-12 col-5 image">
+                                            @if (explode('/', $courses->cover)[0] != 'https:')
+                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $courses->title }}" class="w-100">
+                                            @else
+                                                <img src="{{ $courses->cover }}" alt="{{ $courses->title }}"
+                                                    class="w-100">
+                                            @endif
+                                        </div>
+                                        <div class="col-md-12 col-7 text">
+                                            <span class="title">{{ $courses->title }}</span>
+                                            <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
                                         </div>
                                     </div>
                                 </a>
@@ -193,8 +239,9 @@
                                                     <i class="uis uis-star text-yellow"></i>
                                                 @endfor
                                             </span>
-                                            <span
-                                                class="price">{{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}</span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
                                         </div>
                                     </div>
                                 </a>

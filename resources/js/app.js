@@ -5,6 +5,7 @@ $(document).ready(function () {
     })
 })
 
+
 // AOS
 const options = {
     disable: false,
@@ -34,13 +35,53 @@ const toastList = toastElList.map(function (toastEl) {
 })
 toastList.forEach(toast => toast.show())
 
-// TYPED
-const typed = new Typed('#slogan', {
-    strings: ['A New Different Way to Improve Your Skills', 'Let\'s Join and Start Growing with Us...'],
-    smartBackspace: true,
-    typeSpeed: 50,
-    backSpeed: 30,
-    loop: true,
-    startDelay: 1000,
 
-});
+// CUSTOM CHECKBOX
+function componentInit() {
+    const checkBoxes = document.getElementsByClassName("red-checkbox-container");
+    for (let i = 0; i < checkBoxes.length; i++) {
+        checkBoxes[i].addEventListener("click", () => {
+            let checkMark = checkBoxes[i].childNodes[1];
+            let inputCheckBox = checkBoxes[i].childNodes[3];
+            checkMark.classList.toggle("d-none");
+            inputCheckBox.checked = !inputCheckBox.checked;
+        });
+    }
+}
+componentInit()
+
+
+// CHART
+if (window.location.pathname != '/') {
+    const mentorCTX = document.querySelector('.mentorChart').getContext('2d')
+    const mentorChart = new Chart(mentorCTX, {
+        type: 'bar',
+        data: {
+            labels: ['Total Kelas', 'Total Mentee', 'Total Forum', 'Total Rating'],
+            datasets: [{
+                label: 'Grafik Pencapaian',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    })
+}

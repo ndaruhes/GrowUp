@@ -64,7 +64,3 @@
         </div>
     </div>
 @endsection
-
-@section('script')
-    <script src="{{ asset('js/customCheckBox.js') }}"></script>
-@endsection
