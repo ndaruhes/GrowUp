@@ -21,9 +21,13 @@
                 <div class="form-group">
                     <input type="file" name="cover" class="d-none" id="cover">
                     <label for="cover">
-                        <img src="{{ $course->cover != null ? asset('storage/images/cover/' . $course->cover) : asset('images/no-image.png') }}"
-                            alt="{{ $course->cover != null ? $course->title : 'image not found' }}"
-                            class="w-100 rounded shadow-sm cursor-pointer" id="cover-preview">
+                        @if (explode('/', $course->cover)[0] != 'https:')
+                            <img src="{{ $course->cover != null ? asset('storage/images/cover/' . $course->cover) : asset('images/no-image.png') }}"
+                                alt="{{ $course->cover != null ? $course->title : 'image not found' }}"
+                                class="w-100 rounded shadow-sm cursor-pointer" id="cover-preview">
+                        @else
+                            <img src="{{ $course->cover }}" alt="{{ $course->title }}" class="w-100 rounded shadow-sm cursor-pointer" id="cover-preview">
+                        @endif
                     </label>
                     <button type="button" class="btn bg-red btn-sm mt-3 shadow-sm" id="changeCover">Ganti Sampul <i
                             class="uil uil-image-upload ms-1"></i></button>

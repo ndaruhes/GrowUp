@@ -30,17 +30,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./resources/sass/register.scss":
-/*!**************************************!*\
-  !*** ./resources/sass/register.scss ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9yZWdpc3Rlci5zY3NzLmpzIiwibWFwcGluZ3MiOiI7QUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9zYXNzL3JlZ2lzdGVyLnNjc3M/ZmE2MiJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/sass/register.scss\n");
-
-/***/ }),
-
 /***/ "./resources/sass/banner.scss":
 /*!************************************!*\
   !*** ./resources/sass/banner.scss ***!
@@ -48,7 +37,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9iYW5uZXIuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9iYW5uZXIuc2Nzcz81NDk4Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/banner.scss\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9iYW5uZXIuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9iYW5uZXIuc2Nzcz9lN2YyIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/banner.scss\n");
 
 /***/ }),
 
@@ -59,7 +48,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9leHBsb3JlLnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL3Nhc3MvZXhwbG9yZS5zY3NzPzc1NjYiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/explore.scss\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9leHBsb3JlLnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL3Nhc3MvZXhwbG9yZS5zY3NzPzFhYjQiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/explore.scss\n");
 
 /***/ }),
 
@@ -70,7 +59,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9jb3Vyc2VfZGV0YWlsLnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL3Nhc3MvY291cnNlX2RldGFpbC5zY3NzPzBmMzkiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/course_detail.scss\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9jb3Vyc2VfZGV0YWlsLnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL3Nhc3MvY291cnNlX2RldGFpbC5zY3NzP2MyOWMiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/course_detail.scss\n");
 
 /***/ }),
 
@@ -81,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy91c2VyX2hvbWUuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy91c2VyX2hvbWUuc2Nzcz8yZjI4Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/user_home.scss\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy91c2VyX2hvbWUuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy91c2VyX2hvbWUuc2Nzcz83NzljIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/user_home.scss\n");
 
 /***/ }),
 
@@ -92,7 +81,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9jb250YWN0LnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL3Nhc3MvY29udGFjdC5zY3NzPzkxMTMiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/contact.scss\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9jb250YWN0LnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL3Nhc3MvY29udGFjdC5zY3NzP2Y4N2IiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/contact.scss\n");
 
 /***/ }),
 
@@ -103,7 +92,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9hYm91dC5zY3NzLmpzIiwibWFwcGluZ3MiOiI7QUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9zYXNzL2Fib3V0LnNjc3M/NzQ0ZSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/sass/about.scss\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9hYm91dC5zY3NzLmpzIiwibWFwcGluZ3MiOiI7QUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9zYXNzL2Fib3V0LnNjc3M/ZDg0NCJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/sass/about.scss\n");
 
 /***/ }),
 
@@ -260,7 +249,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 			"css/course_detail": 0,
 /******/ 			"css/explore": 0,
 /******/ 			"css/banner": 0,
-/******/ 			"css/register": 0,
 /******/ 			"css/auth": 0
 /******/ 		};
 /******/ 		
@@ -311,20 +299,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/navbar.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/dashboard.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/footer.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/home.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/auth.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/register.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/banner.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/explore.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/course_detail.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/user_home.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/contact.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/register","css/auth"], () => (__webpack_require__("./resources/sass/about.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/navbar.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/dashboard.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/footer.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/auth.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/banner.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/explore.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/course_detail.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/user_home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/contact.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/about.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

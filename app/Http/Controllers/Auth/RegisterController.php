@@ -39,9 +39,9 @@ class RegisterController extends Controller
             return redirect('/register')
                 ->withErrors($validator)
                 ->withInput()
-                ->with('error_message', 'Please fill in the form correctly');
+                ->with('error_message', 'Harap isi form dengan benar');
         } else {
-            $this->create($request->all());
+            return $this->create($request->all());
         }
     }
 
@@ -50,35 +50,44 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
     protected function create(array $data)
     {
-        return User::create([
+        User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password'])
         ]);
+
+        return redirect('/login')->with('success_message', 'Yeyy, akun kamu berhasil dibuat');
     }
 
-    public function createMentor(Request $request)
+    public function createMentor()
     {
-        $request->validate([
-            'name' => 'required|string|min:5',
-            'email' => 'required|email|min:5',
-            'password' => 'required|string|min:5',
-            'password_confirmation' => 'required|string|confirmed',
-        ]);
+        return view('auth.registerMentor');
+    }
 
-        User::create([
-            'name' => $request['name'],
-            'email' => $request['email'],
-            'password' => Hash::make($request['password']),
-            'role' => 'Mentor'
-        ]);
+    public function storeMentor(Request $request)
+    {
+        $validator = $this->validator($request->all());
 
-        return redirect('/login')->with('success_message', 'You have successfully registered as a mentor');
+        if ($validator->fails()) {
+            return redirect('/register')
+                ->withErrors($validator)
+                ->withInput()
+                ->with('error_message', 'Harap isi form dengan benar');
+        } else {
+            User::create([
+                'name' => $request['name'],
+                'email' => $request['email'],
+                'password' => Hash::make($request['password']),
+                'role' => 'Mentor'
+            ]);
+
+            return redirect('/login')->with('success_message', 'Yeyy, berhasil mendaftar sebagai mentor');
+        }
     }
 }

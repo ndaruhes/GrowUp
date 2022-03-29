@@ -28,11 +28,11 @@
             left: 70px;
             bottom: 100px;
         }
+    }
 
-        .w-100 {
-            animation: sky 12s linear infinite;
-            width: 90% !important;
-        }
+    .w-100 {
+        animation: sky 12s linear infinite;
+        width: 90% !important;
     }
 
     .text {
@@ -216,9 +216,9 @@
                 bottom: 25px;
             }
 
-            .w-100 {
+            .w-75 {
                 animation: sky 12s linear infinite;
-                width: 55% !important;
+                width: 90% !important;
             }
         }
 
@@ -228,11 +228,11 @@
 
         .text {
             span {
-                font-size: 18px;
+                font-size: 17px;
             }
 
             h1 {
-                font-size: 27px;
+                font-size: 23px;
             }
 
             p {
@@ -242,7 +242,7 @@
 
             .btn-started {
                 border-radius: 5px;
-                width: 150px;
+                width: 160px;
                 padding: 8px 0;
                 font-size: 17px;
                 font-weight: bold;

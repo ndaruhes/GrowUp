@@ -14,28 +14,43 @@ $user = Auth::user();
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}"><i class="uil uil-estate me-1"></i>Beranda</a>
+                    <a class="nav-link" href="{{ url('/') }}">
+                        <i class="uil uil-estate"></i>
+                        Beranda
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/about') }}"><i
-                            class="uil uil-lightbulb-alt me-1"></i>Tentang Kami</a>
+                    <a class="nav-link" href="{{ url('/about') }}">
+                        <i class="uil uil-lightbulb-alt"></i>
+                        Tentang Kami
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/explore') }}"><i class="uil uil-rocket me-1"></i>Eksplor
-                        Kelas</a>
+                    <a class="nav-link" href="{{ url('/explore') }}">
+                        <i class="uil uil-rocket"></i>
+                        Eksplor Kelas
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/contact') }}"><i
-                            class="uil uil-phone-volume me-1"></i>Hubungi Kami</a>
+                    <a class="nav-link" href="{{ url('/contact') }}">
+                        <i class="uil uil-phone-volume"></i>
+                        Hubungi Kami
+                    </a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/login') }}"><i class="uil uil-user me-1"></i>Masuk</a>
+                        <a class="nav-link" href="{{ url('/login') }}">
+                            <i class="uil uil-user"></i>
+                            Masuk
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link bg-green signup-btn" href="{{ url('/register') }}">Daftar</a>
+                        <a class="nav-link signup-btn" href="{{ url('/register') }}">
+                            <i class="uil uil-user-plus"></i>
+                            Daftar
+                        </a>
                     </li>
                 @else
                     <li class="nav-item dropdown">
@@ -48,13 +63,16 @@ $user = Auth::user();
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
                                 <a class="dropdown-item"
-                                    href="{{ $user->role == 'Mentee' ? url('/mentee') : url('/mentor') }}"><i
-                                        class="uil uil-apps me-1"></i>Dashboard</a>
+                                    href="{{ $user->role == 'Mentee' ? url('/mentee') : url('/mentor') }}">
+                                    <i class="uil uil-apps"></i>
+                                    Dashboard
+                                </a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
-                                        class="uil uil-sign-out-alt me-1"></i>Keluar
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="uil uil-sign-out-alt"></i>
+                                    Keluar
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                     class="d-none">

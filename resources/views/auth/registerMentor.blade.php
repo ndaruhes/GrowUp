@@ -1,6 +1,6 @@
 @extends("layouts.app")
 
-@section('title', 'Register | GrowUp')
+@section('title', 'Daftar Mentor | GrowUp')
 
 @section('cssExternal')
     <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
@@ -12,11 +12,12 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-5 auth-section-left">
                     <div class="auth-header">
-                        <h1>Register <span class="text-red">G</span>row<span class="text-green">U</span>p</h1>
-                        <p>Buat akun kamu dan nikmati semua fitur</p>
+                        <h1>Register Mentor <span class="text-red">G</span>row<span class="text-green">U</span>p
+                        </h1>
+                        <p>Bergabung dan mulai karirmu dengan daftar sebagai mentor di <b>GrowUp</b></p>
                         <hr>
                     </div>
-                    <form action="{{ route('register') }}" method="POST">
+                    <form action="{{ route('storeMentor') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="name" class="form-label">Nama Lengkap</label>
@@ -37,8 +38,7 @@
                         <div class="form-group">
                             <label for="password" class="form-label">Password</label>
                             <input name="password" type="password"
-                                class="form-control @error('password') is-invalid @enderror" id="password"
-                                value="{{ old('password') }}" placeholder="Password Kamu...">
+                                class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password Kamu...">
                             @error('password')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
@@ -46,8 +46,7 @@
                         <div class="form-group">
                             <label for="password_confirmation" class="form-label">Konfirmasi Password</label>
                             <input name="password_confirmation" type="password"
-                                class="form-control @error('password_confirmation') is-invalid @enderror"
-                                id="password_confirmation" placeholder="Konfirmasi Password Kamu...">
+                                class="form-control @error('password_confirmation') is-invalid @enderror" id="password_confirmation" placeholder="Konfirmasi Password Kamu...">
                             @error('password_confirmation')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
@@ -56,8 +55,8 @@
                             <div role="button" class="red-checkbox-container border bg-light">
                                 <img class="w-100 h-100 d-block d-none" src="{{ asset('images/checkbox.png') }}"
                                     alt="checkbox.png">
-                                <input name="termsPrivacy" type="checkbox" class="form-check-input custom-check-box d-none"
-                                    id="termsPrivacyCheck">
+                                <input name="termsPrivacy" type="checkbox"
+                                    class="form-check-input custom-check-box d-none" id="termsPrivacyCheck">
                             </div>
                             <label class="form-check-label" for="termsPrivacyCheck">
                                 Saya Setuju dengan <a href="#" class="text-decoration-none">Persyaratan & Privasi</a>
@@ -73,19 +72,10 @@
                         <a href="{{ url('/login') }}" class="text-red text-decoration-none">
                             Login Disini
                         </a>
-
-                        <br>
-                        <hr>
-
-                        {{-- OPSI DAFTAR MENTOR --}}
-                        <span>Ingin jadi mentor?</span>
-                        <a href="{{ url('/register/mentor') }}" class="text-red text-decoration-none">
-                            Daftar Disini
-                        </a>
                     </div>
                 </div>
                 <div class="col-md-6 auth-section-right text-center">
-                    <img src="{{ asset('images/illustrations/auth.png') }}" alt="auth.png" class="w-75">
+                    <img src="{{ asset('images/illustrations/mentor.png') }}" alt="auth.png" class="w-75">
                 </div>
             </div>
         </div>

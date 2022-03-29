@@ -116,7 +116,7 @@
   left: 70px;
   bottom: 100px;
 }
-.header .image-right .w-100 {
+.header .w-100 {
   -webkit-animation: sky 12s linear infinite;
           animation: sky 12s linear infinite;
   width: 90% !important;
@@ -269,19 +269,19 @@
     left: 20px;
     bottom: 25px;
   }
-  .header .image-left .w-100 {
+  .header .image-left .w-75 {
     -webkit-animation: sky 12s linear infinite;
             animation: sky 12s linear infinite;
-    width: 55% !important;
+    width: 90% !important;
   }
   .header .image-right {
     display: none;
   }
   .header .text span {
-    font-size: 18px;
+    font-size: 17px;
   }
   .header .text h1 {
-    font-size: 27px;
+    font-size: 23px;
   }
   .header .text p {
     font-size: 17px;
@@ -289,7 +289,7 @@
   }
   .header .text .btn-started {
     border-radius: 5px;
-    width: 150px;
+    width: 160px;
     padding: 8px 0;
     font-size: 17px;
     font-weight: bold;

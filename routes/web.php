@@ -20,11 +20,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/profile', 'PageController@profile')->middleware('auth');
     Route::get('/explore', 'PageController@explore');
     Route::get('/contact', 'PageController@contact')->name('contact');
-    Route::get('/courses/explore/{id}', 'PageController@detailCourse')->name('detailCourse');
     Route::get('/about', 'PageController@about')->name('about');
+    Route::get('/register/mentor', 'Auth\RegisterController@createMentor')->name('createMentor');
+    Route::post('/register/mentor', 'Auth\RegisterController@storeMentor')->name('storeMentor');
     Route::post('/explore/search', 'CourseController@searchCourse')->name('searchCourse');
     Route::post('/checkout/{id}', 'TransactionController@checkout')->name('checkout');
     Route::get('/download/{id}', 'SessionController@downloadResource')->name('downloadResource');
+    Route::get('/courses/explore/{id}', 'PageController@detailCourse')->name('detailCourse');
 
     // MENTEE ROUTES
     Route::group(['prefix' => 'mentee', 'middleware' => 'RoleMentee'], function () {

@@ -7,58 +7,57 @@
 @endsection
 
 @section('content')
-    <div class="auth-section-container">
-        <div class="row h-100">
-            {{-- LEFT SECTION (FORM) --}}
-            <div class="col h-100 auth-section auth-section-left">
-                <div class="header-wrapper">
-                    <h1 class="text-nowrap">Sign In to Your</h1>
-                    <h1>Account</h1>
-                </div>
-
-                <div class="form-wrapper">
+    <div class="auth-wrapper">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 auth-section-left">
+                    <div class="auth-header">
+                        <h1>Login <span class="text-red">G</span>row<span class="text-green">U</span>p</h1>
+                        <p>Masuk dan nikmati semua fitur</p>
+                        <hr>
+                    </div>
                     <form action="{{ route('login') }}" method="POST">
                         @csrf
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Alamat E-Mail</label>
                             <input name="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                id="email" value="{{ old('email') }}">
+                                id="email" value="{{ old('email') }}" placeholder="E-Mail Kamu...">
                             @error('email')
-                                <small class=" text-danger">{{ $message }}</small>
+                                <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-                        <div class="mb-3">
+                        <div class="form-group">
                             <label for="password" class="form-label">Password</label>
                             <input name="password" type="password"
-                                class="form-control @error('password') is-invalid @enderror" id="password" value="{{ old('password') }}">
+                                class="form-control @error('password') is-invalid @enderror" id="password"
+                                value="{{ old('password') }}" placeholder="Password Kamu...">
                             @error('password')
-                                <small class=" text-danger">{{ $message }}</small>
+                                <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-                        <div class="mb-3 form-check d-flex mx-2">
+                        <div class="form-group form-check d-flex align-items-center p-0">
                             <div role="button" class="red-checkbox-container border bg-light">
-                                <img class="w-100 h-100 d-block d-none" src="{{ asset('images/icons/checkbox.png') }}"
-                                    alt="">
-                                <input name="remember" type="checkbox" class="form-check-input me-2 custom-check-box d-none"
+                                <img class="w-100 h-100 d-block d-none" src="{{ asset('images/checkbox.png') }}"
+                                    alt="checkbox.png">
+                                <input name="remember" type="checkbox" class="form-check-input custom-check-box d-none"
                                     id="rememberCheck">
                             </div>
-                            <label class="form-check-label" for="rememberCheck">Remember Me</label>
+                            <label class="form-check-label" for="rememberCheck">Ingat Saya</label>
                         </div>
-                        <button type="submit" class="btn bg-red w-100">Submit</button>
+                        <button type="submit" class="btn bg-green w-100 auth-btn">Masuk</button>
                     </form>
-                </div>
-                <div class="text-center">
-                    <a class="red-text forgot-password-text text-center" href="">Forgot Password?</a>
-                </div>
-                <hr>
-                <p class="text-center mt-5">Already have an account? <a href=""><b class="red-text">Sign in</b></a>
-                </p>
-            </div>
+                    <div class="option text-center">
+                        <span class="d-block text-secondary">Atau</span>
 
-            {{-- RIGHT SECTION (FORM) --}}
-            <div class="col bg-red auth-section auth-section-right auth-section-right">
-                <div class="image-wrapper d-flex justify-content-center">
-                    <img class="auth-section-image" src="{{ asset('images/3dimages/auth.png') }}" alt="auth.png">
+                        {{-- OPSI REGISTER --}}
+                        <span>Belum punya akun?</span>
+                        <a href="{{ url('/register') }}" class="text-red text-decoration-none">
+                            Daftar Disini
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 auth-section-right text-center">
+                    <img src="{{ asset('images/illustrations/auth.png') }}" alt="auth.png" class="w-75">
                 </div>
             </div>
         </div>

@@ -2,12 +2,6 @@
 
 .navbar-brand {
     font-size: 25px;
-    // background: #E31A56;
-    // background: -webkit-linear-gradient(to right, #E31A56 0%, #49d983 100%);
-    // background: -moz-linear-gradient(to right, #E31A56 0%, #49d983 100%);
-    // background: linear-gradient(to right, #E31A56 0%, #49d983 100%);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
     font-weight: bold;
     color: $primaryColor !important;
 }
@@ -24,6 +18,8 @@
 
 .signup-btn {
     border-radius: 10px;
+    background: $green;
+    color: $white !important;
 }
 
 .navbar-light .navbar-toggler {
@@ -45,7 +41,18 @@
 
 
 @media screen and (max-width: 768px) {
+    .navbar {
+        background: #F8F9FA;
+        padding: 5px 0;
+        margin-bottom: 20px;
+    }
+
     .nav-link {
         font-size: 18px;
+    }
+
+    .signup-btn {
+        background: none;
+        color: $primaryColor !important;
     }
 }

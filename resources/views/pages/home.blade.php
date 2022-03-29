@@ -13,7 +13,7 @@
                 <div class="col-md-5 image-left text-center" data-aos="fade-down">
                     <img src="{{ asset('images/header-asset1.png') }}" alt="header-asset1.png" class="header-asset1">
                     <img src="{{ asset('images/header-asset2.png') }}" alt="header-asset2.png" class="header-asset2">
-                    <img src="{{ asset('images/3dimages/hero.png') }}" class="w-75" alt="hero.png">
+                    <img src="{{ asset('images/illustrations/hero.png') }}" class="w-75" alt="hero.png">
                 </div>
                 <div class="col-md-7 text" data-aos="fade-up">
                     <div>
@@ -29,7 +29,7 @@
                 <div class="col-md-5 image-right text-center" data-aos="fade-down">
                     <img src="{{ asset('images/header-asset1.png') }}" alt="header-asset1.png" class="header-asset1">
                     <img src="{{ asset('images/header-asset2.png') }}" alt="header-asset2.png" class="header-asset2">
-                    <img src="{{ asset('images/3dimages/hero.png') }}" class="w-100" alt="hero.png">
+                    <img src="{{ asset('images/illustrations/hero.png') }}" class="w-100" alt="hero.png">
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 image text-center" data-aos="fade-up">
-                    <img src="{{ asset('images/3dimages/about.png') }}" alt="about.png" class="w-75">
+                    <img src="{{ asset('images/illustrations/about.png') }}" alt="about.png" class="w-75">
                 </div>
                 <div class="col-md-6 text" data-aos="fade-down">
                     <div>
