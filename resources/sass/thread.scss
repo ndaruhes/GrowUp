@@ -1,0 +1,44 @@
+@import 'variables';
+
+.main-container {
+    padding: 0 15%;
+
+    hr {
+        background-color: $green;
+        height: 4px;
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+    .button-container {
+        margin-top: 10px;
+    }
+
+    .post-thread-container {
+        margin-top: 20px;
+
+        h2 {
+            font-weight: 600;
+        }
+
+        .text-area-form {
+            height: 100px !important;
+        }
+    }
+
+    .forum-thread-header {
+        margin-top: 40px;
+    }
+
+    .thread-wrapper {
+        margin-bottom: 50px;
+        .replies {
+            margin: 40px 0;
+            padding-left: 70px;
+        }
+    }
+
+}
+

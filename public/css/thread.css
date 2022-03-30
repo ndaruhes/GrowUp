@@ -1,0 +1,128 @@
+.bg-green {
+  background: #49D983;
+  color: white !important;
+}
+
+.bg-red {
+  background: #E31A56;
+  color: white !important;
+}
+
+.bg-white {
+  background-color: white;
+  color: #34495e !important;
+}
+
+.bg-green-gradient {
+  background: #49d983;
+  background: linear-gradient(221deg, #49d983 0%, #c6e2d1 89%);
+  color: white !important;
+}
+
+.bg-red-gradient {
+  background: #e31a56;
+  background: linear-gradient(189deg, #e31a56 0%, #ffdce7 100%);
+  color: white !important;
+}
+
+.bg-outline-green {
+  color: #49D983 !important;
+  border: 1px solid #49D983;
+}
+.bg-outline-green:hover {
+  background: #49D983 !important;
+  color: white !important;
+}
+
+.bg-outline-red {
+  color: #E31A56 !important;
+  border: 1px solid #E31A56;
+}
+.bg-outline-red:hover {
+  background: #E31A56 !important;
+  color: white !important;
+}
+
+.text-primaryColor {
+  color: #34495e !important;
+}
+
+.text-green {
+  color: #49D983 !important;
+}
+
+.text-red {
+  color: #E31A56 !important;
+}
+
+.text-yellow {
+  color: #FFC83D !important;
+}
+
+@-webkit-keyframes sky {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 20px);
+  }
+  50% {
+    transform: translate(20px, 0);
+  }
+  75% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes sky {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 20px);
+  }
+  50% {
+    transform: translate(20px, 0);
+  }
+  75% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.main-container {
+  padding: 0 15%;
+}
+.main-container hr {
+  background-color: #49D983;
+  height: 4px;
+}
+.main-container h1 {
+  font-weight: bold;
+}
+.main-container .button-container {
+  margin-top: 10px;
+}
+.main-container .post-thread-container {
+  margin-top: 20px;
+}
+.main-container .post-thread-container h2 {
+  font-weight: 600;
+}
+.main-container .post-thread-container .text-area-form {
+  height: 100px !important;
+}
+.main-container .forum-thread-header {
+  margin-top: 40px;
+}
+.main-container .thread-wrapper {
+  margin-bottom: 50px;
+}
+.main-container .thread-wrapper .replies {
+  margin: 40px 0;
+  padding-left: 70px;
+}

@@ -80,6 +80,11 @@ class PageController extends Controller
         return view('pages.about');
     }
 
+    public function forum($id)
+    {
+        return view('pages.forum');
+    }
+
     public function cleanString($str)
     {
         $str = str_replace(' ', '', $str);
