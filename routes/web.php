@@ -27,11 +27,17 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::post('/checkout/{id}', 'TransactionController@checkout')->name('checkout');
     Route::get('/download/{id}', 'SessionController@downloadResource')->name('downloadResource');
 
-    //Common
+    //Thread
     Route::get('/thread/{id}', 'ForumController@getThread')->name('thread');
-    Route::post('/thread', 'ForumController@postThread')->name('createThread');
-    Route::post('/reply/{id}', 'ForumController@postReply')->name('createReply');
+    Route::delete('/thread/{id}', 'ForumController@deleteThread')->name('deleteThread');
+    Route::patch('/thread/{id}', 'ForumController@editThread')->name('editThread');
 
+    //Reply
+    Route::post('/reply/{id}', 'ForumController@postReply')->name('createReply');
+    Route::delete('/reply/{id}', 'ForumController@deleteReply')->name('deleteReply');
+    Route::patch('/reply/{id}', 'ForumController@editReply')->name('editReply');
+
+    Route::post('/thread', 'ForumController@postThread')->name('createThread');
     // MENTEE ROUTES
     Route::group(['prefix' => 'mentee', 'middleware' => 'RoleMentee'], function () {
         // 1. Dashboard

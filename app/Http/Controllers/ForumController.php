@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 use App\Models\Course;
 use App\Models\Transaction;
@@ -58,12 +59,18 @@ class ForumController extends Controller
     {
         $url = explode('/', url()->current());
         return view('forum.thread', [
-            'threads' => Question::where('forum_id',end($url))->get()
+            'threads' => Question::where('forum_id',end($url))->get(),
+            'title' => Forum::findOrFail(end($url))->title
         ]);
     }
 
     public function postThread(Request $request)
     {
+        $validated = $request->validateWithBag('threadPost', [
+            'title' => ['required', 'max:100'],
+            'content' => ['required', 'max:500'],
+        ]);
+
         $url = explode('/',url()->previous());
         $forum_id = end($url);
         Question::create([
@@ -78,6 +85,22 @@ class ForumController extends Controller
 
     public function postReply(Request $request, $id)
     {
+        // $validated = $request->validateWithBag('threadReply', [
+        //     'content' => ['required', 'max:500'],
+        // ]);
+
+        $validator = Validator::make($request->all(), [
+            'content' => 'required|max:500',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()
+                        ->back()
+                        ->withErrors($validator, 'threadReply')
+                        ->withInput()
+                        ->with('questionNo', $id);
+        }
+
         Answer::create([
             'content' => $request->content,
             'question_id' => $id,
@@ -99,5 +122,49 @@ class ForumController extends Controller
             'hasTransaction' => Auth::user() ? $transaction->where('mentee_id', Auth::user()->id)->first() : null,
             'forums' => Forum::all()
         ]);
+    }
+
+    public function deleteThread($id)
+    {
+        $threadReplies = Question::findOrFail($id)->answer;
+        foreach($threadReplies as $thread) {
+            $thread->delete();
+        }
+        Question::findOrFail($id)->delete();
+        return redirect()->back();
+    }
+
+    public function deleteReply($id)
+    {
+        Answer::findOrFail($id)->delete();
+        return redirect()->back();
+    }
+
+    public function editThread(Request $request, $id)
+    {
+        $validated = $request->validateWithBag('updateThread', [
+            'title' => ['required', 'max:100'],
+            'content' => ['required', 'max:500'],
+        ]);
+
+        Question::findOrFail($id)->update([
+            'title' => $request->title,
+            'content' => $request->content
+        ]);
+
+        return redirect()->back();
+    }
+    public function editReply(Request $request, $id)
+    {
+        $validated = $request->validateWithBag('updateReply', [
+            'content' => ['required', 'max:500'],
+        ]);
+
+
+        Answer::findOrFail($id)->update([
+            'content' => $request->content
+        ]);
+
+        return redirect()->back();
     }
 }
