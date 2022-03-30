@@ -27,7 +27,7 @@ class CourseSeeder extends Seeder
             ['https://i.ibb.co/b1dQt1G/1.jpg', 'Chinese Culture: Belajar Budaya & Bahasa Mandarin', 'Belajar Basic dari Bahasa Mandarin: Pengucapan, Pendengaran, Penulisan dan Pendengaran', '250000', '2022-08-10', '2022-10-10', '30', '5', '11', '4'],
             ['https://i.ibb.co/945CdPZ/video-thumbnail-hsk-courses.jpg', 'HSK Pemula: Belajar HSK 1 - 6 Sampai Mahir', 'Belajar Bahasa Mandarin untuk keperluan bisnis, sekolah dan sehari-hari menggunakan buku HSK', '1500000', '2022-07-08', '2022-12-28', '30', '5', '11', '1'],
             ['https://i.ibb.co/JjVgNFy/course-6.jpg', 'Chinese Kids: Kelas Bahasa Mandarin Untuk Anak ', 'Belajar Basic dari Bahasa Mandarin: Pengucapan, Pendengaran, Penulisan dan Pendengaran', '980000', '2022-07-08', '2022-12-28', '30', '5', '11', '3'],
-            ['https://i.ibb.co/LkqhVX4/courses-7.jpg', 'Pasti Bisa: Bahasa Mandarin Untuk Pemula', 'Belajar Basic dari Bahasa Mandarin: Pengucapan, Pendengaran, Penulisan dan Pendengaran', '370000', '2022-07-08', '2022-12-28', '30', '5', '11', '2'],
+            ['https://i.ibb.co/LkqhVX4/courses-7.jpg', 'Pasti Bisa: Bahasa Mandarin Untuk Pemula', 'Belajar Basic dari Bahasa Mandarin: Pengucapan, Pendengaran, Penulisan dan Pendengaran', '370000', '2022-07-08', '2022-12-28', '30', '5', '11', '2']
         ];
 
         foreach ($courses as $course) {
@@ -41,7 +41,7 @@ class CourseSeeder extends Seeder
                 'max_mentee' => $course[6],
                 'rating' => $course[7],
                 'category_id' => $course[8],
-                'mentor_id' => $course[9],
+                'mentor_id' => $course[9]
             ]);
         }
     }

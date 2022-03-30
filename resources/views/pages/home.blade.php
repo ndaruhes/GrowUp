@@ -94,7 +94,7 @@
             <div class="row">
                 @foreach ($categories as $category)
                     <div class="col-md-4 col-6 item">
-                        <a href="#" class="col-md-12 item-content">
+                        <a href="{{ route('courseCategory', $category->id) }}" class="col-md-12 item-content">
                             <div class="row">
                                 <div class="col-md-3 col-4 image">
                                     <img src="{{ $category->icon }}" alt="{{ $category->title }}">

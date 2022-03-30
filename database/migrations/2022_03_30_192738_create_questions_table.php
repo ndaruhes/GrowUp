@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('forum_id');
             $table->unsignedBigInteger('user_id');
-            $table->string('title',100);
-            $table->string('content',500);
+            $table->string('title', 100);
+            $table->string('content', 500);
             $table->timestamps();
         });
     }

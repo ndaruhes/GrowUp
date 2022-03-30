@@ -12,7 +12,7 @@ class PageController extends Controller
     public function index()
     {
         return view('pages.home', [
-            'categories' => $this->category()
+            'categories' => CategoryController::index()
         ]);
     }
 
@@ -30,7 +30,7 @@ class PageController extends Controller
         }
         return view('pages.userHome', [
             'courses' => $courses,
-            'categories' => $this->category(),
+            'categories' => CategoryController::index(),
             'transactions' => $transactions,
             'salary' => $salary,
             'totalMentor' => $totalMentor
@@ -40,13 +40,13 @@ class PageController extends Controller
     public function profile()
     {
         return view('auth.profile', [
-            'categories' => $this->category()
+            'categories' => CategoryController::index()
         ]);
     }
 
     public function explore()
     {
-        $categories = $this->category();
+        $categories = CategoryController::index();
         $data = null;
         foreach ($categories as $category) {
             $data[$this->cleanString($category->title)] = Course::where('category_id', $category->id)->get();
@@ -70,6 +70,16 @@ class PageController extends Controller
         ]);
     }
 
+    public function courseCategory($id)
+    {
+        $courses = Course::where('category_id', $id)->get();
+        return view('pages.courseCategory', [
+            'courses' => $courses,
+            'categories' => CategoryController::index(),
+            'category' => CategoryController::show($id)
+        ]);
+    }
+
     public function contact()
     {
         return view('pages.contact');
@@ -89,10 +99,5 @@ class PageController extends Controller
     {
         $str = str_replace(' ', '', $str);
         return strtolower(preg_replace('/[^A-Za-z0-9\-]/', '', $str));
-    }
-
-    public function category()
-    {
-        return CategoryController::index();
     }
 }

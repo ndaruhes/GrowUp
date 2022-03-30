@@ -30,7 +30,8 @@
                 <div class="categories-menu">
                     <div class="categories-menu-panel">
                         @foreach ($categories as $category)
-                            <a href="#" class="btn bg-outline-green btn-sm">{{ $category->title }}
+                            <a href="{{ route('courseCategory', $category->id) }}"
+                                class="btn bg-outline-green btn-sm">{{ $category->title }}
                             </a>
                         @endforeach
                     </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Explore Courses | GrowUp')
+@section('title', $category->title . ' Courses | GrowUp')
 @section('cssExternal')
     <link rel="stylesheet" href="{{ asset('css/explore.css') }}">
 @endsection
@@ -29,8 +29,9 @@
                 {{-- CATEGORIES MENU --}}
                 <div class="categories-menu">
                     <div class="categories-menu-panel">
-                        @foreach ($categories as $category)
-                            <a href="{{ route('courseCategory', $category->id) }}" class="btn bg-outline-green btn-sm">{{ $category->title }}
+                        @foreach ($categories as $data)
+                            <a href="{{ route('courseCategory', $data->id) }}"
+                                class="btn bg-outline-green btn-sm">{{ $data->title }}
                             </a>
                         @endforeach
                     </div>
@@ -40,30 +41,30 @@
             {{-- SEARCH RESULT --}}
             <div class="courses">
                 <div class="category-title d-flex align-items-center">
-                    <img src=" {{ asset('images/magnifier.png') }}" alt="magnifier.png">
-                    <span>Hasil Pencarian</span>
+                    <img src="{{ $category->icon }}" alt="{{ $category->icon }}">
+                    <span>{{ $category->title }}</span>
                 </div>
-                @if ($searchedCourses->count() != 0)
+                @if ($courses->count() != 0)
                     <div class="row">
-                        @foreach ($searchedCourses as $courses)
+                        @foreach ($courses as $course)
                             <div class="col-md-3 col-12">
-                                <a href="{{ route('detailCourse', $courses->id) }}"
+                                <a href="{{ route('detailCourse', $course->id) }}"
                                     class="col-md-12 item-content d-flex align-items-center">
                                     <div class="row align-items-center">
                                         <div class="col-md-12 col-5 image">
-                                            @if (explode('/', $courses->cover)[0] != 'https:')
-                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
-                                                    alt="{{ $courses->title }}" class="w-100">
+                                            @if (explode('/', $course->cover)[0] != 'https:')
+                                                <img src="{{ $course->cover != null ? asset('storage/images/cover/' . $course->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $course->title }}" class="w-100">
                                             @else
-                                                <img src="{{ $courses->cover }}" alt="{{ $courses->title }}"
+                                                <img src="{{ $course->cover }}" alt="{{ $course->title }}"
                                                     class="w-100">
                                             @endif
                                         </div>
                                         <div class="col-md-12 col-7 text">
-                                            <span class="title">{{ $courses->title }}</span>
-                                            <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="title">{{ $course->title }}</span>
+                                            <span class="mentor">{{ $course->user->name }}</span>
                                             <span
-                                                class="price">{{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}</span>
+                                                class="price">{{ $course->price == null ? 'Gratis' : 'Rp' . number_format($course->price) }}</span>
                                         </div>
                                     </div>
                                 </a>
@@ -71,7 +72,7 @@
                         @endforeach
                     </div>
                 @else
-                    <div class="alert alert-warning">Kelas yang kamu cari nggk ketemu<i class="uil uil-sad-squint ms-1"></i>
+                    <div class="alert alert-warning">Belum ada kelas di kategori ini<i class="uil uil-sad-squint ms-1"></i>
                     </div>
                 @endif
             </div>

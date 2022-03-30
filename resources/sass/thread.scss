@@ -28,6 +28,13 @@
         margin-top: 10px;
     }
 
+    .main-thread {
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
     .post-thread-container {
         h2 {
             font-weight: 600;
@@ -65,7 +72,7 @@
 
         .heading {
             h1 {
-                font-size: 20px;
+                font-size: 22px;
             }
         }
 
@@ -73,8 +80,14 @@
             margin-bottom: 15px;
 
             h2 {
-                font-size: 18px;
+                font-size: 20px;
                 font-weight: bold;
+            }
+        }
+
+        .main-thread {
+            h3 {
+                font-size: 18px;
             }
         }
     }

@@ -26,7 +26,7 @@ class SessionSeeder extends Seeder
                 'resources' => $session[3],
                 'schedule' => $session[4],
                 'time' => $session[5],
-                'course_id' => $session[6],
+                'course_id' => $session[6]
             ]);
         }
     }

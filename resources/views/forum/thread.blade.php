@@ -48,11 +48,11 @@
                 </form>
             </div>
 
-            {{-- JAWABAN FORUM --}}
+            {{-- THREAD FORUM --}}
             <div class="col-md-6 thread-right">
                 @if ($threads->count() != 0)
                     <div class="section-heading">
-                        <h2>Jawaban <i class="uil uil-comment-alt-chart-lines ms-1"></i></h2>
+                        <h2>Thread <i class="uil uil-comment-alt-chart-lines ms-1"></i></h2>
                     </div>
                     @foreach ($threads as $thread)
                         <div class="thread-wrapper">

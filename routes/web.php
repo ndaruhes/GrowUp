@@ -28,6 +28,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::post('/checkout/{id}', 'TransactionController@checkout')->name('checkout');
     Route::get('/download/{id}', 'SessionController@downloadResource')->name('downloadResource');
     Route::get('/courses/explore/{id}', 'PageController@detailCourse')->name('detailCourse');
+    Route::get('/courses/category/{id}', 'PageController@courseCategory')->name('courseCategory');
 
     // FORUM
     Route::get('/thread/{id}', 'ForumController@getThread')->name('thread');
