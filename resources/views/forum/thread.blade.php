@@ -68,7 +68,7 @@
                                 <p>{{ $reply->content }}</p>
                                 <div class="action-wrapper d-flex gap-4">
                                     <p class="text-green">{{ $reply->user->name}}</p>
-                                    @if($thread->user_id == Auth::user()->id)
+                                    @if($reply->user_id == Auth::user()->id)
                                         <a class="reply-edit" href="{{ route('editReply', $reply->id) }}" data-bs-toggle="modal" data-bs-target="#editReplyModal">Edit</a>
                                         <a href="#" data-uri="{{ route('deleteReply', $reply->id) }}"
                                             class="text-danger" data-bs-toggle="modal"
