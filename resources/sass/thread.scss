@@ -1,0 +1,81 @@
+@import 'variables';
+
+.main-container {
+    padding: 50px 0;
+
+    .heading {
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+
+    hr {
+        background-color: $green;
+        height: 4px;
+    }
+
+    .section-heading {
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    }
+
+    .button-container {
+        margin-top: 10px;
+    }
+
+    .post-thread-container {
+        h2 {
+            font-weight: 600;
+        }
+
+        .text-area-form {
+            height: 100px !important;
+        }
+    }
+
+    .forum-thread-header {
+        margin-top: 40px;
+    }
+
+    .thread-wrapper {
+        margin-bottom: 30px;
+        background: #F8F9FA;
+        padding: 15px;
+        border-radius: 10px;
+
+        .replies {
+            margin: 40px 0;
+            padding-left: 70px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        padding: 20px;
+
+        .thread-left {
+            margin-bottom: 40px;
+        }
+
+        .heading {
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        .section-heading {
+            margin-bottom: 15px;
+
+            h2 {
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+}

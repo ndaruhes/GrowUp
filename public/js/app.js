@@ -96,6 +96,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./resources/sass/thread.scss":
+/*!************************************!*\
+  !*** ./resources/sass/thread.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy90aHJlYWQuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy90aHJlYWQuc2Nzcz9kODJjIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/thread.scss\n");
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -243,6 +254,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 			"css/footer": 0,
 /******/ 			"css/dashboard": 0,
 /******/ 			"css/navbar": 0,
+/******/ 			"css/thread": 0,
 /******/ 			"css/about": 0,
 /******/ 			"css/contact": 0,
 /******/ 			"css/user_home": 0,
@@ -299,19 +311,20 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/navbar.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/dashboard.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/footer.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/home.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/auth.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/banner.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/explore.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/course_detail.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/user_home.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/contact.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/about.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/navbar.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/dashboard.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/footer.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/auth.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/banner.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/explore.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/course_detail.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/user_home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/contact.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/about.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/home","css/footer","css/dashboard","css/navbar","css/thread","css/about","css/contact","css/user_home","css/course_detail","css/explore","css/banner","css/auth"], () => (__webpack_require__("./resources/sass/thread.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

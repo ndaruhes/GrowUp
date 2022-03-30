@@ -31,4 +31,9 @@ class Course extends Model
     {
         return $this->hasMany('App\Models\Transaction', 'course_id');
     }
+
+    public function forum()
+    {
+        return $this->hasMany('App\Models\Forum', 'course_id');
+    }
 }

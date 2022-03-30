@@ -94,72 +94,62 @@
     transform: translate(0, 0);
   }
 }
-body, html {
-  width: 100%;
-  height: 100%;
+.main-container {
+  padding: 50px 0;
 }
-
-.auth-section-container {
-  height: 100% !important;
+.main-container .heading h1 {
+  font-size: 30px;
+  font-weight: bold;
 }
-
-.auth-section-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+.main-container hr {
+  background-color: #49D983;
+  height: 4px;
 }
-
-.auth-section-left {
-  overflow-y: auto;
+.main-container .section-heading {
+  margin-bottom: 20px;
 }
-
-.auth-section {
-  padding: 40px 5%;
-  height: 100%;
+.main-container .section-heading h2 {
+  font-size: 25px;
+  font-weight: bold;
 }
-
-.auth-section-image {
-  height: 500px;
+.main-container .button-container {
+  margin-top: 10px;
 }
-
-.header-wrapper > h1 {
-  font-size: 48px !important;
-  font-weight: bold !important;
+.main-container .post-thread-container h2 {
+  font-weight: 600;
 }
-
-.red-checkbox-container {
-  width: 25px;
-  height: 25px;
-  margin-right: 15px;
+.main-container .post-thread-container .text-area-form {
+  height: 100px !important;
+}
+.main-container .forum-thread-header {
+  margin-top: 40px;
+}
+.main-container .thread-wrapper {
+  margin-bottom: 30px;
+  background: #F8F9FA;
+  padding: 15px;
+  border-radius: 10px;
+}
+.main-container .thread-wrapper .replies {
+  margin: 40px 0;
+  padding-left: 70px;
 }
 
 @media screen and (max-width: 768px) {
-  body, html {
-    width: auto;
-    height: auto;
+  .main-container {
+    padding: 20px;
   }
-
-  .auth-section-container {
-    padding: 40px 25px;
+  .main-container .thread-left {
+    margin-bottom: 40px;
   }
-
-  .auth-section {
-    padding: 20px 25px;
+  .main-container .heading h1 {
+    font-size: 20px;
   }
-
-  .auth-section-right {
-    display: none !important;
+  .main-container .section-heading {
+    margin-bottom: 15px;
   }
-
-  .header-wrapper > h1 {
-    font-size: 26px !important;
-    font-weight: bold !important;
-  }
-
-  .red-checkbox-container {
-    width: 25px;
-    height: 25px;
-    margin-right: 15px;
+  .main-container .section-heading h2 {
+    font-size: 18px;
+    font-weight: bold;
   }
 }

@@ -183,6 +183,12 @@
 .table-wrapper .table .action-btn-table a {
   cursor: pointer;
 }
+.table-wrapper .table .th-1 {
+  width: 1%;
+}
+.table-wrapper .table .th-5 {
+  width: 10%;
+}
 .table-wrapper .table .th-10 {
   width: 10%;
 }
@@ -197,6 +203,12 @@
 }
 .table-wrapper .table .th-30 {
   width: 30%;
+}
+.table-wrapper .table .action-btn-table {
+  text-align: left;
+}
+.table-wrapper .table .action-btn-table .bg-dark:hover {
+  color: white;
 }
 
 .modal-user-info span {

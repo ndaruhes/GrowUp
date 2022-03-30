@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,15 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/download/{id}', 'SessionController@downloadResource')->name('downloadResource');
     Route::get('/courses/explore/{id}', 'PageController@detailCourse')->name('detailCourse');
 
+    // FORUM
+    Route::get('/thread/{id}', 'ForumController@getThread')->name('thread');
+    Route::delete('/thread/{id}', 'ForumController@deleteThread')->name('deleteThread');
+    Route::patch('/thread/{id}', 'ForumController@editThread')->name('editThread');
+    Route::post('/reply/{id}', 'ForumController@postReply')->name('createReply');
+    Route::delete('/reply/{id}', 'ForumController@deleteReply')->name('deleteReply');
+    Route::patch('/reply/{id}', 'ForumController@editReply')->name('editReply');
+    Route::post('/thread', 'ForumController@postThread')->name('createThread');
+
     // MENTEE ROUTES
     Route::group(['prefix' => 'mentee', 'middleware' => 'RoleMentee'], function () {
         // 1. Dashboard
@@ -36,6 +46,14 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         // 2. Kelas
         Route::group(['prefix' => 'courses'], function () {
             Route::get('/', 'CourseController@index');
+        });
+
+        // 3. Forum
+        Route::group(['prefix' => 'forum'], function () {
+            Route::get('/', 'ForumController@index');
+            Route::post('/create', 'ForumController@createForum')->name('createForum');
+            Route::get('/show/{id}', 'ForumController@showForum')->name('showForum');
+            Route::get('/detail/{id}', 'ForumController@detailForum')->name('forumDetail');
         });
     });
 
@@ -65,7 +83,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
         // 4. Forum
         Route::group(['prefix' => 'forum'], function () {
-            // Route::get('/', 'CourseController@index');
+            Route::get('/', 'ForumController@index');
+            Route::post('/create', 'ForumController@createForum')->name('createForum');
+            Route::get('/show/{id}', 'ForumController@showForum')->name('showForum');
         });
     });
 });

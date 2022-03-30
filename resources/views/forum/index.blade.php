@@ -1,13 +1,13 @@
 @extends('layouts.dashboard')
+
 @php $user = Auth::user(); @endphp
-@section('title', $user->role == 'Mentor' ? 'Kelola Kelas' : 'Kelas Saya' . ' | GrowUp')
+@section('title', 'Forum | GrowUp')
+@section('cssExternal')
+    <link rel="stylesheet" href="{{ asset('css/forum.css') }}">
+@endsection
+
 
 @section('dashboard_content')
-    {{-- ADD COURSE MODAL --}}
-    @if ($user->role == 'Mentor')
-        @include('courses.create')
-    @endif
-
     {{-- TITLE --}}
     <div class="section-title">
         <h1>
@@ -15,10 +15,6 @@
             Daftar Kelas
         </h1>
         <div class="line"></div>
-        @if ($user->role == 'Mentor')
-            <button class="btn btn-dark btn-sm add-btn" data-bs-toggle="modal" data-bs-target="#addModal">Buat Kelas<i
-                    class="uil uil-plus ms-1"></i></button>
-        @endif
     </div>
 
     {{-- CONTENT --}}
@@ -65,7 +61,7 @@
                                     </small>
                                 </td>
                                 <td class="action-btn-table">
-                                    <a href="{{ route('showCourse', $course->id) }}" class="text-dark"><i
+                                    <a href="{{ route('showForum', $course->id) }}" class="text-dark"><i
                                             class="uil uil-eye"></i></a>
                                     @if ($user->role == 'Mentor')
                                         <a href="{{ route('editCourse', $course->id) }}" class="text-primary mx-1"><i

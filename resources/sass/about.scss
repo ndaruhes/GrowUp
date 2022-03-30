@@ -1,8 +1,8 @@
 @import "variables";
 
-//HEADER
+// HEADER DESKTOP
 header {
-    padding: 40px 0;
+    padding: 100px 0;
     background: url('/images/about-image/about-header.png') no-repeat center;
     background-size: cover;
     overflow: hidden;
@@ -20,11 +20,13 @@ header {
         .header-text-wrapper {
             h1 {
                 font-size: 45px;
+                font-weight: bold;
             }
         }
 
         .text-content {
             margin: 25px 0;
+            font-size: 17px;
         }
 
         .button-wrapper {
@@ -35,9 +37,10 @@ header {
 
                 img {
                     height: 12px;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                 }
 
-                p{
+                p {
                     margin: 0 10px 0 0;
                 }
             }
@@ -51,19 +54,23 @@ header {
     }
 }
 
-//SECTION
+// SECTION DESKTOP
 .content-section {
-    padding: 100px 0;
+    padding: 50px 0;
 
     .section-header-container {
-        display: flex;
-        justify-content: center;
+        padding: 20px;
 
         .section-wrapper {
-            width: 50%;
+            text-align: center;
 
-            h2, h3 {
+            h2 {
                 font-weight: bold;
+                font-size: 30px;
+            }
+
+            h3 {
+                font-size: 25px;
             }
 
             hr {
@@ -74,7 +81,6 @@ header {
     }
 
     .card-container {
-        margin: 40px 0;
         display: flex;
         justify-content: center;
 
@@ -82,10 +88,10 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             border-radius: 10px;
             padding: 10px 20px;
-            width: 250px;
+            width: 400px;
             margin: 20px;
 
             img {
@@ -95,12 +101,13 @@ header {
             .card-text {
                 h6 {
                     font-weight: bold;
-                    font-size: 16px;
+                    font-size: 20px;
                     margin: 10px 0;
                 }
 
                 p {
-                    font-size: 12px;
+                    text-align: center;
+                    font-size: 18px;
                 }
             }
         }
@@ -108,36 +115,72 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-    .card-container {
-        margin: 40px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+
+    // HEADER MOBILE
+    header {
+        padding: 0 10px;
+    }
+
+    .col-container {
+        height: 100%;
         align-items: center;
 
-        .card-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
-            border-radius: 10px;
-            padding: 10px 20px;
-            width: 250px;
-            margin: 20px;
-
-            img {
-                height: 100px;
+        .col-left {
+            .header-text-wrapper {
+                h1 {
+                    font-size: 30px;
+                }
             }
+        }
+    }
 
-            .card-text {
-                h6 {
-                    font-weight: bold;
-                    font-size: 16px;
-                    margin: 10px 0;
+    // SECTION MOBILE
+    .content-section {
+        padding: 20px 0;
+
+        .section-header-container {
+            padding: 20px;
+
+            .section-wrapper {
+                h2 {
+                    font-size: 25px;
                 }
 
-                p {
-                    font-size: 12px;
+                h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .card-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 10px;
+                padding: 10px 20px;
+                width: 330px;
+                margin: 10px;
+
+                img {
+                    height: 100px;
+                }
+
+                .card-text {
+                    h6 {
+                        font-weight: bold;
+                        font-size: 20px;
+                        margin: 10px 0;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
                 }
             }
         }

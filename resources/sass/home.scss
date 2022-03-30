@@ -200,7 +200,7 @@
             .header-asset1,
             .header-asset2 {
                 position: absolute;
-                width: 110px;
+                width: 130px;
                 animation: sky 12s reverse infinite;
                 z-index: 999;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -218,7 +218,7 @@
 
             .w-75 {
                 animation: sky 12s linear infinite;
-                width: 90% !important;
+                width: 70% !important;
             }
         }
 

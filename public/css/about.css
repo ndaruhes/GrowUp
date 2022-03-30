@@ -95,7 +95,7 @@
   }
 }
 header {
-  padding: 40px 0;
+  padding: 100px 0;
   background: url("/images/about-image/about-header.png") no-repeat center;
   background-size: cover;
   overflow: hidden;
@@ -111,9 +111,11 @@ header {
 }
 .col-container .col-left .header-text-wrapper h1 {
   font-size: 45px;
+  font-weight: bold;
 }
 .col-container .col-left .text-content {
   margin: 25px 0;
+  font-size: 17px;
 }
 .col-container .col-left .button-wrapper button {
   display: flex;
@@ -122,6 +124,7 @@ header {
 }
 .col-container .col-left .button-wrapper button img {
   height: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .col-container .col-left .button-wrapper button p {
   margin: 0 10px 0 0;
@@ -131,24 +134,26 @@ header {
 }
 
 .content-section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 .content-section .section-header-container {
-  display: flex;
-  justify-content: center;
+  padding: 20px;
 }
 .content-section .section-header-container .section-wrapper {
-  width: 50%;
+  text-align: center;
 }
-.content-section .section-header-container .section-wrapper h2, .content-section .section-header-container .section-wrapper h3 {
+.content-section .section-header-container .section-wrapper h2 {
   font-weight: bold;
+  font-size: 30px;
+}
+.content-section .section-header-container .section-wrapper h3 {
+  font-size: 25px;
 }
 .content-section .section-header-container .section-wrapper hr {
   height: 5px !important;
   margin: 16px 0;
 }
 .content-section .card-container {
-  margin: 40px 0;
   display: flex;
   justify-content: center;
 }
@@ -156,10 +161,10 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
   padding: 10px 20px;
-  width: 250px;
+  width: 400px;
   margin: 20px;
 }
 .content-section .card-container .card-wrapper img {
@@ -167,40 +172,63 @@ header {
 }
 .content-section .card-container .card-wrapper .card-text h6 {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   margin: 10px 0;
 }
 .content-section .card-container .card-wrapper .card-text p {
-  font-size: 12px;
+  text-align: center;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 768px) {
-  .card-container {
-    margin: 40px 0;
+  header {
+    padding: 0 10px;
+  }
+
+  .col-container {
+    height: 100%;
+    align-items: center;
+  }
+  .col-container .col-left .header-text-wrapper h1 {
+    font-size: 30px;
+  }
+
+  .content-section {
+    padding: 20px 0;
+  }
+  .content-section .section-header-container {
+    padding: 20px;
+  }
+  .content-section .section-header-container .section-wrapper h2 {
+    font-size: 25px;
+  }
+  .content-section .section-header-container .section-wrapper h3 {
+    font-size: 20px;
+  }
+  .content-section .card-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .card-container .card-wrapper {
+  .content-section .card-container .card-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     padding: 10px 20px;
-    width: 250px;
-    margin: 20px;
+    width: 330px;
+    margin: 10px;
   }
-  .card-container .card-wrapper img {
+  .content-section .card-container .card-wrapper img {
     height: 100px;
   }
-  .card-container .card-wrapper .card-text h6 {
+  .content-section .card-container .card-wrapper .card-text h6 {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     margin: 10px 0;
   }
-  .card-container .card-wrapper .card-text p {
-    font-size: 12px;
+  .content-section .card-container .card-wrapper .card-text p {
+    font-size: 15px;
   }
 }

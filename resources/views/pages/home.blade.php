@@ -13,7 +13,7 @@
                 <div class="col-md-5 image-left text-center" data-aos="fade-down">
                     <img src="{{ asset('images/header-asset1.png') }}" alt="header-asset1.png" class="header-asset1">
                     <img src="{{ asset('images/header-asset2.png') }}" alt="header-asset2.png" class="header-asset2">
-                    <img src="{{ asset('images/illustrations/hero.png') }}" class="w-75" alt="hero.png">
+                    <img src="{{ asset('images/illustrations/hero.png') }}" class="w-75" alt=" hero.png">
                 </div>
                 <div class="col-md-7 text" data-aos="fade-up">
                     <div>
