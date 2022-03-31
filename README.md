@@ -1,64 +1,69 @@
-@<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h1 align="center">GrowUp - I/O Technology Innovation 2022</h1>
+<h3 align="center">Made by Ayang BNCC Team</h3>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<br>
 
-## About Laravel
+## A. SCREENSHOTS
+<img src="https://i.ibb.co/ckns9NR/beranda.png" width="100%"> <br>
+<img src="https://i.ibb.co/4pGnJ0h/eksplor-kelas.png" width="100%"> <br>
+<img src="https://i.ibb.co/fxj6F4N/detail-kelas.png" width="100%">
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## B. LIVE DEMO
+<b>Untuk demo aplikasi dapat diakses pada link berikut</b> <br>
+<span>https://growup.ndaruhes.com/</span> <br>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<br>
+<b>RuApps Assets Credits. Thanks to them 😊</b> <br>
+<span>https://undraw.co/ (Illustration)</span> <br>
+<span>https://iconscout.com/ (Icons)</span> <br>
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<br>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## C. USER ROLES
+<p>Credentials user dapat dilihat di initial data & semua passwordnya adalah <i>12345678</i></p>
+<b>1. Mentor</b>
 
-## Laravel Sponsors
+```
+email: ndaru@gmail.com
+password: 12345678
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<br>
 
-### Premium Partners
+<b>2. Mentee</b> <br>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```
+email: albert@gmail.com
+password: 12345678
+```
 
-## Contributing
+<br>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## D. SETUP PROJECT
+<p>*Untuk menjalankan project ini membutuhkan php versi 8</p>
+<b>1. Clone Repository</b>
 
-## Code of Conduct
+```
+git clone https://github.com/ndaruhes/GrowUp.git
+cd GrowUp
+```
+<br>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<b>2. Setup Project</b>
+<p>Ubah credentials database didalam file .env</p>
+<ul>
+    <li>DB_DATABASE</li>
+    <li>DB_USERNAME</li>
+    <li>DB_PASSWORD</li>
+</ul>
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+composer install                    // menginstall package laravel (vendor)
+npm install                         // menginstall package (node_modules)
+php artisan migrate:fresh --seed    // menjalankan migrasi dan initial data ke database
+php artisan storage:link			// membuat shortcut link untuk menampilkan gambar backend
+php artisan serve                   // menjalankan server (Link: http://127.0.0.1:8000/)
+```

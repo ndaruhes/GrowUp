@@ -123,6 +123,176 @@
                 </div>
             @endif
 
+            {{-- ACCOUNTING --}}
+            @if ($accounting->count() != 0)
+                <div class="courses">
+                    <div class="category-title d-flex align-items-center">
+                        <img src=" {{ $accounting[0]->category->icon }}" alt="{{ $accounting[0]->category->title }}">
+                        <span>{{ $accounting[0]->category->title }}</span>
+                    </div>
+                    <div class="row">
+                        @foreach ($accounting as $courses)
+                            <div class="col-md-3 col-12">
+                                <a href="{{ route('detailCourse', $courses->id) }}"
+                                    class="col-md-12 item-content d-flex align-items-center">
+                                    <div class="row">
+                                        <div class="col-md-12 col-5 image">
+                                            @if (explode('/', $courses->cover)[0] != 'https:')
+                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $courses->title }}" class="w-100">
+                                            @else
+                                                <img src="{{ $courses->cover }}" alt="{{ $courses->title }}"
+                                                    class="w-100">
+                                            @endif
+                                        </div>
+                                        <div class="col-md-12 col-7 text">
+                                            <span class="title">{{ $courses->title }}</span>
+                                            <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+
+            {{-- DATA SCIENCE --}}
+            @if ($datascience->count() != 0)
+                <div class="courses">
+                    <div class="category-title d-flex align-items-center">
+                        <img src=" {{ $datascience[0]->category->icon }}"
+                            alt="{{ $datascience[0]->category->title }}">
+                        <span>{{ $datascience[0]->category->title }}</span>
+                    </div>
+                    <div class="row">
+                        @foreach ($datascience as $courses)
+                            <div class="col-md-3 col-12">
+                                <a href="{{ route('detailCourse', $courses->id) }}"
+                                    class="col-md-12 item-content d-flex align-items-center">
+                                    <div class="row">
+                                        <div class="col-md-12 col-5 image">
+                                            @if (explode('/', $courses->cover)[0] != 'https:')
+                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $courses->title }}" class="w-100">
+                                            @else
+                                                <img src="{{ $courses->cover }}" alt="{{ $courses->title }}"
+                                                    class="w-100">
+                                            @endif
+                                        </div>
+                                        <div class="col-md-12 col-7 text">
+                                            <span class="title">{{ $courses->title }}</span>
+                                            <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+
+            {{-- UI UX DESIGN --}}
+            @if ($uiuxdesign->count() != 0)
+                <div class="courses">
+                    <div class="category-title d-flex align-items-center">
+                        <img src=" {{ $uiuxdesign[0]->category->icon }}" alt="{{ $uiuxdesign[0]->category->title }}">
+                        <span>{{ $uiuxdesign[0]->category->title }}</span>
+                    </div>
+                    <div class="row">
+                        @foreach ($uiuxdesign as $courses)
+                            <div class="col-md-3 col-12">
+                                <a href="{{ route('detailCourse', $courses->id) }}"
+                                    class="col-md-12 item-content d-flex align-items-center">
+                                    <div class="row">
+                                        <div class="col-md-12 col-5 image">
+                                            @if (explode('/', $courses->cover)[0] != 'https:')
+                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $courses->title }}" class="w-100">
+                                            @else
+                                                <img src="{{ $courses->cover }}" alt="{{ $courses->title }}"
+                                                    class="w-100">
+                                            @endif
+                                        </div>
+                                        <div class="col-md-12 col-7 text">
+                                            <span class="title">{{ $courses->title }}</span>
+                                            <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+
+            {{-- MOBILE DEVELOPMENT --}}
+            @if ($mobiledevelopment->count() != 0)
+                <div class="courses">
+                    <div class="category-title d-flex align-items-center">
+                        <img src=" {{ $mobiledevelopment[0]->category->icon }}"
+                            alt="{{ $mobiledevelopment[0]->category->title }}">
+                        <span>{{ $mobiledevelopment[0]->category->title }}</span>
+                    </div>
+                    <div class="row">
+                        @foreach ($mobiledevelopment as $courses)
+                            <div class="col-md-3 col-12">
+                                <a href="{{ route('detailCourse', $courses->id) }}"
+                                    class="col-md-12 item-content d-flex align-items-center">
+                                    <div class="row">
+                                        <div class="col-md-12 col-5 image">
+                                            @if (explode('/', $courses->cover)[0] != 'https:')
+                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $courses->title }}" class="w-100">
+                                            @else
+                                                <img src="{{ $courses->cover }}" alt="{{ $courses->title }}"
+                                                    class="w-100">
+                                            @endif
+                                        </div>
+                                        <div class="col-md-12 col-7 text">
+                                            <span class="title">{{ $courses->title }}</span>
+                                            <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+
             {{-- WEB DEVELOPMENT --}}
             @if ($webdevelopment->count() != 0)
                 <div class="courses">
@@ -166,7 +336,91 @@
                 </div>
             @endif
 
-            {{-- WEB DEVELOPMENT --}}
+            {{-- BUSINESS --}}
+            @if ($business->count() != 0)
+                <div class="courses">
+                    <div class="category-title d-flex align-items-center">
+                        <img src=" {{ $business[0]->category->icon }}" alt="{{ $business[0]->category->title }}">
+                        <span>{{ $business[0]->category->title }}</span>
+                    </div>
+                    <div class="row">
+                        @foreach ($business as $courses)
+                            <div class="col-md-3 col-12">
+                                <a href="{{ route('detailCourse', $courses->id) }}"
+                                    class="col-md-12 item-content d-flex align-items-center">
+                                    <div class="row">
+                                        <div class="col-md-12 col-5 image">
+                                            @if (explode('/', $courses->cover)[0] != 'https:')
+                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $courses->title }}" class="w-100">
+                                            @else
+                                                <img src="{{ $courses->cover }}" alt="{{ $courses->title }}"
+                                                    class="w-100">
+                                            @endif
+                                        </div>
+                                        <div class="col-md-12 col-7 text">
+                                            <span class="title">{{ $courses->title }}</span>
+                                            <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+
+            {{-- STATISTIC --}}
+            @if ($statistic->count() != 0)
+                <div class="courses">
+                    <div class="category-title d-flex align-items-center">
+                        <img src=" {{ $statistic[0]->category->icon }}" alt="{{ $statistic[0]->category->title }}">
+                        <span>{{ $statistic[0]->category->title }}</span>
+                    </div>
+                    <div class="row">
+                        @foreach ($statistic as $courses)
+                            <div class="col-md-3 col-12">
+                                <a href="{{ route('detailCourse', $courses->id) }}"
+                                    class="col-md-12 item-content d-flex align-items-center">
+                                    <div class="row">
+                                        <div class="col-md-12 col-5 image">
+                                            @if (explode('/', $courses->cover)[0] != 'https:')
+                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $courses->title }}" class="w-100">
+                                            @else
+                                                <img src="{{ $courses->cover }}" alt="{{ $courses->title }}"
+                                                    class="w-100">
+                                            @endif
+                                        </div>
+                                        <div class="col-md-12 col-7 text">
+                                            <span class="title">{{ $courses->title }}</span>
+                                            <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+
+            {{-- JAPANASE LANGUAGE --}}
             @if ($japaneselanguage->count() != 0)
                 <div class="courses">
                     <div class="category-title d-flex align-items-center">
@@ -219,6 +473,49 @@
                     </div>
                     <div class="row">
                         @foreach ($chineselanguage as $courses)
+                            <div class="col-md-3 col-12">
+                                <a href="{{ route('detailCourse', $courses->id) }}"
+                                    class="col-md-12 item-content d-flex align-items-center">
+                                    <div class="row">
+                                        <div class="col-md-12 col-5 image">
+                                            @if (explode('/', $courses->cover)[0] != 'https:')
+                                                <img src="{{ $courses->cover != null ? asset('storage/images/cover/' . $courses->cover) : asset('images/no-image.png') }}"
+                                                    alt="{{ $courses->title }}" class="w-100">
+                                            @else
+                                                <img src="{{ $courses->cover }}" alt="{{ $courses->title }}"
+                                                    class="w-100">
+                                            @endif
+                                        </div>
+                                        <div class="col-md-12 col-7 text">
+                                            <span class="title">{{ $courses->title }}</span>
+                                            <span class="mentor">{{ $courses->user->name }}</span>
+                                            <span class="rating">
+                                                @for ($i = 1; $i <= $courses->rating; $i++)
+                                                    <i class="uis uis-star text-yellow"></i>
+                                                @endfor
+                                            </span>
+                                            <span class="price">
+                                                {{ $courses->price == null ? 'Gratis' : 'Rp' . number_format($courses->price) }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+
+            {{-- MATHEMATIC --}}
+            @if ($mathematic->count() != 0)
+                <div class="courses">
+                    <div class="category-title d-flex align-items-center">
+                        <img src=" {{ $mathematic[0]->category->icon }}"
+                            alt="{{ $mathematic[0]->category->title }}">
+                        <span>{{ $mathematic[0]->category->title }}</span>
+                    </div>
+                    <div class="row">
+                        @foreach ($mathematic as $courses)
                             <div class="col-md-3 col-12">
                                 <a href="{{ route('detailCourse', $courses->id) }}"
                                     class="col-md-12 item-content d-flex align-items-center">
