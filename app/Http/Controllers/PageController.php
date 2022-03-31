@@ -51,7 +51,7 @@ class PageController extends Controller
         foreach ($categories as $category) {
             $data[$this->cleanString($category->title)] = Course::where('category_id', $category->id)->get();
         }
-        dd($data);
+        
         return view('pages.explore', $data, [
             'categories' => $categories
         ]);
