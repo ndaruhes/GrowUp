@@ -115,12 +115,13 @@ class ForumController extends Controller
         $url = explode('/', url()->current());
         $course = Course::findOrFail($id);
         $transaction = Transaction::where('course_id', $id);
+        $forums = Forum::where('course_id',$id)->get();
         return view('forum.detail', [
             'course' => $course,
             'sessions' => (new SessionController)->getAll(end($url)),
             'transaction' => $transaction->get(),
             'hasTransaction' => Auth::user() ? $transaction->where('mentee_id', Auth::user()->id)->first() : null,
-            'forums' => Forum::all()
+            'forums' => $forums
         ]);
     }
 
