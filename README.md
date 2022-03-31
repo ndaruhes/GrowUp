@@ -64,6 +64,6 @@ cd GrowUp
 composer install                    // menginstall package laravel (vendor)
 npm install                         // menginstall package (node_modules)
 php artisan migrate:fresh --seed    // menjalankan migrasi dan initial data ke database
-php artisan storage:link			// membuat shortcut link untuk menampilkan gambar backend
+php artisan storage:link            // membuat shortcut link untuk menampilkan gambar backend
 php artisan serve                   // menjalankan server (Link: http://127.0.0.1:8000/)
 ```
