@@ -1,0 +1,15 @@
+Penjelasan fitur dan setup project dapat diakses di link repository ini (di bagian bawah / README.md)
+https://github.com/ndaruhes/GrowUp
+
+
+DEMO APLIKASI
+---------------------------------------------
+https://growup.ndaruhes.com/
+
+
+LANGKAH INSTALASI
+---------------------------------------------
+1. composer install                    // menginstall package laravel (vendor)
+2. npm install                         // menginstall package (node_modules)
+3. php artisan migrate:fresh --seed    // menjalankan migrasi dan initial data ke database
+4. php artisan serve                   // menjalankan server (Link: http://127.0.0.1:8000/)
