@@ -11,7 +11,8 @@ LANGKAH INSTALASI
 ---------------------------------------------
 *Untuk menjalankan project ini membutuhkan php versi 8
 
-1. composer install                    // menginstall package laravel (vendor)
-2. npm install                         // menginstall package (node_modules)
-3. php artisan migrate:fresh --seed    // menjalankan migrasi dan initial data ke database
-4. php artisan serve                   // menjalankan server (Link: http://127.0.0.1:8000/)
+1. composer install			// menginstall package laravel (vendor)
+2. npm install				// menginstall package (node_modules)
+3. php artisan migrate:fresh --seed	// menjalankan migrasi dan initial data ke database
+4. php artisan storage:link		// membuat shortcut link untuk menampilkan gambar backend
+5. php artisan serve			// menjalankan server (Link: http://127.0.0.1:8000/)
