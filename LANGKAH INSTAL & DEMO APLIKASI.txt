@@ -9,6 +9,8 @@ https://growup.ndaruhes.com/
 
 LANGKAH INSTALASI
 ---------------------------------------------
+*Untuk menjalankan project ini membutuhkan php versi 8
+
 1. composer install                    // menginstall package laravel (vendor)
 2. npm install                         // menginstall package (node_modules)
 3. php artisan migrate:fresh --seed    // menjalankan migrasi dan initial data ke database

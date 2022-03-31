@@ -43,6 +43,7 @@ password: 12345678
 <br>
 
 ## D. SETUP PROJECT
+<p>*Untuk menjalankan project ini membutuhkan php versi 8</p>
 <b>1. Clone Repository</b>
 
 ```
