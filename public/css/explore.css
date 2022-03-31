@@ -229,6 +229,9 @@
   .explore .courses .item-content .image {
     margin-bottom: 0;
   }
+  .explore .courses .item-content .image img {
+    min-height: auto;
+  }
   .explore .courses .item-content .text {
     padding-left: 0;
   }

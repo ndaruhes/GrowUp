@@ -173,6 +173,10 @@
 
                 .image {
                     margin-bottom: 0;
+
+                    img {
+                        min-height: auto;
+                    }
                 }
 
                 .text {
