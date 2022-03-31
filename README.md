@@ -1,5 +1,5 @@
 <h1 align="center">GrowUp - I/O Technology Innovation 2022</h1>
-<h3 align="center">Made by Tim Ayang BNCC</h3>
+<h3 align="center">Made by Ayang BNCC Team</h3>
 
 <br>
 
