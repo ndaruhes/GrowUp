@@ -151,6 +151,7 @@ footer .footer-end .footer-social-media-wrapper img {
 @media screen and (max-width: 768px) {
   footer .row {
     flex-direction: column;
+    gap: 20px;
   }
   footer .send-icon {
     height: 15px;

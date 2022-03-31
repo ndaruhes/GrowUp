@@ -7,7 +7,6 @@
 footer {
     .row {
         .footer-item {
-
             .footer-logo {
                 font-size: 42px;
                 font-weight: bold;
@@ -76,6 +75,7 @@ footer {
     footer {
         .row {
             flex-direction: column;
+            gap: 20px;
         }
 
         .send-icon {
